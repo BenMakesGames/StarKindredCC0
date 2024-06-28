@@ -1,0 +1,26 @@
+<main>
+  <h1>News</h1>
+  <app-loading *ngIf="!news"></app-loading>
+  <ng-container *ngIf="news">
+    <app-pagination
+      *ngIf="news.totalPages > 1"
+      href="/news"
+      [queryParams]="query"
+      [page]="news.page"
+      [totalPages]="news.totalPages"
+    ></app-pagination>
+    <div class="news">
+      <article *ngFor="let n of news.results">
+        <h4>{{ n.type }} &mdash; {{ n.createdOn|date }}</h4>
+        <markdown [data]="n.body"></markdown>
+      </article>
+    </div>
+    <app-pagination
+      *ngIf="news.totalPages > 1"
+      href="/news"
+      [queryParams]="query"
+      [page]="news.page"
+      [totalPages]="news.totalPages"
+    ></app-pagination>
+  </ng-container>
+</main>

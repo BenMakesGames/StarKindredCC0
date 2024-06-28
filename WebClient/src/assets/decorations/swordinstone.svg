@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0 -288.53)">
+  <g>
+   <rect x="3.5605" y="296.09" width="1.029" height=".77844" fill="#6e6e6e" style="paint-order:markers stroke fill"/>
+   <rect x="2.8063" y="296.66" width="2.5374" height=".33907" fill="#878787" style="paint-order:markers stroke fill"/>
+   <rect x="2.5959" y="296.82" width="2.9583" height=".17543" fill="#a1a1a1" style="paint-order:markers stroke fill"/>
+  </g>
+  <path d="m4.075 296.09v-0.5588" fill="none" stroke="#e8e8e8" stroke-width=".13229"/>
+  <g>
+   <path d="m4.0463 295.5v-0.1602s0.00206-0.0124 0.025839-0.0124c0.02377 0 0.026872 0.0114 0.026872 0.0114v0.1633" fill="#80562f"/>
+   <path d="m3.9113 295.54h0.32156s-0.014616-0.0848-0.16663-0.0819c-0.15201 3e-3 -0.15493 0.0819-0.15493 0.0819z" fill="#dbbb0a"/>
+   <circle cx="4.0721" cy="295.33" r=".036174" fill="#dbbb0a" style="paint-order:markers stroke fill"/>
+  </g>
+  <g fill="none" stroke="#a1a1a1" stroke-linecap="round" stroke-width=".052917">
+   <path d="m3.9026 296.41h0.14032"/>
+   <path d="m3.9783 296.49h0.17003"/>
+   <path d="m4.151 296.41h0.058465"/>
+  </g>
+  <g fill="#fff" fill-opacity=".33451">
+   <path transform="matrix(.26458 0 0 .26458 .71107 288.93)" d="m10.531 25.067-0.27528-0.69799-0.69799-0.27528 0.69799-0.27528 0.27528-0.69799 0.27528 0.69799 0.69799 0.27528-0.69799 0.27528z" style="paint-order:markers stroke fill"/>
+   <path transform="matrix(.1414 0 0 .1414 2.9633 292.28)" d="m10.531 25.067-0.27528-0.69799-0.69799-0.27528 0.69799-0.27528 0.27528-0.69799 0.27528 0.69799 0.69799 0.27528-0.69799 0.27528z" style="paint-order:markers stroke fill"/>
+   <path transform="matrix(.1414 0 0 .1414 3.1824 291.87)" d="m10.531 25.067-0.27528-0.69799-0.69799-0.27528 0.69799-0.27528 0.27528-0.69799 0.27528 0.69799 0.69799 0.27528-0.69799 0.27528z" style="paint-order:markers stroke fill"/>
+   <path transform="matrix(.1414 0 0 .1414 2.7277 291.44)" d="m10.531 25.067-0.27528-0.69799-0.69799-0.27528 0.69799-0.27528 0.27528-0.69799 0.27528 0.69799 0.69799 0.27528-0.69799 0.27528z" style="paint-order:markers stroke fill"/>
+   <circle cx="3.9026" cy="295.08" r=".057878" style="paint-order:markers stroke fill"/>
+   <circle cx="4.5062" cy="294.56" r=".057878" style="paint-order:markers stroke fill"/>
+   <circle cx="3.7207" cy="294.26" r=".057878" style="paint-order:markers stroke fill"/>
+   <circle cx="3.7786" cy="295.74" r=".057878" style="paint-order:markers stroke fill"/>
+  </g>
+ </g>
+</svg>

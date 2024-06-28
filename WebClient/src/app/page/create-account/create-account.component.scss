@@ -1,0 +1,91 @@
+main {
+  background: #bef;
+  padding: 0;
+
+  display: grid;
+  grid-template-rows: auto calc(400px + 5rem) auto;
+}
+
+.middle {
+  position: relative;
+  .clouds {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  .god-and-goddess {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: calc(100vw - 200px);
+    max-width: 400px;
+    min-width: 250px;
+  }
+
+  form {
+    position: relative;
+    padding: 2em;
+
+    input[type=text],input[type=email],input[type=password] {
+      width: calc(100% - 400px);
+      min-width: calc(320px - 4em);
+    }
+  }
+}
+
+.below-clouds {
+  background-color: #fff;
+}
+
+
+.columns {
+  display: grid;
+  grid-template-columns: auto 400px;
+  height: 100%;
+}
+
+.form {
+  padding: 2em;
+}
+
+.species {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  > label {
+    position: relative;
+    display: block;
+    width: 5rem;
+    opacity: 1;
+    border-radius: 0.5em;
+    background-color: #ccc;
+
+    > input {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+    }
+
+    > h4 {
+      margin: 0.5em 0 0;
+    }
+
+    > img {
+      display: block;
+      width: 5rem;
+    }
+  }
+}
+
+.buttons {
+  z-index: 1;
+  position: relative;
+}

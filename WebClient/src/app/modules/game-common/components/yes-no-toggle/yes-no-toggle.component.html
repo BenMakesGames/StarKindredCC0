@@ -1,0 +1,4 @@
+<button class="button invisible" (click)="doToggle()">
+  <div class="label">{{ label }}</div>
+  <div class="toggle" [class.on]="value" role="checkbox" [attr.aria-checked]="value ? 'true' : 'false'"><div></div></div>
+</button>

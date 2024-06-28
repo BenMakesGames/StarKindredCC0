@@ -1,0 +1,119 @@
+<main>
+  <h1><a routerLink="/alliance/search">Alliances</a> &gt; My</h1>
+  <app-loading *ngIf="!loadAllianceSubscription.closed"></app-loading>
+  <ng-container *ngIf="loadAllianceSubscription.closed">
+    <ng-container *ngIf="!alliance">
+      <p class="centered-text">Being in an Alliance lets you take on Giants <app-help-button topic="mission-giant"></app-help-button> with other players.</p>
+      <div class="no-alliance">
+        <a class="button" routerLink="/alliance/search">
+          <img src="/assets/ui/white-magnifying-glass.svg" alt="magnifying glass">
+          <span>Find an Alliance</span>
+        </a>
+        <button type="button" (click)="doEnterCode()">
+          <img src="/assets/ui/white-quill.svg" alt="quill">
+          <span>Enter an Alliance Invite Code</span>
+        </button>
+        <a class="button" routerLink="/alliance/create">
+          <img src="/assets/ui/white-plus.svg" alt="plus sign">
+          <span>Create Alliance</span>
+        </a>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="alliance">
+      <div class="alliance">
+        <div class="summary">
+          <dl>
+            <dt>Founded</dt>
+            <dd>{{ alliance.createdOn|date:'mediumDate' }}</dd>
+            <dt>Level</dt>
+            <dd>{{ alliance.level }}</dd>
+            <ng-container *ngIf="leader">
+              <dt>Leader</dt>
+              <dd>{{ leader.name }}</dd>
+            </ng-container>
+          </dl>
+          <p style="text-align:center">
+            <a routerLink="/alliance/titles">View Titles & Ranks</a>
+          </p>
+        </div>
+        <div class="giant">
+          <h2>Giant</h2>
+          <div *ngIf="!alliance.giant">
+            <p style="text-align:center">You're not currently tracking a Giant.</p>
+            <form *ngIf="alliance.rights.indexOf('TrackGiants') >= 0" (submit)="doTrackAGiant()">
+              <p class="buttons centered">
+                <button type="submit">Track</button>
+              </p>
+            </form>
+            <ng-container *ngIf="alliance.rights.indexOf('TrackGiants') < 0">
+              <p>Only the Alliance leader can find a new Giant.</p>
+            </ng-container>
+          </div>
+          <ng-container *ngIf="alliance.giant">
+            <dl>
+              <dt>Element</dt>
+              <dd>{{ alliance.giant.element }} <app-help-button [topic]="'element-' + alliance.giant.element"></app-help-button></dd>
+              <dt>Damage<small style="display:block">({{ alliance.giant.damage }} / {{ alliance.giant.health }})</small></dt>
+              <dd style="max-width:200px"><app-progress-bar [progress]="alliance.giant.damage" [maxProgress]="alliance.giant.health" [pulsing]="false"></app-progress-bar></dd>
+              <ng-container *ngIf="giantTimeUntil > 0">
+                <dt>Arrives</dt>
+                <dd>{{ giantTimeUntil|describeInterval }}</dd>
+              </ng-container>
+              <ng-container *ngIf="giantTimeUntil <= 0 && giantTimeRemaining > 0">
+                <dt>Leaves</dt>
+                <dd>{{ giantTimeRemaining|describeInterval }}</dd>
+              </ng-container>
+            </dl>
+            <div *ngIf="giantTimeRemaining <= 0" style="text-align:center">
+              <ng-container *ngIf="alliance.giant.damage >= alliance.giant.health">
+                <p>The giant was slain!</p>
+                <p *ngIf="alliance.rights.indexOf('TrackGiants') >= 0">
+                  <button type="button" (click)="doCompleteGiant()">Claim Rewards & Find Another</button>
+                </p>
+              </ng-container>
+              <ng-container *ngIf="alliance.giant.damage < alliance.giant.health">
+                <p>The giant escaped...</p>
+                <p *ngIf="alliance.rights.indexOf('TrackGiants') >= 0">
+                  <button type="button" (click)="doCompleteGiant()">Find Another</button>
+                </p>
+              </ng-container>
+            </div>
+          </ng-container>
+        </div>
+        <div class="members">
+          <h2>Members ({{ alliance.members.length }}/20)</h2>
+          <div class="member-list">
+            <button *ngFor="let m of alliance.members" class="invisible" (click)="doViewMember(m)">
+              <app-member-card
+                [name]="m.name"
+                [avatar]="m.avatar"
+                [color]="m.color"
+                [level]="m.level"
+                [isLeader]="m.id == alliance.leaderId"
+                [rank]="m.rank"
+              ></app-member-card>
+            </button>
+          </div>
+          <div class="buttons centered" *ngIf="alliance.rights.indexOf('Recruit') >= 0 && alliance.members.length < 20">
+            <button class="button" (click)="doRecruit()">Recruit</button>
+          </div>
+        </div>
+        <div class="logs-section">
+          <h2>Activity</h2>
+          <div class="logs">
+            <app-log-entry *ngFor="let l of alliance.logs"
+              [createdOn]="l.createdOn"
+              [message]="l.message"
+              [icon]="'alliance/' + l.activityType.toLowerCase() + '.svg'"
+            >
+              <img [src]="'/assets/ui/logs/alliance/' + l.activityType.toLowerCase() + '.svg'" [alt]="l.activityType">
+            </app-log-entry>
+          </div>
+          <p>
+            <a routerLink="/alliance/logs">More &raquo;</a>
+          </p>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</main>

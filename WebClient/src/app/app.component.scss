@@ -1,0 +1,13 @@
+.has-no-keyboard {
+  display: block;
+  @media (hover: hover) and (pointer: fine) {
+    display: none;
+  }
+}
+
+.has-keyboard {
+  display: none;
+  @media (hover: hover) and (pointer: fine) {
+    display: block;
+  }
+}

@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  width: 7.5rem;
+  height: 10rem;
+  border-radius: 0.5em;
+  background-color: #ccc;
+
+  > img {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    left: 0.75rem;
+    top: 0.25rem;
+  }
+
+  > app-card-ribbon {
+    position: absolute;
+    bottom: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  > .duration {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 100%;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em;
+
+    > img {
+      height: 1em;
+      width: 1em;
+    }
+  }
+}

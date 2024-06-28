@@ -1,0 +1,3 @@
+<img [src]="image" [style.width.%]="imageWidth" />
+<app-card-ribbon [color]="ribbonColor"><div class="name">{{ ribbonText }}<app-help-button *ngIf="helpTopic" [topic]="helpTopic"></app-help-button></div></app-card-ribbon>
+<div class="extra"><ng-content></ng-content></div>

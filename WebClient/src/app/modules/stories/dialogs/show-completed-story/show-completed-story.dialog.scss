@@ -1,0 +1,19 @@
+.vassals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 1em;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.none {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+markdown {
+  display: block;
+  margin-bottom: 1em;
+}

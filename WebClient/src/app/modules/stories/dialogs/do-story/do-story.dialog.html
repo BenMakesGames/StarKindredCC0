@@ -1,0 +1,12 @@
+<app-dialog>
+  <app-assemble-a-team
+    [minVassals]="storyStep.minVassals"
+    [maxVassals]="storyStep.maxVassals"
+    [requiredElement]="storyStep.requiredElement"
+    [embarking]="embarking"
+    [tags]="tags"
+    [(selectedVassals)]="selectedVassals"
+    (select)="doGoOnMission()"
+    (cancel)="doCancel()"
+  ></app-assemble-a-team>
+</app-dialog>

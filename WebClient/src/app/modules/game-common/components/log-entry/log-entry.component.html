@@ -1,0 +1,8 @@
+<div [class.has-icon]="!!icon">
+  <img *ngIf="icon" [src]="'/assets/ui/logs/' + icon">
+  <label>{{ createdOn|date:'medium' }}</label>
+  <markdown [data]="message"></markdown>
+  <ul class="tags" *ngIf="tags && tags.length > 0">
+    <li *ngFor="let tag of tags" [style.background-color]="tag|logTagColor"><span>{{ tag|logTagTitle }}</span></li>
+  </ul>
+</div>

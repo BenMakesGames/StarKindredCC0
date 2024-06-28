@@ -1,0 +1,41 @@
+.subscriptions
+{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  > div {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+
+    img {
+      width: 4em;
+      display: block;
+      opacity: 0.8;
+    }
+  }
+}
+
+.info > p:last-child
+{
+  margin-bottom: 0;
+}
+
+stripe-pricing-table {
+  max-width: 640px;
+  display: block;
+  margin: 0 auto;
+}
+
+.stuff-you-get {
+  max-width: 640px;
+  display: block;
+  margin: 0 auto 1em;
+  padding-left: 2em;
+  box-sizing: border-box;
+}

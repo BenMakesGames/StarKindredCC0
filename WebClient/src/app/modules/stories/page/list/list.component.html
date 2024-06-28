@@ -1,0 +1,30 @@
+<main>
+  <h1>Stories</h1>
+  <app-loading *ngIf="!stories"></app-loading>
+  <ng-container *ngIf="stories">
+    <div class="stories">
+      <ng-container *ngFor="let story of stories.results; let i = index">
+        <div class="complete-separator" *ngIf="i > 0 && stories.results[i - 1].missionsComplete < stories.results[i - 1].missionsAvailable && story.missionsComplete >= story.missionsAvailable">
+          <h2>Complete</h2>
+        </div>
+        <div>
+          <a class="thumbnail" [routerLink]="'/stories/' + story.id">
+            <img [src]="'/assets/stories/' + story.year + '/' + story.month + '/thumbnail.svg'" alt="thumbnail" />
+            <p class="progress" [class.complete]="story.missionsComplete >= story.missionsAvailable">
+              <img src="/assets/stories/complete.svg" alt="green check">
+              <span>{{ (story.missionsComplete * 100 / story.missionsAvailable)|number:'1.0-0' }}%</span>
+            </p>
+            <div class="buttons">
+              <span class="button full-width" [routerLink]="'/stories/' + story.id">View</span>
+            </div>
+          </a>
+          <div>
+            <h4>{{story.title}}</h4>
+            <p class="release-date">Released {{story.month|monthName}} {{story.year}}</p>
+            <markdown [data]="story.summary"></markdown>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</main>

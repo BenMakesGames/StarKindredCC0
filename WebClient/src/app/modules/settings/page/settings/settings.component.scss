@@ -1,0 +1,27 @@
+.options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+
+  > a {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1em;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text);
+
+    > img {
+      display: block;
+      height: 4em;
+      margin: 0 auto 1em;
+    }
+
+    > span {
+      display: block;
+    }
+  }
+}

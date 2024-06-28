@@ -1,0 +1,17 @@
+<app-dialog>
+  <app-loading *ngIf="!options"></app-loading>
+  <form *ngIf="options" (submit)="doBuild()" [class.disabled]="waitingOnApi">
+    <div class="buildings">
+      <label *ngFor="let o of options" [class.disabled]="!o.canAfford" [class.selected]="selection == o.building">
+        <input type="radio" name="building" [value]="o.building" [(ngModel)]="selection" />
+        <img [src]="'/assets/buildings/' + o.building.toLowerCase() + '.svg'" alt="" aria-hidden="true" />
+        <app-card-ribbon color="#258">{{ o.building }}</app-card-ribbon>
+        <span class="cost"><app-describe-yield [yield]="o.cost" [orientation]="YieldOrientation.Horizontal"></app-describe-yield></span>
+      </label>
+    </div>
+    <div class="buttons">
+      <button type="submit" class="full-width" [class.disabled]="!selection">Build</button>
+      <button type="button" class="full-width wire" (click)="doCancel()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

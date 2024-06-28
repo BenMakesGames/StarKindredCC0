@@ -1,0 +1,3 @@
+By listening to The Oracle, new paths will be made available for you, but only when the time is right...
+
+Your Vassals will also collect some Quintesssence.

@@ -1,0 +1,27 @@
+.avatars {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+
+  > label {
+    opacity: unset;
+    font-size: unset;
+    width: 5em;
+    height: 5em;
+    position: relative;
+
+    > img {
+      display: block;
+      width: 100%;
+    }
+
+    > input {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+    }
+  }
+}

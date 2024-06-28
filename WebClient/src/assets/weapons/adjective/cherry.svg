@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#f51616">
+  <circle cx="2.2303" cy="3.8662" r=".98599" opacity=".26655"/>
+  <circle cx="6.3875" cy="7.0364" r=".27901" opacity=".13486"/>
+  <circle cx="4.5192" cy="6.5546" r=".27901" opacity=".13486"/>
+  <circle cx="7.969" cy="2.7253" r=".27901" opacity=".13486"/>
+  <circle cx="3.7258" cy=".55196" r=".27901" opacity=".13486"/>
+  <circle cx=".58646" cy="4.6572" r=".27901" opacity=".13486"/>
+  <circle cx="4.0831" cy="5.0438" r=".47929" opacity=".19097"/>
+  <circle cx="2.3113" cy="7.141" r=".47929" opacity=".19097"/>
+  <circle cx="1.4144" cy="1.3109" r=".47929" opacity=".19097"/>
+  <circle cx="7.21" cy="4.6572" r=".47929" opacity=".19097"/>
+  <circle cx="5.6921" cy="2.6563" r="1.5317" opacity=".35338"/>
+ </g>
+</svg>

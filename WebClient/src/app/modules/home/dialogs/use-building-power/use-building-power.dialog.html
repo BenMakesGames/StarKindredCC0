@@ -1,0 +1,25 @@
+<app-dialog>
+  <h4>{{ building.type|buildingTitle }}</h4>
+  <form (submit)="doUsePower()" [class.disabled]="opening">
+    <div class="options">
+      <label *ngFor="let c of building.powersAvailable" [class.selected]="c.power == choice">
+        <input type="radio" (change)="doSelect(c)" [value]="c.power" name="choice" />
+        <app-generic-card
+          ribbonColor="#393"
+          [ribbonText]="c.title"
+          [image]="'/assets/' + c.image + '.svg'"
+          [imageWidth]="c.image.startsWith('ui') ? 100 : 75"
+        ></app-generic-card>
+      </label>
+    </div>
+    <p class="cost">
+      <b>Cost:</b>
+      <app-resource *ngIf="selectedCost" [resource]="selectedCost" ></app-resource>
+      <span *ngIf="!selectedCost" style="font-style: italic;">free</span>
+    </p>
+    <div class="buttons centered">
+      <button type="submit" class="full-width" [class.disabled]="choice === undefined">Select</button>
+      <button type="button" class="full-width wire" (click)="doClose()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

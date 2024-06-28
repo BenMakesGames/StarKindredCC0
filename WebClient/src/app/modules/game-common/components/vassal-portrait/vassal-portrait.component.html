@@ -1,0 +1,22 @@
+<div [class]="'vassal ' + vassal.element">
+  <div class="new" *ngIf="isNew"><span>New</span></div>
+  <img [src]="'/assets/vassal/portraits/' + vassal.species.toLowerCase() + '/' + vassal.portrait + '.svg'" alt="portrait" class="portrait">
+  <app-card-ribbon><img src="/assets/ui/favorite.svg" class="favorite" *ngIf="vassal.favorite" alt="a favorite" /><div class="name">{{ vassal.name }}</div></app-card-ribbon>
+  <app-level-badge [level]="vassal.level"></app-level-badge>
+  <div class="status">
+    <app-stars [stars]="vassal.willpower" icon="willpower" [title]="vassal.willpower + ' Willpower'"></app-stars>
+    <img
+      *ngFor="let se of vassal.statusEffects"
+      [src]="se|statusEffectImage"
+      class="status-effect"
+      [alt]="se|statusEffectTitle"
+    >
+    <img *ngIf="vassal.onMission" src="/assets/ui/on-a-mission.svg" class="status-effect" alt="on a mission">
+    <img *ngIf="vassal.leader" src="/assets/ui/black-crown.svg" class="status-effect" alt="leader">
+  </div>
+  <app-weapon-medallion
+    *ngIf="vassal.weapon"
+    [image]="vassal.weapon.image"
+    [level]="vassal.weapon.level"
+  ></app-weapon-medallion>
+</div>

@@ -1,0 +1,26 @@
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  &.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+
+  &.horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25em;
+  }
+
+  &.stacked {
+    position: relative;
+
+    > li {
+      position: absolute;
+    }
+  }
+}

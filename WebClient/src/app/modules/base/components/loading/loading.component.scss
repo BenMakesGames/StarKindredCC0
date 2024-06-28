@@ -1,0 +1,64 @@
+.loading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.throbber {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  animation: 1s ease 0s infinite normal none running loading;
+
+  > * {
+    display: inline-block;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 0.15em);
+    top: calc(50% - 0.15em);
+  }
+
+  > .a {
+    animation: 2s ease 0s infinite normal none running a;
+  }
+
+  > .b {
+    animation: 2s ease 0s infinite normal none running b;
+  }
+
+  > .c {
+    animation: 2s ease 0s infinite normal none running c;
+  }
+
+  > .d {
+    animation: 2s ease 0s infinite normal none running d;
+  }
+}
+
+@keyframes loading {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes a {
+  0%, 100% { background-color: white; }
+  50% { transform: translate(0.2em, 0.2em); background-color: #f66; }
+}
+
+@keyframes b {
+  0%, 100% { background-color: white; }
+  50% { transform: translate(-0.2em, 0.2em); background-color: #c93; }
+}
+
+@keyframes c {
+  0%, 100% { background-color: white; }
+  50% { transform: translate(0.2em, -0.2em); background-color: #66f; }
+}
+
+@keyframes d {
+  0%, 100% { background-color: white; }
+  50% { transform: translate(-0.2em, -0.2em); background-color: #696; }
+}

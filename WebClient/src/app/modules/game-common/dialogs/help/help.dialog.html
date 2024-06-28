@@ -1,0 +1,5 @@
+<app-dialog>
+  <h4 *ngIf="title">{{ title }}</h4>
+  <markdown [src]="'/assets/help/' + key + '.md'"></markdown>
+  <div class="buttons centered"><button type="button" (click)="doClose()">OK</button></div>
+</app-dialog>

@@ -1,0 +1,55 @@
+.buttons
+{
+  > button {
+
+    > img {
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.buildings {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+
+label {
+  padding: 0.5em 0 0;
+  display: block;
+  background-color: #fff;
+  width: 10rem;
+  border-radius: 0.5em;
+  cursor: pointer;
+  position: relative;
+  opacity: 1;
+
+  input {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  app-card-ribbon {
+    top: calc(10rem - 1em);
+    font-size: 1rem;
+  }
+
+  .cost {
+    display: block;
+    margin: 0.5em auto;
+    width: max-content;
+  }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#65532f" stroke-linecap="round" stroke-linejoin="bevel">
+  <rect x="2.9446" y="1.8789" width="2.5409" height=".91156" stroke-width=".21815"/>
+  <rect x="3.1554" y="4.3902" width="2.1193" height=".27856" stroke-width=".11013"/>
+  <rect x="2.9856" y="6.2738" width="2.4589" height=".27856" stroke-width=".11863"/>
+  <rect x="2.492" y=".62319" width="3.4462" height=".27817" stroke-width=".14034"/>
+ </g>
+ <g fill="none" stroke="#65532f">
+  <g stroke-width=".31392px">
+   <path d="m3.3252 2.646-0.50944 5.6506"/>
+   <path d="m5.1049 2.646 0.50944 5.6506"/>
+   <path d="m2.6623 0.76227 2.6124 3.7673"/>
+   <path d="m3.1554 4.5295 2.6124-3.7673"/>
+  </g>
+  <g stroke-width=".15696">
+   <path d="m3.3252 2.646 1.9495 1.8835-2.2891 1.8835 2.6287 1.8835"/>
+   <path d="m5.1049 2.646-1.9495 1.8835 2.2891 1.8835-2.6287 1.8835"/>
+   <path d="m3.4397 2.0853v-1.9286"/>
+   <path d="m4.2121 2.0853v-1.9286"/>
+   <path d="m2.6673 0.82965-2e-7 -0.67293h3.1136v0.67293"/>
+   <path d="m4.9965 2.0853v-1.9286"/>
+   <path d="m2.6673 0.43357h3.1136"/>
+  </g>
+  <g stroke-width=".07848">
+   <path d="m3.4397 1.2114h1.5568"/>
+   <path d="m3.4397 1.5742h1.5568"/>
+   <path d="m3.8296 0.76006v1.3"/>
+   <path d="m4.614 0.76006v1.3"/>
+  </g>
+ </g>
+ <g fill="#a0a0a0">
+  <rect x="5.2994" y="8.2597" width=".62078" height=".20667"/>
+  <rect x="2.5326" y="8.2597" width=".62078" height=".20667"/>
+ </g>
+</svg>

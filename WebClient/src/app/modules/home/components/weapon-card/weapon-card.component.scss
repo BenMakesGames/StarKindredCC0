@@ -1,0 +1,52 @@
+.weapon {
+  width: 7.5rem;
+  height: 10rem;
+  background-color: #ccc;
+  border-radius: 0.5em;
+  display: block;
+  position: relative;
+
+  > img {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    left: 0.75rem;
+    top: 0.25rem;
+  }
+
+  > app-card-ribbon {
+    position: absolute;
+    bottom: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  > .level {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #333;
+
+    > span {
+      display: block;
+    }
+
+    &.levelAndRepair {
+      bottom: 0.15em;
+    }
+
+    > .small {
+      font-size: 80%;
+    }
+  }
+
+  > app-vassal-medallion {
+    position: absolute;
+    display: block;
+    right: 0.25rem;
+    top: 4.25rem;
+    font-size: 50%;
+  }
+}

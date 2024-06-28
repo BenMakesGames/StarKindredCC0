@@ -1,0 +1,15 @@
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  > .panels {
+    position: relative;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 100%);
+
+    transition: left 0.1s ease-out;
+  }
+}

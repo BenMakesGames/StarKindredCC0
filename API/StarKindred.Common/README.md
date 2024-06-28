@@ -1,0 +1,3 @@
+"Common" is a really bad name for, like, anything. It's too generic; it doesn't mean anything; no one who looks at something named "Common" can possibly guess what lies within. Never name something "Common" >_>
+
+This project _mostly_ contains database-related code; "Database" or "DataAccess" or even just "Data" would have been a better name for this project. All non-DB stuff should probably just get taken out.

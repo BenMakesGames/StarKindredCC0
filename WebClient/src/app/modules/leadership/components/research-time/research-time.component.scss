@@ -1,0 +1,11 @@
+span {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  gap: 0.25em;
+  align-items: center;
+
+  > img {
+    height: 0.8em;
+  }
+}

@@ -1,0 +1,48 @@
+div {
+  position: relative;
+  background-color: #fff;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+
+  &.has-icon {
+    padding-left: 3em;
+  }
+
+  > img {
+    position: absolute;
+    top: 1em;
+    left: 0.5em;
+    width: 2em;
+    height: 2em;
+  }
+
+  > label {
+    margin-bottom: 0.5em;
+  }
+
+  > .tags {
+    list-style: none;
+    margin: 0.6667em 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 75%;
+    gap: 0.5em;
+
+    > li {
+      background-color: #666;
+      border-radius: 1em;
+      padding: 0.25em 0.5em;
+
+      > span {
+        background: inherit;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        filter: invert(1) grayscale(1) contrast(100);
+      }
+    }
+  }
+}

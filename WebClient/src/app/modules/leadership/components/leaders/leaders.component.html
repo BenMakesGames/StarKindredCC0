@@ -1,0 +1,79 @@
+<app-resources *ngIf="resources" [resources]="resources"></app-resources>
+<h1>Leadership <app-help-button topic="leaders"></app-help-button></h1>
+<app-loading *ngIf="!leadersByPosition"></app-loading>
+<ng-container *ngIf="leadersByPosition">
+  <div class="positions">
+    <div class="position" *ngFor="let position of positions">
+      <h4>{{position}}</h4>
+      <ng-container *ngIf="leadersByPosition[position]">
+        <p class="leader">
+          <a [routerLink]="'/home/vassals/' + leadersByPosition[position].vassal.id">
+            <app-vassal-medallion
+              [portrait]="leadersByPosition[position].vassal.portrait"
+              [species]="leadersByPosition[position].vassal.species"
+              [element]="leadersByPosition[position].vassal.element"
+              [level]="leadersByPosition[position].vassal.level"
+            ></app-vassal-medallion>
+            <span class="details">
+              <span class="name">{{ leadersByPosition[position].vassal.name }}</span>
+              <span class="nature-and-sign">
+                {{ leadersByPosition[position].vassal.nature|natureTitle }}
+                {{ leadersByPosition[position].vassal.sign|signTitle }}
+              </span>
+            </span>
+          </a>
+        </p>
+        <p *ngIf="now < establishTimes[position]" style="text-align:center">
+          <span style="font-weight:bold;margin-bottom:0.5em;display:block;">Getting Established</span>
+          <app-time-remainings [current]="now" [end]="establishTimes[position]"></app-time-remainings>
+          <app-progress-bar
+            [progress]="86400000 - (establishTimes[position] - now)"
+            [maxProgress]="86400000"
+          ></app-progress-bar>
+        </p>
+        <p *ngIf="projectsByPosition[position]">
+          <span style="font-weight:bold;margin-bottom:0.5em;display:block;">Project: {{ projectsByPosition[position]!.title }}<app-help-button [topic]="'technology-' + projectsByPosition[position]!.technology.toLowerCase()"></app-help-button></span>
+          <app-time-remainings [current]="now" [end]="projectsByPosition[position]!.endsOn"></app-time-remainings>
+          <app-progress-bar
+            [progress]="(now - projectsByPosition[position]!.startedOn) / projectsByPosition[position]!.duration"
+            [maxProgress]="1"
+          ></app-progress-bar>
+        </p>
+      </ng-container>
+      <p *ngIf="!leadersByPosition[position]" class="vacant">This position is vacant.</p>
+      <div class="buttons centered" [class.disabled]="waitingOnAPI">
+        <button type="button" *ngIf="!leadersByPosition[position]" (click)="doAssignLeader(position)">Assign</button>
+        <ng-container *ngIf="leadersByPosition[position]">
+          <ng-container *ngIf="projectsByPosition[position] && projectsByPosition[position]!.endsOn <= now">
+            <button type="button" class="notice-me" (click)="doCompleteResearch(leadersByPosition[position])">Complete</button>
+            <button type="button" class="disabled">Remove</button>
+          </ng-container>
+          <ng-container *ngIf="!projectsByPosition[position] || projectsByPosition[position]!.endsOn > now">
+            <button *ngIf="!projectsByPosition[position]" type="button" [class.disabled]="now < establishTimes[position]" (click)="doChooseResearch(position)">Research</button>
+            <button *ngIf="projectsByPosition[position]" type="button" [class.disabled]="now < establishTimes[position]" (click)="doCancelResearch(leadersByPosition[position])">Cancel Project</button>
+            <button type="button" (click)="doRemoveLeader(position)">Remove</button>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<div *ngIf="completedProjects" style="padding-top:3em">
+  <h2>Completed Projects</h2>
+  <table class="properties completed-projects">
+    <thead>
+      <tr>
+        <th></th>
+        <th><button class="button sort" [class.sorted]="currentSort.property === 'technology'" [class.sorted-descending]="currentSort.direction === 'desc'" (click)="doClickSortHeader('technology', 'asc')">Project</button></th>
+        <th class="align-right"><button class="button sort" [class.sorted]="currentSort.property === 'completedOn'" [class.sorted-descending]="currentSort.direction === 'desc'" (click)="doClickSortHeader('completedOn', 'desc')">Completed</button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of completedProjects" (click)="doShowProjectHelp($event, p.technology)">
+        <td><img alt="" [src]="'/assets/technologies/' + p.technology.toLowerCase() + '.svg'" aria-hidden="true" /></td>
+        <td><button class="button link-text" (click)="doShowProjectHelp($event, p.technology)">{{ p.title }}</button></td>
+        <td class="completed-on align-right">{{ p.completedOn|date:'mediumDate' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

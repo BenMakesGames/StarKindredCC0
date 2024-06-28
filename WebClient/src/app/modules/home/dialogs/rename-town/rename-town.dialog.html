@@ -1,0 +1,12 @@
+<app-dialog>
+  <form (submit)="doRename()" [class.disabled]="renaming">
+    <p>
+      <label>Name</label>
+      <input type="text" minlength="1" [(ngModel)]="name" name="newName" autocomplete="off" />
+    </p>
+    <div class="buttons centered">
+      <button type="submit" class="full-width" [class.disabled]="name.trim().length == 0">Rename</button>
+      <button type="button" class="full-width wire" (click)="doClose()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

@@ -1,0 +1,10 @@
+<app-dialog>
+  <h4>Appoint a Vassal <app-help-button topic="leaders"></app-help-button></h4>
+  <app-select-vassals
+    [disabled]="assigning"
+    [tags]="tags"
+    (selectVassal)="doSelectVassal($event)"
+    [extraInfo]="projectCost"
+  >
+  </app-select-vassals>
+</app-dialog>

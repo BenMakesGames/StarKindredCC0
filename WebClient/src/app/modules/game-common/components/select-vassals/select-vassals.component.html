@@ -1,0 +1,44 @@
+<div *ngIf="vassals" [class.disabled]="disabled">
+  <app-vassal-filters [filters]="query" (filtersChange)="doUpdateFilters($event)" [tags]="tags"></app-vassal-filters>
+</div>
+<app-loading *ngIf="!vassals"></app-loading>
+<ng-container *ngIf="vassals">
+  <ng-container *ngIf="vassals.results.length > 0">
+    <div class="vassals" [class.disabled]="disabled">
+      <button
+        *ngFor="let v of vassals.results"
+        [class.disabled]="!canAdd(v)"
+        class="invisible"
+        (click)="doAddVassal(v)"
+      >
+        <app-vassal-medallion
+          [element]="v.element"
+          [level]="v.level"
+          [species]="v.species"
+          [portrait]="v.portrait"
+        ></app-vassal-medallion>
+        <div class="properties">
+          <div class="name">
+            <img class="favorite" src="/assets/ui/favorite.svg" *ngIf="v.favorite" />
+            {{ v.name }}
+          </div>
+          <div class="nature">{{ v.nature|natureTitle }} {{ v.sign|signTitle}}</div>
+          <div class="weapon" *ngIf="v.weapon || v.statusEffects.length > 0 || v.tags.length > 0">
+            <app-tag *ngFor="let t of v.tags" [title]="t.title" [color]="t.color"></app-tag>
+            <img *ngFor="let se of v.statusEffects" [src]="se|statusEffectImage" />
+            <ng-container *ngIf="v.weapon"><img [src]="'/assets/weapons/' + v.weapon.image + '.svg'"><span>Level {{ v.weapon.level }}</span></ng-container>
+          </div>
+        </div>
+        <div class="extra-info" *ngIf="extraInfo">
+          <ng-container *ngIf="extraInfo">{{ extraInfo(v) }}</ng-container>
+        </div>
+      </button>
+    </div>
+    <p *ngIf="vassals.totalPages > 1">
+      <app-pagination [page]="vassals.page" [totalPages]="vassals.totalPages" (pageChange)="doChangePage($event)"></app-pagination>
+    </p>
+  </ng-container>
+  <ng-container *ngIf="vassals.results.length == 0">
+    <p class="none">&mdash; none available &mdash;</p>
+  </ng-container>
+</ng-container>

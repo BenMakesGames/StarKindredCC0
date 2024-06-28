@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0 -288.53)">
+  <g fill="#733a00">
+   <path d="m4.0572 295.35s-0.12093 0.33171 0.031526 0.56026c0.15245 0.22856 0.27124 0.24869 0.27124 0.24869l-0.091788 0.36757-1.8109-0.45223 0.091788-0.36757s0.11437 0.0378 0.35632-0.092c0.24201-0.13004 0.29122-0.47966 0.29122-0.47966"/>
+   <rect transform="rotate(14.021)" x="74.117" y="280.5" width="1.7926" height=".42506" rx="0" ry="0" style="paint-order:markers fill stroke"/>
+   <path d="m3.4846 293.68-0.11106 0.44474 0.37717 0.43092 0.57351-0.19352 0.11106-0.44473z"/>
+  </g>
+  <path d="m3.3735 294.12s-0.87446-0.38845-0.63695-1.4158c0.23751-1.0274 1.2082-1.711 1.3725-2.407 0.16429-0.69603-0.33569-0.98822-0.33569-0.98822s0.30856 0.59824-0.14381 0.89952c-0.45238 0.30132-1.3049 1.3317-1.5653 2.7362-0.37134 2.0029 1.5242 2.3366 1.5242 2.3366s1.8451 0.60145 2.4438-1.3457c0.43044-1.4001 0.16241-2.6722-0.095206-3.1508-0.25762-0.47859 0.29596-0.86152 0.29596-0.86152s-0.57865 0.0228-0.76087 0.71438c-0.18222 0.69155 0.35317 1.7513 0.079804 2.7697-0.27337 1.0184-1.2278 0.95016-1.2278 0.95016s-0.18018-4e-3 -0.49752-0.0838c-0.31735-0.0796-0.45317-0.15357-0.45317-0.15357z" fill="#ab5600"/>
+  <g fill="none" stroke-width=".13229">
+   <path d="m4.3696 290.25-0.75537 3.7568m0.54213 0.12507 1.0493-3.6829" stroke="#fff" stroke-opacity=".49597"/>
+   <path d="m3.3859 290.87s-0.23084 9e-3 -0.27332 0.36985c-0.042488 0.36084-0.32707 0.50883-0.32707 0.50883" stroke="#d7b11e" stroke-linecap="round"/>
+   <path d="m5.8314 291.48s0.19949 0.1165 0.067355 0.45492c-0.13214 0.33845 0.049462 0.60286 0.049462 0.60286" stroke="#d7b11e" stroke-linecap="round"/>
+  </g>
+  <g fill="#d7b11e">
+   <circle transform="rotate(14.021)" cx="73.308" cy="282.73" r=".10626" style="paint-order:markers fill stroke"/>
+   <circle transform="rotate(14.021)" cx="76.75" cy="282.73" r=".10626" style="paint-order:markers fill stroke"/>
+   <circle transform="rotate(14.021)" cx="76.787" cy="283.16" r=".10626" style="paint-order:markers fill stroke"/>
+   <circle transform="rotate(14.021)" cx="76.75" cy="283.64" r=".10626" style="paint-order:markers fill stroke"/>
+   <circle transform="rotate(14.021)" cx="73.267" cy="283.18" r=".10626" style="paint-order:markers fill stroke"/>
+   <circle transform="rotate(14.021)" cx="73.304" cy="283.65" r=".10626" style="paint-order:markers fill stroke"/>
+   <circle transform="rotate(14.021)" cx="73.433" cy="284.18" r=".10626" style="paint-order:markers fill stroke"/>
+   <circle transform="rotate(14.021)" cx="76.593" cy="284.21" r=".10626" style="paint-order:markers fill stroke"/>
+   <circle transform="rotate(14.021)" cx="73.96" cy="281.08" r=".10626" style="paint-order:markers fill stroke"/>
+   <circle transform="rotate(14.021)" cx="76.113" cy="281.09" r=".10626" style="paint-order:markers fill stroke"/>
+  </g>
+  <circle transform="rotate(14.021)" cx="74.56" cy="280.52" r=".10626" fill="#ab5600" style="paint-order:markers fill stroke"/>
+  <path d="m4.7865 290.37-0.90874 3.706" fill="none" stroke="#fff" stroke-opacity=".49597" stroke-width=".13229"/>
+  <circle transform="rotate(14.021)" cx="74.995" cy="280.5" r=".10626" fill="#ab5600" style="paint-order:markers fill stroke"/>
+  <circle transform="rotate(14.021)" cx="75.429" cy="280.5" r=".10626" fill="#ab5600" style="paint-order:markers fill stroke"/>
+  <g fill="none" stroke-linecap="round" stroke-width=".13229">
+   <path d="m3.5551 293.99 0.64953 0.16426" stroke="#ab5600"/>
+   <g stroke="#d7b11e">
+    <g>
+     <path d="m2.3769 294.09 0.35651-0.21404"/>
+     <path d="m2.772 294.64 0.33538-0.39466"/>
+     <path d="m5.2486 294.8-0.21403-0.3565"/>
+     <path d="m4.6531 295.05-0.10847-0.50643"/>
+    </g>
+    <circle transform="rotate(14.021)" cx="75.013" cy="285.06" r=".27769" style="paint-order:markers fill stroke"/>
+   </g>
+  </g>
+  <path d="m3.1523 295.87 0.38967-0.35965 0.1821 0.50856z" fill="#3e1f00"/>
+ </g>
+</svg>

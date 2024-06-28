@@ -1,0 +1,16 @@
+<ng-container *ngIf="min !== max">
+  Between {{ min }} and {{ max }} Vassals can go.
+</ng-container>
+<ng-container *ngIf="min === max">
+  <ng-container *ngIf="min === 1">
+    Only {{ min }} Vassal may go.
+  </ng-container>
+  <ng-container *ngIf="min > 1">
+    Exactly {{ min }} Vassals must go.
+  </ng-container>
+</ng-container>
+
+<ng-container *ngIf="requiredElement">
+  <ng-container *ngIf="max === 1">It must be {{ requiredElement }}-type.</ng-container>
+  <ng-container *ngIf="max > 1">At least one must be {{ requiredElement }}-type.</ng-container>
+</ng-container>

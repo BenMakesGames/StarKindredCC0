@@ -1,0 +1,50 @@
+.vassals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.none {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.chance-of-success {
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Caesar Dressing',Helvetica,Arial,sans-serif;
+
+  > :last-child {
+    display: block;
+    font-size: 1rem;
+  }
+}
+
+.selected-members {
+  position: sticky;
+  top: 0;
+  background-color: rgba(202, 202, 202, 0.95);
+  z-index: 1;
+  margin: -1em -1em 1em;
+  padding: 1em 0;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  padding-top: 1em;
+  justify-content: center;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+app-describe-vassal-range {
+  text-align: center;
+  display: block;
+  font-size: 80%;
+  font-style: italic;
+}

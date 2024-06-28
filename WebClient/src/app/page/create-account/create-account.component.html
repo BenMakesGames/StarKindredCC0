@@ -1,0 +1,55 @@
+<main>
+  <div class="sky">
+
+  </div>
+  <div class="middle">
+    <img src="/assets/god-and-goddess.svg" class="god-and-goddess" alt="welcoming god & goddess" />
+    <form [hidden]="step != 1" (submit)="step = 2">
+      <p>A new god appears! What is your name?</p>
+      <p>
+        <label>Name</label>
+        <input type="text" name="personalName" maxlength="20" [(ngModel)]="request.personalName" autocomplete="off">
+      </p>
+      <div class="buttons">
+        <a routerLink="/" class="button wire">Cancel</a>
+        <button type="submit" [class.disabled]="request.personalName.trim().length == 0">Next &raquo;</button>
+      </div>
+    </form>
+    <form [hidden]="step != 2" (submit)="step = 3">
+      <p>Who is your prophet?</p>
+      <p>
+        <label>Name</label>
+        <input type="text" name="vassalName" [(ngModel)]="request.vassalName" autocomplete="off">
+      </p>
+      <p class="species">
+        <label *ngFor="let portrait of availablePortraits" [class.selected]="request.portrait == portrait">
+          <input type="radio" [value]="portrait" name="species" [(ngModel)]="request.portrait">
+          <img [src]="'/assets/vassal/portraits/human/' + portrait + '.svg'" alt="portrait of a Human" />
+        </label>
+      </p>
+      <div class="buttons">
+        <button type="button" (click)="step = 1">&laquo; Back</button>
+        <button type="submit" [class.disabled]="request.vassalName.trim().length == 0">Next &raquo;</button>
+      </div>
+    </form>
+    <form [hidden]="step != 3" (submit)="doCreateAccount()" [class.disabled]="signingUp">
+      <p>Sorry to break the fourth wall, but some additional information is required to establish your divinity:</p>
+      <p>
+        <label>Email Address</label>
+        <input type="email" name="email" [(ngModel)]="request.email">
+      </p>
+      <p>
+        <label>Passphrase (at least 10 characters)</label>
+        <input type="password" name="passphrase" [(ngModel)]="request.passphrase">
+      </p>
+      <div class="buttons">
+        <button type="button" (click)="step = 2">&laquo; Back</button>
+        <button type="submit" [class.disabled]="request.email.trim().length == 0 || request.passphrase.length < 10">Done</button>
+      </div>
+    </form>
+    <img src="/assets/clouds.svg" class="clouds" alt="heavenly clouds" />
+  </div>
+  <div class="below-clouds">
+
+  </div>
+</main>

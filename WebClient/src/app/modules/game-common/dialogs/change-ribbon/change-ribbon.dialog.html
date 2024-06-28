@@ -1,0 +1,21 @@
+<app-dialog>
+  <p class="preview">
+    <app-card-ribbon [color]="color|hslToCss">{{ name }}</app-card-ribbon>
+  </p>
+  <p>
+    <label>Hue</label>
+    <input type="range" min="0" max="360" [value]="color.hue" (input)="doUpdateHue($event)">
+  </p>
+  <p>
+    <label>Saturation</label>
+    <input type="range" min="0" max="100" [value]="color.saturation" (input)="doUpdateSaturation($event)">
+  </p>
+  <p>
+    <label>Luminosity</label>
+    <input type="range" min="0" max="100" [value]="color.luminosity" (input)="doUpdateLuminosity($event)">
+  </p>
+  <div class="buttons centered" [class.disabled]="saving">
+    <button type="button" (click)="doSaveChanges()">Save</button>
+    <button type="button" (click)="doClose()" class="wire">Cancel</button>
+  </div>
+</app-dialog>

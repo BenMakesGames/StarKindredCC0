@@ -1,0 +1,28 @@
+<main class="no-padding">
+  <app-loading *ngIf="!town"></app-loading>
+  <ng-container *ngIf="town">
+    <img src="/assets/town.svg" class="map" alt="town map" />
+    <div
+      *ngFor="let b of town.buildings; let i = index"
+      class="building"
+      [style.left]="'calc(max(min(960px, 100vw), 100vh) * ' + TownPositions[b.position].left / 100 + ')'"
+      [style.top]="'calc(max(min(960px, 100vw), 100vh) * ' + TownPositions[b.position].top / 100 + ')'"
+      [style.z-index]="TownPositions[b.position].top - TownPositions[b.position].top % 1"
+    >
+      <img [src]="'/assets/buildings/' + b.type.toLowerCase() + '.svg'" alt="" aria-hidden="true" />
+      <div class="label"><div class="type">{{ b.type|buildingTitle }}</div><div class="level">level {{ b.level }}</div></div>
+    </div>
+
+    <div
+      *ngFor="let d of town.decorations"
+      class="decoration"
+      [style.left]="'calc(max(min(960px, 100vw), 100vh) * ' + d.x / 100 + ')'"
+      [style.top]="'calc(max(min(960px, 100vw), 100vh) * ' + d.y / 100 + ')'"
+      [style.z-index]="d.y - d.y % 1"
+      [class.flip-x]="d.flipX"
+    >
+      <img [src]="'/assets/decorations/' + d.type.toLowerCase() + '.svg'" [style.width.%]="d.scale" [alt]="d.type" />
+    </div>
+
+  </ng-container>
+</main>

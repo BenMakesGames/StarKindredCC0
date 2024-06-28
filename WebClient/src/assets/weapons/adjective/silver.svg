@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#868686">
+  <rect transform="rotate(45)" x="3.6293" y="1.0779" width="1.894" height="1.894" opacity=".31938"/>
+  <rect transform="rotate(45)" x="7.0732" y="1.0137" width="1.1194" height="1.1194" opacity=".22216"/>
+  <rect transform="rotate(45)" x="8.2262" y="-.45057" width=".60709" height=".60709" opacity=".16778"/>
+  <rect transform="rotate(45)" x="9.1151" y="1.3918" width=".60709" height=".60709" opacity=".16778"/>
+  <rect transform="rotate(45)" x="9.4323" y="-1.0431" width=".60709" height=".60709" opacity=".16778"/>
+  <rect transform="rotate(45)" x="6.0445" y="3.207" width=".60709" height=".60709" opacity=".16778"/>
+  <rect transform="rotate(45)" x="2.3612" y=".8606" width=".60709" height=".60709" opacity=".16778"/>
+  <rect transform="rotate(45)" x="8.0484" y="-3.1507" width=".60709" height=".60709" opacity=".16778"/>
+  <rect transform="rotate(45)" x="2.9939" y="-2.9642" width=".60709" height=".60709" opacity=".16778"/>
+  <rect transform="rotate(45)" x="2.0561" y="-1.2006" width="1.1194" height="1.1194" opacity=".22216"/>
+  <rect transform="rotate(45)" x="4.2651" y="-3.4833" width="2.9966" height="2.9966" opacity=".39402"/>
+ </g>
+</svg>

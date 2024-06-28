@@ -1,0 +1,50 @@
+<div class="carousel">
+  <div class="panels" [style.left.%]="panelIndex * -100">
+    <div>
+      <p class="buttons">
+        <button type="button" class="full-width" (click)="panelIndex = 1">Log In</button>
+        <a class="button full-width" routerLink="/createAccount">Create Account</a>
+      </p>
+    </div>
+    <div>
+      <p class="buttons">
+        <button type="button" class="full-width" (click)="panelIndex = 3">Email Magic Link</button>
+        <button type="button" class="full-width" (click)="panelIndex = 2">Enter Passphrase</button>
+        <button type="button" class="wire full-width" (click)="panelIndex = 0">&laquo; Back</button>
+      </p>
+    </div>
+    <div>
+      <form (submit)="doLogIn()" [class.disabled]="loggingIn">
+        <p>
+          <label>Email</label>
+          <input type="email" name="email" [(ngModel)]="logInRequest.email">
+        </p>
+        <p>
+          <label>Passphrase</label>
+          <input type="password" name="passphrase" [(ngModel)]="logInRequest.passphrase">
+        </p>
+        <p class="buttons">
+          <button type="submit" class="full-width" [class.disabled]="logInRequest.email.trim().length == 0 || logInRequest.passphrase.length == 0">Log In</button>
+          <button type="button" class="wire full-width" (click)="panelIndex = 1">&laquo; Back</button>
+          <button type="button" class="link-text full-width" [disabled]="loggingIn" (click)="panelIndex = 3" style="text-align: center;">I forgot my passphrase...</button>
+        </p>
+      </form>
+    </div>
+    <div>
+      <form (submit)="doEmailMagicLink()" [class.disabled]="loggingIn">
+        <p>
+          <label>Email</label>
+          <input type="email" name="email" [(ngModel)]="logInRequest.email">
+        </p>
+        <p class="buttons">
+          <button type="submit" class="full-width" [class.disabled]="logInRequest.email.trim().length == 0">Email Magic Link</button>
+          <button type="button" class="wire full-width" (click)="panelIndex = 1">&laquo; Back</button>
+        </p>
+      </form>
+    </div>
+    <div>
+      <p style="font-weight:bold;">Email sent!</p>
+      <p>Click the link inside to get magically logged in.</p>
+    </div>
+  </div>
+</div>

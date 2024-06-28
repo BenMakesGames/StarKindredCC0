@@ -1,0 +1,12 @@
+.vassals {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  justify-content: center;
+
+  > img {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+  }
+}

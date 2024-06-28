@@ -1,0 +1,23 @@
+main {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  position: relative;
+
+  > app-loading {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+img.map {
+  width: max(min(1920px, 220vw), 220vh);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

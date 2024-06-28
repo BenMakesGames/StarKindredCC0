@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  left: -2px;
+  width: calc(100% + 4px);
+  color: #eee;
+  text-align: center;
+
+  > div {
+    position: relative;
+
+    > .middle {
+      padding: 0.25em 0;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    > .left, > .right {
+      filter: brightness(66.67%);
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      top: 4px;
+    }
+
+    > .left {
+      left: -3px;
+    }
+
+    > .right {
+      right: -3px;
+    }
+  }
+}

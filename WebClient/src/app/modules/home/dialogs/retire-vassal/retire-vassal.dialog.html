@@ -1,0 +1,15 @@
+<app-dialog>
+  <form (submit)="doRetire()" [class.disabled]="retiring">
+    <h4>Really Retire {{ vassalName }}?</h4>
+    <p>You'll get some rewards based on the Vassal's level ({{ vassalLevel }}) and Nature ({{ vassalNature|natureTitle}}), but a retired Vassal is gone forever! There's no getting them back!</p>
+    <p class="radio-checkbox-list">
+      <label>
+        <input type="checkbox" name="confirm" value="1" [(ngModel)]="confirm" /> Confirm
+      </label>
+    </p>
+    <div class="buttons centered">
+      <button type="submit" class="full-width" [class.disabled]="!confirm">Retire {{ vassalName }}</button>
+      <button type="button" class="full-width wire" (click)="doClose()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(1.0788 1.0386 -1.0386 1.0788 4.7627 -4.4339)" fill="#494949">
+  <rect x="3.3987" y="3.9552" width=".67687" height="3.9934" style="paint-order:stroke fill markers"/>
+  <circle cx="3.7314" cy="2.4695" r="1.3183" style="paint-order:stroke fill markers"/>
+  <path d="m5.3063 2.3899a1.587 1.7748 0 0 1-1.5747 1.5637 1.587 1.7748 0 0 1-1.5516-1.4066 1.587 1.7748 0 0 0-0.012476 0.21342 1.587 1.7748 0 0 0 1.5867 1.7751 1.587 1.7748 0 0 0 1.5872-1.7751 1.587 1.7748 0 0 0-0.035117-0.37052z" style="paint-order:stroke fill markers"/>
+ </g>
+</svg>

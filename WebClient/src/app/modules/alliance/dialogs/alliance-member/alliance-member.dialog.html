@@ -1,0 +1,16 @@
+<app-dialog>
+  <h4>{{ memberName }}</h4>
+  <div class="buttons centered">
+    <ng-container *ngIf="myId !== memberId">
+      <button type="button" *ngIf="rights.indexOf('PromoteDemote') >= 0" (click)="doChangeTitle()">Change Title</button>
+      <button type="button" *ngIf="rights.indexOf('Kick') >= 0" (click)="doKick()">Kick</button>
+      <a class="button" [routerLink]="'/home/view/' + memberId" matDialogClose>View Town</a>
+    </ng-container>
+    <ng-container *ngIf="myId === memberId">
+      <button type="button" (click)="doChangeAvatar()">Change Picture</button>
+      <button type="button" (click)="doChangeRibbon()">Change Ribbon</button>
+      <button type="button" (click)="doLeave()">Leave Alliance</button>
+    </ng-container>
+    <button type="button" (click)="doCancel()">OK</button>
+  </div>
+</app-dialog>

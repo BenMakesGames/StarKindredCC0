@@ -1,0 +1,70 @@
+<ng-container *ngIf="!previewMode">
+  <div class="decoration-limit" *ngIf="town">{{ decorations.length }} / {{ town.maxDecorations }} decorations</div>
+  <app-decoration-box (decorate)="doDecorate($event)" [placed]="decorations" [maxDecorations]="town?.maxDecorations ?? 20"></app-decoration-box>
+  <div class="extra-buttons right">
+    <button type="button" (click)="doStopEditing()" class="invisible"><img src="/assets/ui/diskette.svg" alt="save & stop editing"></button>
+    <button type="button" (click)="doToggleMoreMenu($event)" class="invisible"><img src="/assets/ui/white-vertical-dots.svg" alt="more options"></button>
+  </div>
+  <div class="extra-buttons left" *ngIf="dragging">
+    <button type="button" (click)="doRemove()"><img src="/assets/ui/white-eraser.svg" alt="remove from town" /></button>
+    <button type="button" (click)="doFlip()"><img src="/assets/ui/flip-left-right.svg" alt="flip left/right" /></button>
+    <button type="button" (click)="doExpand()" [class.disabled]="dragging.scale >= 200"><img src="/assets/ui/expand.svg" alt="expand" /></button>
+    <button type="button" (click)="doShrink()" [class.disabled]="dragging.scale <= 50"><img src="/assets/ui/shrink.svg" alt="shrink" /></button>
+  </div>
+</ng-container>
+<main #main class="no-padding" (click)="doClickMap($event)" [class.preview-mode]="previewMode">
+  <app-loading *ngIf="!town"></app-loading>
+  <ng-container *ngIf="town">
+    <img src="/assets/town.svg" class="map" alt="town map" [class.dragging]="dragging" />
+    <div
+      *ngFor="let b of town.buildings; let i = index"
+      class="building"
+      [style.left]="'calc(max(min(960px, 100vw), 100vh) * ' + b.left / 100 + ')'"
+      [style.top]="'calc(max(min(960px, 100vw), 100vh) * ' + b.top / 100 + ')'"
+      [style.z-index]="b.top - b.top % 1"
+    >
+      <img [src]="'/assets/buildings/' + b.type.toLowerCase() + '.svg'" alt="" aria-hidden="true" />
+      <div class="label"><div class="type">{{ b.type|buildingTitle }}</div><div class="level">level {{ b.level }}</div></div>
+    </div>
+
+    <button
+      *ngFor="let d of decorations"
+      class="decoration"
+      [style.left]="'calc(max(min(960px, 100vw), 100vh) * ' + d.x / 100 + ')'"
+      [style.top]="'calc(max(min(960px, 100vw), 100vh) * ' + d.y / 100 + ')'"
+      [style.z-index]="d.y - d.y % 1"
+      [class.flip-x]="d.flipX"
+      [class.selected]="this.dragging == d"
+      (click)="doClickDecoration($event, d)"
+    >
+      <img [src]="'/assets/decorations/' + d.type.toLowerCase() + '.svg'" [style.width.%]="d.scale" [alt]="d.type" />
+    </button>
+
+  </ng-container>
+</main>
+<div class="advanced-tools" *ngIf="this.dragging && useAdvancedTools" [class.left]="advancedEditorLeft">
+  <p>
+    <label>X</label>
+    <input type="number" [(ngModel)]="dragging.x" min="0" max="100" step="0.1" />
+  </p>
+  <p>
+    <label>Y</label>
+    <input type="number" [(ngModel)]="dragging.y" min="0" max="100" step="0.1" />
+  </p>
+  <p>
+    <label>Scale</label>
+    <input type="number" [(ngModel)]="dragging.scale" min="50" max="200" step="5" />
+  </p>
+  <div class="buttons">
+    <button type="button" class="full-width" (click)="clearSelection()">Done</button>
+    <button type="button" class="full-width invisible move-advanced-tools" (click)="doMoveAdvancedEditor()">&larr; / &rarr;</button>
+  </div>
+</div>
+<div class="more-menu" [class.open]="showMoreMenu" #moreMenu>
+  <button (click)="doClearAllDecorations()">Remove All Decorations</button>
+  <button (click)="doShowAdvancedTools()">{{ useAdvancedTools ? 'Hide' : 'Show' }} "Advanced" Placement Tools</button>
+  <button (click)="doPreviewMode($event)">Preview Mode</button>
+</div>
+<div class="saving" *ngIf="saving">
+  <app-loading text="Saving"></app-loading>
+</div>

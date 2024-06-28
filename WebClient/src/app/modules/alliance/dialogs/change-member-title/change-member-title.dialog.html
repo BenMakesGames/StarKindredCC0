@@ -1,0 +1,16 @@
+<app-dialog>
+  <form (submit)="doChangeTitle()" [class.disabled]="submitting">
+    <h4>Change Title</h4>
+    <app-loading *ngIf="!titles"></app-loading>
+    <ng-container *ngIf="titles">
+      <p class="radio-checkbox-list">
+        <label *ngFor="let title of titles"><input name="title" type="radio" [(ngModel)]="titleId" [value]="title.id" /> {{ title.title }}</label>
+        <label><input name="title" type="radio" [(ngModel)]="titleId" [value]="null" /> No Title</label>
+      </p>
+      <div class="buttons centered">
+        <button type="submit">Change</button>
+        <button type="button" (click)="doClose()" class="wire">Cancel</button>
+      </div>
+    </ng-container>
+  </form>
+</app-dialog>

@@ -1,0 +1,10 @@
+<div *ngIf="href">
+  <a [routerLink]="href" [queryParams]="prevQuery" class="button" [class.disabled]="page <= 1">&laquo; Prev</a>
+  <span>{{ page }} / {{ totalPages }}</span>
+  <a [routerLink]="href" [queryParams]="nextQuery" class="button" [class.disabled]="page >= totalPages">Next &raquo;</a>
+</div>
+<div *ngIf="!href">
+  <button class="button" [class.disabled]="page <= 1" (click)="pageChange.emit(page - 1)">&laquo; Prev</button>
+  <span>{{ page }} / {{ totalPages }}</span>
+  <button class="button" [class.disabled]="page >= totalPages" (click)="pageChange.emit(page + 1)">Next &raquo;</button>
+</div>

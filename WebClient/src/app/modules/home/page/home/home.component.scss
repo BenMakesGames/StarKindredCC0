@@ -1,0 +1,220 @@
+.no-clicky {
+  pointer-events: none;
+
+  > .label {
+    opacity: 0.5;
+  }
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  position: relative;
+  z-index: 0;
+}
+
+img.map {
+  width: max(min(960px, 100vw), 100vh);
+  display: block;
+  position: absolute;
+  z-index: -100; // below all objects
+  left: 0;
+  top: 0;
+}
+
+.harvest {
+  text-align: left;
+}
+
+.building,.empty-space {
+  position: absolute;
+  width: calc(max(min(960px, 100vw), 100vh) * 0.11);
+  height: calc(max(min(960px, 100vw), 100vh) * 0.11);
+  background: transparent;
+  padding: 0;
+}
+
+.decoration {
+  position: absolute;
+  width: calc(max(min(960px, 100vw), 100vh) * 0.07);
+  height: calc(max(min(960px, 100vw), 100vh) * 0.07);
+  pointer-events: none;
+
+  > img {
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.goodie {
+  position: absolute;
+  background-color: transparent;
+  padding: 0;
+  background-image: url(/assets/goodie.svg);
+  background-size: cover;
+  width: 28px;
+  height: 36px;
+  border-radius: 0;
+  z-index: 200;
+
+  > img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    position: relative;
+    top: -4px;
+  }
+}
+
+.empty-space {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/assets/buildsite.svg);
+  background-size: cover;
+  border-radius: 0;
+
+  > img {
+    height: 1em;
+    width: 1em;
+  }
+
+  > span {
+    padding-right: 0.25em;
+  }
+}
+
+.building {
+  > button.power {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 50%;
+    bottom: -2em;
+    transform: translateX(-50%);
+
+    > img {
+      display: block;
+      width: 1em;
+      padding: 0.25em;
+    }
+  }
+
+  > button.main {
+    > img {
+      position: absolute;
+      display: block;
+      width: 130%;
+      height: 130%;
+      left: -15%;
+      top: -15%;
+    }
+
+    > .label {
+
+      > div {
+        position: absolute;
+        background-color: #900;
+        border-radius: 1.2em;
+        padding: 0.25em 0.75em;
+        white-space: pre;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      > .type {
+        bottom: -1.2em;
+        min-width: 3.5em;
+      }
+
+      > .level {
+        bottom: 0;
+        font-size: 66.67%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    > .yield {
+      position: absolute;
+      top: -1.5em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    > .yield-progress
+    {
+      pointer-events: none;
+      position: absolute;
+      top: -2.5em;
+      left: 0;
+      width: 100%;
+      > app-progress-bar {
+        font-size: 50%;
+      }
+    }
+  }
+}
+
+.rumor {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  background: transparent;
+  padding: 0;
+  animation: wiggle 2s infinite;
+  border-radius: 0;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(0deg); }
+  32% { transform: rotate(10deg); }
+  36% { transform: rotate(-10deg); }
+  40% { transform: rotate(7.5deg); }
+  44% { transform: rotate(-7.5deg); }
+  48% { transform: rotate(5deg); }
+  52% { transform: rotate(-5deg); }
+  54% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+a.decoration-mode {
+  position: fixed;
+  bottom: 1.5em;
+  background-color: #333;
+  left: calc(50% - 1em + 3em);
+  padding: 0.25em;
+  z-index: var(--z-index-nav);
+  border-radius: 50%;
+  > img {
+    width: 1.5em;
+    height: 1.5em;
+    display: block;
+  }
+}
+
+.town-name {
+  font-size: 150%;
+  display: block;
+  position: absolute;
+  left: calc(max(min(960px, 100vw), 100vh) - 0.75em);
+  top: calc(max(min(960px, 100vw), 100vh) - 2.25em);
+  transform: translateX(-100%);
+  z-index: 200;
+}
+
+app-card-ribbon {
+  white-space: pre;
+  font-family: 'Caesar Dressing', Helvetica, Arial, sans-serif;
+  width: fit-content;
+  display: block;
+  position: relative;
+}

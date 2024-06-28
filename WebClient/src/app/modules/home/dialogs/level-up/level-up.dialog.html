@@ -1,0 +1,12 @@
+<app-dialog>
+  <form (submit)="doLevelUp()">
+    <h4>Level Up</h4>
+    <p>{{ name }} Level {{ level }} &rarr; {{ level + 1 }}</p>
+    <h5>Cost</h5>
+    <p><app-describe-yield [yield]="cost" [orientation]="YieldOrientation.Horizontal"></app-describe-yield></p>
+    <div class="buttons">
+      <button type="submit" class="full-width">Level Up</button>
+      <button type="button" class="full-width wire" (click)="doCancel()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

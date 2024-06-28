@@ -1,0 +1,16 @@
+<main>
+  <h1><a routerLink="/settings">Account</a> &gt; Passphrase</h1>
+  <form (submit)="doChangePassphrase()" [class.disabled]="working">
+    <p>
+      <label for="newPassphrase">New Passphrase</label>
+      <input id="newPassphrase" type="password" name="newPassphrase" [(ngModel)]="newPassphrase">
+    </p>
+    <p>
+      <label for="newPassphrase2">Confirm New Passphrase</label>
+      <input id="newPassphrase2" type="password" name="newPassphrase2" [(ngModel)]="newPassphrase2">
+    </p>
+    <p class="buttons centered">
+      <button type="submit" [class.disabled]="!newPassphrase || !newPassphrase2">Update</button>
+    </p>
+  </form>
+</main>

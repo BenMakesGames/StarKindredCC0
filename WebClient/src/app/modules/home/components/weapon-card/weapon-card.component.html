@@ -1,0 +1,16 @@
+<div class="weapon">
+  <img *ngIf="adjective" [src]="'/assets/weapons/adjective/' + adjective + '.svg'" alt="" aria-hidden="true" />
+  <img [src]="'/assets/weapons/' + image + '.svg'" alt="" aria-hidden="true" />
+  <app-card-ribbon color="#960">{{ name }}</app-card-ribbon>
+  <div class="level" [class.levelAndRepair]="level && repairValue">
+    <span *ngIf="level" [class.small]="!!repairValue">Level {{ level }}</span>
+    <span *ngIf="repairValue">Repairs {{ repairValue }}</span>
+  </div>
+  <app-vassal-medallion
+    *ngIf="vassal"
+    [species]="vassal.species"
+    [portrait]="vassal.portrait"
+    [element]="vassal.element"
+    [level]="vassal.level"
+  ></app-vassal-medallion>
+</div>

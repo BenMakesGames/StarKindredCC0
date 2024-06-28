@@ -1,0 +1,38 @@
+.options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding-bottom: 1em;
+
+  > label {
+    opacity: 1;
+
+    > input[type=radio]
+    {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+    }
+  }
+}
+
+.buttons
+{
+  > button {
+    app-resource {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.cost {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+}

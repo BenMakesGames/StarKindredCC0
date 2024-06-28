@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#ffd500">
+  <g opacity=".73451">
+   <circle cx="3.3234" cy="3.3445" r="1.9156" opacity="1"/>
+   <path transform="translate(-2.7857 -.18385)" d="m9.0204 5.19-1.8974-0.79303 1.0339 1.7777-1.4495-1.4588 0.27492 2.038-0.78093-1.9024-0.52593 1.9881 0.0065467-2.0565-1.2467 1.6355 0.79303-1.8974-1.7777 1.0339 1.4588-1.4495-2.038 0.27491 1.9024-0.78093-1.9881-0.52593 2.0565 0.0065467-1.6355-1.2467 1.8974 0.79303-1.0339-1.7777 1.4495 1.4588-0.27491-2.038 0.78093 1.9024 0.52593-1.9881-0.0065467 2.0565 1.2467-1.6355-0.79303 1.8974 1.7777-1.0339-1.4588 1.4495 2.038-0.27491-1.9024 0.78093 1.9881 0.52593-2.0565-0.0065467z" opacity="1"/>
+  </g>
+  <g stroke-linecap="round" stroke-linejoin="round" stroke-width=".026458">
+   <circle cx="6.175" cy="7.1349" r=".20756" opacity=".26991" style="paint-order:markers stroke fill"/>
+   <circle cx="6.8236" cy="1.3232" r=".20756" opacity=".55752" style="paint-order:markers stroke fill"/>
+   <circle cx="7.8614" cy="2.9578" r=".20756" opacity=".26991" style="paint-order:markers stroke fill"/>
+   <circle cx="6.9274" cy="4.4366" r=".20756" opacity=".55752" style="paint-order:markers stroke fill"/>
+   <circle cx="7.7317" cy="5.8117" r=".20756" opacity=".26991" style="paint-order:markers stroke fill"/>
+   <circle cx="2.5686" cy="7.2128" r=".20756" opacity=".55752" style="paint-order:markers stroke fill"/>
+   <circle cx=".70052" cy="6.5641" r=".20756" opacity=".55752" style="paint-order:markers stroke fill"/>
+   <circle cx="4.8258" cy="6.4344" r=".20756" opacity=".55752" style="paint-order:markers stroke fill"/>
+   <circle cx="4.8777" cy="7.8614" r=".20756" opacity=".26991" style="paint-order:markers stroke fill"/>
+   <circle cx="7.4722" cy="7.3944" r=".20756" opacity=".11504" style="paint-order:markers stroke fill"/>
+  </g>
+ </g>
+</svg>

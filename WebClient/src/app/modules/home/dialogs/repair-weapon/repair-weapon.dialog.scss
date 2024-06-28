@@ -1,0 +1,18 @@
+.weapons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+label {
+  opacity: unset;
+  font-size: unset;
+  position: relative;
+
+  > input[type=radio] {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+  }
+}

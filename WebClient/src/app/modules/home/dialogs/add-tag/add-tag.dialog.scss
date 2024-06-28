@@ -1,0 +1,34 @@
+.tag-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.buttons
+{
+  flex-direction: column;
+  align-items: center;
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+
+  > label {
+    opacity: unset;
+    font-size: unset;
+    position: relative;
+    width: 2em;
+    height: 2em;
+
+    > input[type=radio] {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+    }
+  }
+}

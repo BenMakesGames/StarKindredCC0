@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <path d="m0.25119 2.5592s0.56763 0.35103 2.0574 0.36627c1.4897 0.015243 2.1434-0.71643 3.8004-0.73167 1.657-0.015243 2.1497 0.3654 2.1497 0.3654" fill="none" stroke="#333" stroke-linecap="round" stroke-width=".26458"/>
+ <ellipse cx="1.4273" cy="4.6385" rx=".64822" ry=".65" fill="#333"/>
+ <path d="m1.9434 4.6912v-2.4471l0.91514 0.57353" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width=".26458px"/>
+ <ellipse cx="4.0418" cy="5.3276" rx=".64822" ry=".65" fill="#333"/>
+ <path d="m4.5581 5.3598v-2.4471l0.91514 0.57353" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width=".26458px"/>
+ <ellipse cx="6.8206" cy="3.1056" rx=".64822" ry=".65" fill="#333"/>
+ <g fill="none" stroke="#333" stroke-linecap="round">
+  <path d="m6.3035 3.0712v2.4471l-0.91514-0.57353" stroke-linejoin="round" stroke-width=".26458px"/>
+  <path d="m0.25119 4.3789s0.56763 0.35103 2.0574 0.36627c1.4897 0.015243 2.1434-0.71643 3.8004-0.73167 1.657-0.015243 2.1497 0.3654 2.1497 0.3654" stroke-width=".26458"/>
+  <path d="m0.25119 6.1986s0.56763 0.35103 2.0574 0.36627c1.4897 0.015243 2.1434-0.71643 3.8004-0.73167 1.657-0.015243 2.1497 0.3654 2.1497 0.3654" stroke-width=".26458"/>
+ </g>
+</svg>

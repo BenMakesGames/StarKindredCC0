@@ -1,0 +1,16 @@
+<app-dialog>
+  <form (submit)="doDismiss()" [class.disabled]="dismissing">
+    <h4>Really Dismiss {{ vassalName }}?</h4>
+    <p>After a Vassal has acted according to their Nature at least 10 times, they can be <em>retired</em>, instead, for rewards.</p>
+    <p>Either way, once a Vassal is dismissed or retired, they're gone forever! There's no getting them back!</p>
+    <p class="radio-checkbox-list">
+      <label>
+        <input type="checkbox" name="confirm" value="1" [(ngModel)]="confirm" /> Confirm
+      </label>
+    </p>
+    <div class="buttons centered">
+      <button type="submit" class="full-width" [class.disabled]="!confirm">Dismiss {{ vassalName }}</button>
+      <button type="button" class="full-width wire" (click)="doClose()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

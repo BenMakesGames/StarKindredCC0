@@ -1,0 +1,29 @@
+{
+  "DiscordLogger": {
+    "WebhookUrl": "https://discord.com/api/webhooks/YOUR_WEBHOOK_URL",
+    "EnvironmentName": "Development",
+    "BotName": "YOUR_BOT_NAME"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "LogSqlToConsole": true,
+  "ConnectionStrings": {
+    "Db": "server=localhost;user=root;port=4406;password=YOUR_PASSWORD;database=YOUR_DATABASE_NAME"
+  },
+  "AzureMailer": {
+    "ConnectionString": "endpoint=https://YOUR_SERVICE.communication.azure.com/;accesskey=KEY GOES HERE",
+    "SenderAddress": "noreply@starkindred.com"
+  },
+  "APIAddress": "http://localhost:5245",
+  "CORS": {
+    "AllowedOrigins": [ "http://localhost:4200" ]
+  },
+  "Stripe": {
+    "ApiKey": "YOUR_STRIPE_API_KEY"
+  }
+}

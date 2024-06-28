@@ -1,0 +1,13 @@
+<app-dialog>
+  <app-loading *ngIf="!avatars"></app-loading>
+  <p class="avatars">
+    <label *ngFor="let a of avatars" [class.selected]="a === avatar">
+      <input type="radio" name="avatar" [value]="a" [(ngModel)]="avatar">
+      <img [src]="'/assets/avatars/' + a + '.svg'" [alt]="a.replace('-', ' ')" />
+    </label>
+  </p>
+  <div class="buttons centered" [class.disabled]="saving">
+    <button type="button" (click)="doSaveChanges()" [class.disabled]="!avatars">Save</button>
+    <button type="button" (click)="doClose()" class="wire">Cancel</button>
+  </div>
+</app-dialog>

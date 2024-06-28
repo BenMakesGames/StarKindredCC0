@@ -1,0 +1,48 @@
+.resource {
+  border-radius: 0.6em;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0 0.25em;
+  color: #333;
+
+  &.wheat {
+    background-color: #ec6;
+  }
+
+  &.meat {
+    background-color: #fbb;
+  }
+
+  &.gold {
+    background-color: #ff5;
+  }
+
+  &.stone {
+    background-color: #dcb;
+  }
+
+  &.marble {
+    background-color: #eef;
+  }
+
+  &.wood {
+    background-color: #c93;
+  }
+
+  &.quintessence {
+    background-color: #bfe;
+  }
+
+  &.wine {
+    background-color: #ecf;
+  }
+
+  img {
+    height: 1em;
+    width: 1em;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,5 @@
+<ul [style.width]="orientation == YieldOrientation.Stacked ? ((3 + yield.length / 4) + 'em') : 'auto'" [class]="orientation">
+  <li *ngFor="let y of yield; let i=index" [style.left.px]="i * 8" [style.top.px]="i * 12">
+    <app-resource [resource]="y" ></app-resource>
+  </li>
+</ul>

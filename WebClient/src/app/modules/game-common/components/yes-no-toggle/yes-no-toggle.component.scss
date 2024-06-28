@@ -1,0 +1,43 @@
+button {
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.label {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.toggle {
+  width: 2.75em;
+  height: 1.5em;
+  padding: 0.25em;
+  border-radius: 0.75em;
+  box-sizing: border-box;
+  background-color: #777;
+  transition: background-color;
+  transition-duration: 0.1s;
+
+  &.on
+  {
+    background-color: #090;
+    > div
+    {
+      margin-left: 1.25em;
+    }
+  }
+
+  > div {
+    background-color: #eee;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    transition: margin-left;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+  }
+}

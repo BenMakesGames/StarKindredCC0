@@ -1,0 +1,20 @@
+<app-dialog>
+  <app-assemble-a-team
+    [minVassals]="minVassals"
+    [maxVassals]="maxVassals"
+    [embarking]="embarking"
+    [tags]="tags"
+    [(selectedVassals)]="selectedVassals"
+    (select)="doGoOnMission()"
+    (cancel)="doCancel()"
+  >
+    <app-chance-of-success
+      *ngIf="mission !== 'Settlers' && mission !== 'BoatDate'"
+      [vassals]="selectedVassals"
+      [maxVassals]="maxVassals"
+      [element]="element"
+      [level]="level"
+      [applyHuntingBonus]="applyHuntingBonus"
+    ></app-chance-of-success>
+  </app-assemble-a-team>
+</app-dialog>

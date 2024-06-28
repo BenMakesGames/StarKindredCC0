@@ -1,0 +1,30 @@
+@media (min-width: 640px)
+{
+  .two-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2fr;
+    column-gap: 2em;
+  }
+
+}
+
+.see-more {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+
+  > a {
+    text-align: center;
+
+    > img {
+      width: 4em;
+      display: block;
+      filter: sepia(100%) brightness(0.3) saturate(3000%) hue-rotate(280deg);
+    }
+
+    > span {
+      display: block;
+      padding-top: 0.5em;
+    }
+  }
+}

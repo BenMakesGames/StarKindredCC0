@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BenMakesGames.RandomHelpers" Version="2.1.4" />
+      <PackageReference Include="EFCoreSecondLevelCacheInterceptor" Version="3.7.3" />
+      <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+      <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+      <PackageReference Include="logger-discord-provider" Version="2.3.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.11">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.11" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+      <PackageReference Include="Stripe.net" Version="40.15.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\StarKindred.AzureMailer\StarKindred.AzureMailer.csproj" />
+      <ProjectReference Include="..\StarKindred.Common\StarKindred.Common.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,49 @@
+:host {
+  display: block;
+  background-color: #ccc;
+  border-radius: 5px;
+  width: 7.5em;
+  height: 10em;
+  position: relative;
+
+  > img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  > app-card-ribbon {
+    font-size: 80%;
+    bottom: 2.5em;
+  }
+
+  > .rank, > .level {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  > .rank {
+    bottom: 1.3333em;
+    font-size: 80%;
+    color: var(--color-text);
+
+    &.leader
+    {
+      color: purple;
+      font-weight: bold;
+    }
+
+    &.no-level {
+      bottom: 0.8em;
+    }
+  }
+
+  > .level {
+    bottom: 0.5em;
+    color: var(--color-text);
+    font-size: 70%;
+  }
+}

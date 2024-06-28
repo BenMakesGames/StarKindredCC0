@@ -1,0 +1,14 @@
+<ng-container *ngIf="!broken">
+  <app-nav></app-nav>
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+</ng-container>
+<div class="noscript" *ngIf="broken">
+  <div>
+    <p>Eek: something went terribly wrong with the game.</p>
+    <p class="has-keyboard">Please reload with <kbd>F5</kbd>, or, even better, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>.</p>
+    <p class="has-no-keyboard">Please reload.</p>
+    <p>If the problem continues, clear your browser cache and reload again.</p>
+    <p>Sorry about all that :|</p>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.pulsing {
+  animation: pulse 1s ease-in-out alternate infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.selected {
+  outline: 2px solid #900;
+  animation-name: selected;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes selected {
+  0%, 100% { outline-offset: 0; }
+  50% { outline-offset: 5px; }
+}
+
+.shivering
+{
+  animation: shiver 0.82s linear both;
+  animation-iteration-count: infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shiver {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80%, 100% {
+    transform: translate3d(0, 1px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  0%, 40%, 60% {
+    transform: translate3d(1px, 0, 0);
+  }
+}

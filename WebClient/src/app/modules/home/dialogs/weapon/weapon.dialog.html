@@ -1,0 +1,27 @@
+<app-dialog>
+  <form (submit)="doLevelUp()">
+    <h4>{{ name }}</h4>
+    <p>
+      <label>Durability {{ durability }} / {{ maxDurability }} <app-help-button topic="weapon-durability"></app-help-button></label>
+      <app-progress-bar [progress]="durability" [maxProgress]="maxDurability" [pulsing]="false"></app-progress-bar>
+    </p>
+    <ul>
+      <li>{{ primaryBonus|describePrimaryBonus:level }}</li>
+      <li *ngIf="secondaryBonus">{{ secondaryBonus|describeSecondaryBonus:level }}</li>
+      <li *ngIf="!secondaryBonus" class="hidden-secondary-bonus">Another bonus will be revealed at level 3</li>
+    </ul>
+    <ng-container *ngIf="cost">
+      <h4>Level Up</h4>
+      <p>{{ name }} Level {{ level }} &rarr; {{ level + 1 }}</p>
+      <h5>Cost</h5>
+      <p><app-describe-yield [yield]="cost" [orientation]="YieldOrientation.Horizontal"></app-describe-yield></p>
+    </ng-container>
+    <div class="buttons">
+      <button type="submit" class="full-width" *ngIf="cost">Level Up</button>
+      <button type="button" class="full-width" [class.disabled]="durability == maxDurability" (click)="doRepair()">Repair</button>
+      <button type="button" class="full-width" *ngIf="equippedToVassalId" (click)="doUnequip()">Unequip</button>
+      <button type="button" class="full-width" *ngIf="hasScrappingI" (click)="doScrap()">Scrap</button>
+      <button type="button" class="full-width wire" (click)="doCancel()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

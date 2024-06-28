@@ -1,0 +1,4 @@
+<div [class]="'resource ' + resource.type.toLowerCase()" [title]="resource.type">
+  <img [src]="'/assets/resources/' + resource.type.toLowerCase() + '.svg'" [alt]="resource.type">
+  <span class="monospace-numbers">&times;{{ resource.quantity }}</span>
+</div>

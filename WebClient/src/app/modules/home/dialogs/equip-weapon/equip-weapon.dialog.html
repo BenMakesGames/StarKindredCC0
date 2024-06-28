@@ -1,0 +1,32 @@
+<app-dialog>
+  <h4>Equip</h4>
+  <app-loading *ngIf="!weapons"></app-loading>
+  <div *ngIf="weapons && weapons.length == 0">
+    <p>You don't have any equipment... yet.</p>
+    <div class="buttons centered">
+      <button type="button" (click)="doClose()">Darn</button>
+    </div>
+  </div>
+  <form *ngIf="weapons && weapons.length > 0" (submit)="doEquip()" [class.disabled]="equipping">
+    <p class="weapons">
+      <label
+        *ngFor="let w of weapons"
+        (click)="selected = w.id"
+        [class.selected]="selected == w.id"
+        [class.disabled]="!!w.vassal"
+      >
+        <input type="radio" [value]="w.id" name="weapon" [(ngModel)]="selected" />
+        <app-weapon-card
+          [name]="w.name"
+          [image]="w.image"
+          [level]="w.level"
+          [vassal]="w.vassal"
+        ></app-weapon-card>
+      </label>
+    </p>
+    <div class="buttons">
+      <button type="submit" class="full-width" [class.disabled]="selected == null">Equip</button>
+      <button type="button" class="full-width wire" (click)="doClose()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

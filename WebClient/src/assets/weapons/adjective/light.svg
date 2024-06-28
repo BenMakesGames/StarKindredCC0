@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <pattern id="pattern23176" patternTransform="matrix(8.5814 5.1342 -5.1342 8.5814 4.839 -2.5017)" xlink:href="#Strips1_1"/>
+  <pattern id="Strips1_1" width="2" height="1" patternTransform="translate(0) scale(10)" patternUnits="userSpaceOnUse">
+   <rect y="-.5" width="1" height="2"/>
+  </pattern>
+  <pattern id="pattern23176-0" patternTransform="matrix(9.0889 -4.1703 4.1703 9.0889 1.9413 1.8615)" xlink:href="#Strips1_1-6"/>
+  <pattern id="Strips1_1-6" width="2" height="1" patternTransform="translate(0) scale(10)" patternUnits="userSpaceOnUse">
+   <rect y="-.5" width="1" height="2"/>
+  </pattern>
+  <pattern id="pattern23176-0-4" patternTransform="matrix(9.8659 -1.6324 1.6324 9.8659 1.7754 2.4065)" xlink:href="#Strips1_1-6-1"/>
+  <pattern id="Strips1_1-6-1" width="2" height="1" patternTransform="translate(0) scale(10)" patternUnits="userSpaceOnUse">
+   <rect y="-.5" width="1" height="2"/>
+  </pattern>
+  <pattern id="pattern23176-1" patternTransform="matrix(9.4865 3.1632 -3.1632 9.4865 2.5114 .060111)" xlink:href="#Strips1_1-4"/>
+  <pattern id="Strips1_1-4" width="2" height="1" patternTransform="translate(0) scale(10)" patternUnits="userSpaceOnUse">
+   <rect y="-.5" width="1" height="2"/>
+  </pattern>
+  <pattern id="pattern23176-1-6" patternTransform="matrix(7.5252 6.5857 -6.5857 7.5252 3.1729 -2.533)" xlink:href="#Strips1_1-4-2"/>
+  <pattern id="Strips1_1-4-2" width="2" height="1" patternTransform="translate(0) scale(10)" patternUnits="userSpaceOnUse">
+   <rect y="-.5" width="1" height="2"/>
+  </pattern>
+ </defs>
+ <g fill="#fff">
+  <path d="m5.9864 0.0137 0.62521 0.93802 0.86941-0.71747-0.22116 1.1053 1.1222 0.10743-0.93802 0.62521 0.71747 0.86941-1.1053-0.22116-0.10743 1.1222-0.62521-0.93802-0.86941 0.71747 0.22116-1.1053-1.1222-0.10743 0.93802-0.62521-0.71747-0.86941 1.1053 0.22116z" opacity=".58407" stroke-width=".9854"/>
+  <path d="m6.2374 7.2408 0.19789 0.2969 0.27518-0.22709-0.070002 0.34985 0.35518 0.034002-0.2969 0.19789 0.22709 0.27518-0.34985-0.070002-0.034002 0.35518-0.19789-0.2969-0.27518 0.22709 0.070002-0.34985-0.35518-0.034002 0.2969-0.19789-0.22709-0.27518 0.34985 0.070002z" opacity=".33628" stroke-width=".31189"/>
+  <path d="m3.4005 2.3371 0.19789 0.2969 0.27518-0.22709-0.070002 0.34985 0.35518 0.034002-0.2969 0.19789 0.22709 0.27518-0.34985-0.070002-0.034002 0.35518-0.19789-0.2969-0.27518 0.22709 0.070002-0.34985-0.35518-0.034002 0.2969-0.19789-0.22709-0.27518 0.34985 0.070002z" opacity=".45741" stroke-width=".31189"/>
+  <path d="m4.6522 4.1561 0.32116 0.48183 0.44659-0.36855-0.11361 0.56777 0.57642 0.055182-0.48183 0.32116 0.36855 0.44659-0.56777-0.11361-0.055182 0.57642-0.32116-0.48183-0.44659 0.36855 0.11361-0.56777-0.57642-0.055182 0.48183-0.32116-0.36855-0.44659 0.56777 0.11361z" opacity=".45741" stroke-width=".50618"/>
+  <path d="m1.6857 4.5463 0.19789 0.2969 0.27518-0.22709-0.070002 0.34985 0.35518 0.034002-0.2969 0.19789 0.22709 0.27518-0.34985-0.070002-0.034002 0.35518-0.19789-0.2969-0.27518 0.22709 0.070002-0.34985-0.35518-0.034002 0.2969-0.19789-0.22709-0.27518 0.34985 0.070002z" opacity=".33628" stroke-width=".31189"/>
+ </g>
+ <g stroke="#fff" stroke-linecap="round" stroke-width=".26458">
+  <path d="m4.653 3.57-0.85358 0.59286" fill="url(#pattern23176)" opacity=".23894"/>
+  <path d="m3.6389 6.0291-0.70567 0.76296" fill="url(#pattern23176-1)" opacity=".23894"/>
+  <path d="m1.9045 3.4076-0.94582 0.43071" fill="url(#pattern23176-1-6)" opacity=".23894"/>
+  <path d="m6.8423 5.4504 0.00583 1.0393" fill="url(#pattern23176-0)" opacity=".23894"/>
+  <path d="m5.5596 7.1583-0.26777 1.0042" fill="url(#pattern23176-0-4)" opacity=".23894"/>
+ </g>
+ <g fill="#fff">
+  <circle transform="rotate(30.892)" cx="8.1609" cy=".40218" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+  <circle transform="rotate(30.892)" cx="7.6161" cy=".60974" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+  <circle transform="rotate(30.892)" cx="8.0701" cy="2.4908" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+  <circle transform="rotate(30.892)" cx="7.188" cy="3.9567" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+  <circle transform="rotate(30.892)" cx="4.7669" cy="5.0812" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+  <circle transform="rotate(30.892)" cx="4.4378" cy="2.0108" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+  <circle transform="rotate(30.892)" cx="7.7847" cy="3.347" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+  <circle transform="rotate(30.892)" cx="6.7451" cy="5.1099" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+  <circle transform="rotate(30.892)" cx="4.5545" cy="-.49293" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+  <circle transform="rotate(30.892)" cx="3.0108" cy="3.8659" r=".15567" opacity=".23894" style="paint-order:markers stroke fill"/>
+ </g>
+</svg>

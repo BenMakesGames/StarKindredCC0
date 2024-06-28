@@ -1,0 +1,18 @@
+<app-dialog>
+  <form (submit)="doUpgrade()">
+    <h4>Specialize</h4>
+    <div class="buildings">
+      <label *ngFor="let o of availableSpecializations" [class.selected]="selection == o">
+        <input type="radio" name="building" [value]="o" [(ngModel)]="selection" />
+        <img [src]="'/assets/buildings/' + o.toLowerCase() + '.svg'" alt="" aria-hidden="true"/>
+        <app-card-ribbon color="#258">{{ o|buildingTitle }}</app-card-ribbon>
+        <span class="cost">&nbsp;</span>
+      </label>
+    </div>
+    <div class="buttons">
+      <button type="submit" class="full-width" [class.disabled]="!selection">Specialize (Uses 1 <img src="/assets/treasures/magichammer.svg" alt="" aria-hidden="true" />Magic Hammer)</button>
+      <button type="button" class="full-width" (click)="doRebuild()">Rebuild</button>
+      <button type="button" class="full-width wire" (click)="doCancel()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

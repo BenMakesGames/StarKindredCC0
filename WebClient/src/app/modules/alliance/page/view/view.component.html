@@ -1,0 +1,37 @@
+<main>
+  <h1><a routerLink="/alliance/search">Alliances</a> &gt; Details</h1>
+  <app-loading *ngIf="!alliance"></app-loading>
+  <ng-container *ngIf="alliance">
+    <div class="summary">
+      <dl>
+        <dt>Founded</dt>
+        <dd>{{ alliance.createdOn|date:'mediumDate' }}</dd>
+        <dt>Level</dt>
+        <dd>{{ alliance.level }}</dd>
+        <ng-container *ngIf="leader">
+          <dt>Leader</dt>
+          <dd>{{ leader.name }}</dd>
+        </ng-container>
+      </dl>
+      <form *ngIf="alliance.openInvitation" (submit)="doJoin()">
+        <p class="centered-text">Accepting new members, levels {{ alliance.openInvitation.minLevel }}-{{ alliance.openInvitation.maxLevel }}.</p>
+        <p class="buttons centered" [class.disabled]="joining">
+          <button type="submit">Join</button>
+        </p>
+      </form>
+    </div>
+    <div class="members">
+      <h2>Members ({{ alliance.members.length }}/20)</h2>
+      <div class="member-list">
+        <app-member-card
+          *ngFor="let m of alliance.members"
+          [name]="m.name"
+          [avatar]="m.avatar"
+          [color]="m.color"
+          [level]="m.level"
+          [isLeader]="m.id == alliance.leaderId"
+        ></app-member-card>
+      </div>
+    </div>
+  </ng-container>
+</main>

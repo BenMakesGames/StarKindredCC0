@@ -1,0 +1,23 @@
+<app-dialog>
+  <form (submit)="doCreate()" [class.disabled]="submitting">
+    <h4>Create Title</h4>
+    <p>
+      <label>Title</label>
+      <input type="text" name="title" [(ngModel)]="title" maxlength="20" />
+    </p>
+    <p>
+      <label>Rank <app-help-button topic="alliance-rank"></app-help-button></label>
+      <input type="number" name="rank" [(ngModel)]="rank" min="0" max="9999" />
+    </p>
+    <p class="radio-checkbox-list">
+      <label><input type="checkbox" [checked]="canRecruit" (change)="canRecruit = !canRecruit" /> Can Recruit</label>
+      <label><input type="checkbox" [checked]="canKick" (change)="canKick = !canKick" /> Can Kick</label>
+      <label><input type="checkbox" [checked]="canTrackGiants" (change)="canTrackGiants = !canTrackGiants" /> Can Track Giants</label>
+    </p>
+    <p>Once created, a Title's Rank and permissions cannot be changed (it <em>can</em> be renamed, or deleted).</p>
+    <div class="buttons centered">
+      <button type="submit" [class.disabled]="title.length < 1">Create</button>
+      <button type="button" (click)="doClose()" class="wire">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

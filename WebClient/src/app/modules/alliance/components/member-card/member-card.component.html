@@ -1,0 +1,5 @@
+<img [src]="'/assets/avatars/' + avatar + '.svg'" [alt]="avatar.replace('-', ' ')">
+<app-card-ribbon [color]="color|hslToCss">{{ name }}</app-card-ribbon>
+<span *ngIf="rank === null && !isLeader" class="rank" [class.no-level]="level === undefined" style="font-style:italic;opacity:0.5">No Title</span>
+<span *ngIf="rank !== null || isLeader" class="rank" [class.leader]="isLeader" [class.no-level]="level === undefined">{{ isLeader ? "Leader" : rank }}</span>
+<span class="level" *ngIf="level !== undefined">Level {{ level }}</span>

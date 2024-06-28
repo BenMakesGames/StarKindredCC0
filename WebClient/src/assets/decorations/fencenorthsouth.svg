@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(1.5 0 0 1.5 -2.2651 -5.5854)" fill="none" stroke="#a1781a">
+  <path d="m5.3591 7.6175-1.9475-2.545" stroke-linejoin="bevel" stroke-width=".26458"/>
+  <path d="m5.3472 8.1183-1.9475-2.545" stroke-linejoin="bevel" stroke-width=".26458"/>
+  <g stroke-width=".26458px">
+   <path d="m5.3472 8.4293v-1.1099"/>
+   <path d="m3.3997 5.8627v-1.1099"/>
+   <path d="m3.8633 6.4453v-1.1099"/>
+   <path d="m4.3827 7.0181v-1.1099"/>
+   <path d="m4.8755 7.7106v-1.1099"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,27 @@
+<main>
+  <app-resources *ngIf="resources" [resources]="resources"></app-resources>
+  <h1>Vassals</h1>
+  <app-loading *ngIf="!tags"></app-loading>
+  <p *ngIf="tags">
+    <app-vassal-filters [filters]="query" [tags]="tags" href="/home/vassals"></app-vassal-filters>
+  </p>
+  <app-loading *ngIf="!vassals && tags"></app-loading>
+  <ng-container *ngIf="vassals">
+    <p class="none" *ngIf="vassals.results.length == 0">&mdash; none found &mdash;</p>
+    <ng-container *ngIf="vassals.results.length > 0">
+      <p *ngIf="vassals.totalPages > 1">
+        <app-pagination [page]="vassals.page" [totalPages]="vassals.totalPages" href="/home/vassals" [queryParams]="query"></app-pagination>
+      </p>
+      <p class="vassals">
+        <a *ngFor="let v of vassals.results" [routerLink]="'/home/vassals/' + v.id">
+          <app-vassal-portrait
+            [vassal]="v"
+          ></app-vassal-portrait>
+        </a>
+      </p>
+      <p *ngIf="vassals.totalPages > 1">
+        <app-pagination [page]="vassals.page" [totalPages]="vassals.totalPages" href="/home/vassals" [queryParams]="query"></app-pagination>
+      </p>
+    </ng-container>
+  </ng-container>
+</main>

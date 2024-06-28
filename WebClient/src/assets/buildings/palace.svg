@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <rect x="1.5854" y="2.7052" width="5.5636" height="2.437" fill="#908563"/>
+ <g transform="translate(0 -1.0501)" fill="#59533d">
+  <rect x="2.2797" y="3.6645" width=".35357" height=".49578"/>
+  <rect x="3.4384" y="3.6645" width=".35357" height=".49578"/>
+  <rect x="4.5971" y="3.6645" width=".35357" height=".49578"/>
+  <rect x="5.7558" y="3.6645" width=".35357" height=".49578"/>
+ </g>
+ <g transform="translate(0 -1.0501)">
+  <rect x="1.6032" y="2.8992" width="5.3745" height=".87338" fill="#bd3f3f"/>
+  <path d="m4.1777 4.4132c-0.51699 0.013009-0.92899 0.43364-0.92899 0.95388v0.82545h1.9078v-0.82545c0-0.5285-0.42539-0.95388-0.95388-0.95388-0.00826 0-0.016688-2.065e-4 -0.024894 0z" fill="#59533d"/>
+  <rect x=".17502" y="2.8992" width="1.855" height="3.4557" rx="0" ry="0" fill="#a9a083"/>
+  <rect x="6.386" y="2.8992" width="1.855" height="3.4557" rx="0" ry="0" fill="#a9a083"/>
+  <path d="m0.019648 1.8901 1.0617-0.84001 1.165 0.83916-1.1342 0.34125z" fill="#bd3f3f"/>
+ </g>
+ <g transform="translate(0 -1.0501)" fill="#908563">
+  <rect x=".48731" y="3.0777" width=".35357" height=".49578"/>
+  <rect x="1.3438" y="3.0777" width=".35357" height=".49578"/>
+  <rect x="6.6951" y="3.0911" width=".35357" height=".49578"/>
+  <rect x="7.5515" y="3.0911" width=".35357" height=".49578"/>
+ </g>
+ <rect x=".019648" y=".84001" width="2.2196" height="1.2866" rx="0" ry="0" fill="#c2bca7"/>
+ <g transform="translate(0 -1.0501)" fill="#a9a083">
+  <rect x=".25424" y="2.1298" width=".42687" height=".77392"/>
+  <rect x="1.6032" y="2.1253" width=".42687" height=".77392"/>
+  <rect x=".92857" y="2.1301" width=".42687" height=".77392"/>
+ </g>
+ <path d="m6.2306 0.84001 1.0617-0.84001 1.165 0.83916-1.1027 0.31434z" fill="#bd3f3f"/>
+ <rect x="6.2306" y=".84001" width="2.2196" height="1.2866" rx="0" ry="0" fill="#c2bca7"/>
+ <g transform="translate(0 -1.0501)" fill="#a9a083">
+  <rect x="6.4652" y="2.1298" width=".42687" height=".77392"/>
+  <rect x="7.8141" y="2.1253" width=".42687" height=".77392"/>
+  <rect x="7.1396" y="2.1301" width=".42687" height=".77392"/>
+ </g>
+</svg>

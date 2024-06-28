@@ -1,0 +1,28 @@
+<div class="selected-members">
+  <h3>Assemble a Team</h3>
+  <p><app-describe-vassal-range [min]="minVassals" [max]="maxVassals" [requiredElement]="requiredElement"></app-describe-vassal-range></p>
+  <div class="vassals" [class.disabled]="embarking">
+    <button *ngFor="let v of selectedVassals" class="invisible" (click)="doRemoveVassal(v)">
+      <app-vassal-medallion
+        [element]="v.element"
+        [level]="v.level"
+        [species]="v.species"
+        [portrait]="v.portrait"
+      ></app-vassal-medallion>
+    </button>
+    <app-empty-vassal-medallion *ngFor="let i of [].constructor(maxVassals - selectedVassals.length)"></app-empty-vassal-medallion>
+  </div>
+  <ng-content></ng-content>
+  <div class="buttons" [class.disabled]="embarking">
+    <button type="button" [class.disabled]="!requirementsAreMet" (click)="select.emit()">Go Forth!</button>
+    <button type="button" (click)="cancel.emit()" class="wire">Cancel</button>
+  </div>
+</div>
+<h4>Find Members</h4>
+<app-select-vassals
+  [disabled]="embarking"
+  [canAdd]="canAdd"
+  [tags]="tags"
+  (selectVassal)="doAddVassal($event)"
+  [extraInfo]="extraInfo"
+></app-select-vassals>

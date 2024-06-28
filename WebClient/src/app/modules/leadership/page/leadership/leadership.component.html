@@ -1,0 +1,10 @@
+<main>
+  <app-loading *ngIf="!town"></app-loading>
+  <ng-container *ngIf="town && town.level < 3">
+    <p>You must complete more missions for The Oracle...</p>
+    <p><a routerLink="/home/missions">Assign a Vassal to visit The Oracle if you're not sure what to do!</a></p>
+  </ng-container>
+  <ng-container *ngIf="town && town.level >= 3">
+    <app-leaders></app-leaders>
+  </ng-container>
+</main>

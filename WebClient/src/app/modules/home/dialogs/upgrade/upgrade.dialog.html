@@ -1,0 +1,16 @@
+<app-dialog>
+  <form (submit)="doUpgrade()">
+    <h4>Level Up <app-help-button topic="building-levelup"></app-help-button></h4>
+    <ng-container *ngIf="level < maxLevel">
+      <p>Level {{ level }} &rarr; {{ level + 1 }}</p>
+      <h5>Cost</h5>
+      <p><app-describe-yield [yield]="cost" [orientation]="YieldOrientation.Horizontal"></app-describe-yield></p>
+    </ng-container>
+    <p *ngIf="level >= maxLevel">This building cannot be leveled-up any further.</p>
+    <div class="buttons">
+      <button type="submit" class="full-width" *ngIf="level < maxLevel">Level Up</button>
+      <button *ngIf="type !== 'Palace'" type="button" class="full-width" (click)="doRebuild()">Rebuild</button>
+      <button type="button" class="full-width wire" (click)="doCancel()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

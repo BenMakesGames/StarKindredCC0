@@ -1,0 +1,7 @@
+<app-dialog>
+  <p *ngIf="!story"><app-loading></app-loading></p>
+  <markdown *ngIf="story" [data]="story.narrative"></markdown>
+  <div class="buttons centered">
+    <button type="button" (click)="doOk()">OK</button>
+  </div>
+</app-dialog>

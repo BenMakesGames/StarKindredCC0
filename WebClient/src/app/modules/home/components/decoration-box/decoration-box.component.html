@@ -1,0 +1,18 @@
+<nav [class.open]="open">
+  <div [class.hidden]="!open">
+    <app-loading *ngIf="!decorations"></app-loading>
+    <div class="decorations" *ngIf="decorations">
+      <button *ngFor="let d of decorations" (click)="doPlaceDecoration(d, $event)" [class.disabled]="placedByType[d.type] >= d.quantity">
+        <app-generic-card
+          ribbonColor="#393"
+          [ribbonText]="d.type|decorationTitle"
+          [image]="'/assets/decorations/' + d.type.toLowerCase() + '.svg'"
+        >{{ placedByType[d.type] ?? 0 }} / {{ d.quantity }}</app-generic-card>
+      </button>
+    </div>
+  </div>
+  <button class="toggle-nav" type="button" (click)="doToggleNav()">
+    <img *ngIf="!open" src="/assets/ui/treasures-square.svg" alt="show available decorations" />
+    <img *ngIf="open" src="/assets/ui/white-x.svg" alt="hide available decorations" />
+  </button>
+</nav>

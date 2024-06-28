@@ -1,0 +1,131 @@
+<main>
+  <app-resources *ngIf="resources" [resources]="resources"></app-resources>
+  <app-loading *ngIf="!response"></app-loading>
+  <ng-container *ngIf="response">
+    <img src="/assets/mission-map.svg" class="map" alt="region map" />
+    <section>
+      <app-mission-pin
+        *ngFor="let m of response.missions"
+        [class]="'pin-' + missionCoordinates[m.type].pin"
+        [style.left]="'calc(max(min(960px, 110vw), 110vh) * ' + (missionCoordinates[m.type].x / 50) + ')'"
+        [style.top]="'calc(max(min(960px, 110vw), 110vh) * ' + (missionCoordinates[m.type].y / 50) + ')'"
+      >
+        <h4>{{ m.type|missionTitle }} <app-help-button [topic]="'mission-' + m.type.toLowerCase()"></app-help-button></h4>
+        <app-vassal-medallion-list [vassals]="m.vassals"></app-vassal-medallion-list>
+        <p>
+          <app-time-remainings [current]="now" [end]="m.completesOn"></app-time-remainings>
+          <app-progress-bar [progress]="now - m.startedOn" [maxProgress]="m.completesOn - m.startedOn"></app-progress-bar>
+        </p>
+        <div class="buttons" [class.disabled]="completingAMission">
+          <button type="button" class="notice-me full-width" *ngIf="m.completesOn <= now" (click)="doComplete(m)">Complete!</button>
+          <button type="button" class="wire full-width" *ngIf="m.completesOn > now" (click)="doAbort(m)">Abort</button>
+        </div>
+      </app-mission-pin>
+    </section>
+
+    <section>
+      <app-mission-pin
+        *ngFor="let a of response.available"
+        [class]="'pin-' + missionCoordinates[a.type].pin"
+        [style.left]="'calc(max(min(960px, 110vw), 110vh) * ' + (missionCoordinates[a.type].x / 50) + ')'"
+        [style.top]="'calc(max(min(960px, 110vw), 110vh) * ' + (missionCoordinates[a.type].y / 50) + ')'"
+      >
+        <h4>{{ a.type|missionTitle }} <app-help-button [topic]="'mission-' + a.type.toLowerCase()"></app-help-button></h4>
+        <p><app-describe-vassal-range [min]="a.minVassals" [max]="a.maxVassals"></app-describe-vassal-range></p>
+        <div [class.disabled]="completingAMission">
+          <button type="button" class="full-width" (click)="doAssignToMission(a.type, a.maxVassals)">Assign</button>
+        </div>
+      </app-mission-pin>
+    </section>
+
+    <section>
+      <app-mission-pin
+        *ngFor="let a of response.timedMissions"
+        [class]="'pin-' + timedMissionPositions[a.location].pin"
+        [class.has-treasure]="!!a.treasure || !!a.weapon"
+        [style.left]="'calc(max(min(960px, 110vw), 110vh) * ' + (timedMissionPositions[a.location].left / 50) + ')'"
+        [style.top]="'calc(max(min(960px, 110vw), 110vh) * ' + (timedMissionPositions[a.location].top / 50) + ')'"
+      >
+        <h4>{{ a.type|missionTitle }} <app-help-button [topic]="'mission-' + a.type.toLowerCase()"></app-help-button></h4>
+        <dl *ngIf="a.type !== 'BoatDate' || a.element || a.species || a.treasure || a.weapon">
+          <ng-container *ngIf="a.type !== 'BoatDate'">
+            <dt>Level</dt>
+            <dd>{{ a.level }}</dd>
+          </ng-container>
+          <ng-container *ngIf="a.element">
+            <dt>Element</dt>
+            <dd>{{ a.element }} <app-help-button [topic]="'element-' + a.element"></app-help-button></dd>
+          </ng-container>
+          <ng-container *ngIf="a.species">
+            <dt>Race</dt>
+            <dd>{{ a.species }}</dd>
+          </ng-container>
+          <ng-container *ngIf="a.treasure || a.weapon">
+            <dt>Treasure</dt>
+            <dd *ngIf="a.treasure">{{ a.treasure|treasureTitle }} <app-help-button [topic]="'treasure-' + a.treasure"></app-help-button></dd>
+            <dd *ngIf="a.weapon">{{ a.weapon|weaponName }} <app-help-button [topic]="'weapon-' + a.weapon"></app-help-button></dd>
+          </ng-container>
+        </dl>
+        <ng-container *ngIf="a.vassals.length > 0">
+          <app-vassal-medallion-list [vassals]="a.vassals"></app-vassal-medallion-list>
+          <p>
+            <app-time-remainings [current]="now" [end]="a.completesOn!"></app-time-remainings>
+            <app-progress-bar [progress]="now - a.startedOn!" [maxProgress]="a.completesOn! - a.startedOn!"></app-progress-bar>
+          </p>
+          <div class="buttons" [class.disabled]="completingAMission">
+            <button type="button" class="notice-me full-width" *ngIf="a.completesOn! <= now" (click)="doCompleteTimedMission(a)">Complete!</button>
+            <button type="button" class="wire full-width" *ngIf="a.completesOn! > now" (click)="doAbortTimedMission(a)">Abort</button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="a.vassals.length == 0">
+          <p><app-describe-vassal-range [min]="a.minVassals" [max]="a.maxVassals"></app-describe-vassal-range></p>
+          <div [class.disabled]="completingAMission">
+            <button type="button" class="full-width" (click)="doAssignToTimedMission(a.type, a.id, a.level, a.element, a.minVassals, a.maxVassals)">Assign</button>
+          </div>
+        </ng-container>
+      </app-mission-pin>
+    </section>
+
+    <section *ngIf="response.giant">
+      <app-mission-pin
+        class="pin-bottom"
+        style="width:100%"
+        [style.left]="'calc(max(min(960px, 110vw), 110vh) * ' + (90 / 50) + ')'"
+        [style.top]="'calc(max(min(960px, 110vw), 110vh) * ' + (86.5 / 50) + ')'"
+      >
+        <h4>Giant (Level {{ response.giant.level }}) <app-help-button topic="mission-giant"></app-help-button></h4>
+        <dl>
+          <dt>Element</dt>
+          <dd>{{ response.giant.element }} <app-help-button [topic]="'element-' + response.giant.element"></app-help-button></dd>
+          <dt>Damage<small style="display:block">({{ response.giant.damage }} / {{ response.giant.health }})</small></dt>
+          <dd><app-progress-bar [progress]="response.giant.damage" [maxProgress]="response.giant.health" [pulsing]="false"></app-progress-bar></dd>
+          <ng-container *ngIf="giantTimeUntil > 0">
+            <dt>Arrives In...</dt>
+            <dd>{{ giantTimeUntil|describeInterval }}</dd>
+          </ng-container>
+          <ng-container *ngIf="giantTimeUntil <= 0 && giantTimeRemaining > 0">
+            <dt>Time Remaining</dt>
+            <dd>{{ giantTimeRemaining|describeInterval }}</dd>
+          </ng-container>
+        </dl>
+        <ng-container *ngIf="giantTimeUntil <= 0">
+          <ng-container *ngIf="giantTimeRemaining > 0">
+            <ng-container *ngIf="response.giant.canAttack">
+              <p>Between 1 and 3 Vassals can go.</p>
+              <div>
+                <button type="button" class="full-width" (click)="doAssignToMission('Giant', 3)">Assign</button>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="!response.giant.canAttack">
+              <p>You've already attacked the Giant today.</p>
+            </ng-container>
+          </ng-container>
+          <ng-container *ngIf="giantTimeRemaining <= 0" [class.disabled]="completingAMission">
+            <p *ngIf="response.giant.damage >= response.giant.health">The Giant has been slain. Your Alliance leader will distribute the rewards.</p>
+            <p *ngIf="response.giant.damage < response.giant.health">The Giant escaped. Your Alliance leader will find a new one.</p>
+          </ng-container>
+        </ng-container>
+      </app-mission-pin>
+    </section>
+  </ng-container>
+</main>

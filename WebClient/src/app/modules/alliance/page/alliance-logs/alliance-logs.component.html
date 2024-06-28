@@ -1,0 +1,30 @@
+<main>
+  <h1><a routerLink="/alliance/search">Alliances</a> &gt; <a routerLink="/alliance">My</a> &gt; Logs</h1>
+  <app-loading *ngIf="!results"></app-loading>
+  <ng-container *ngIf="results">
+    <p *ngIf="results.totalPages > 1">
+      <app-pagination
+        href="/alliance/logs"
+        [queryParams]="query"
+        [page]="results.page"
+        [totalPages]="results.totalPages"
+      ></app-pagination>
+    </p>
+    <div>
+      <app-log-entry *ngFor="let l of results.results"
+        [createdOn]="l.createdOn"
+        [message]="l.message"
+        [icon]="'alliance/' + l.activityType.toLowerCase() + '.svg'"
+      >
+      </app-log-entry>
+    </div>
+    <p *ngIf="results.totalPages > 1">
+      <app-pagination
+        href="/alliance/logs"
+        [queryParams]="query"
+        [page]="results.page"
+        [totalPages]="results.totalPages"
+      ></app-pagination>
+    </p>
+  </ng-container>
+</main>

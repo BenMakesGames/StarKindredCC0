@@ -1,0 +1,71 @@
+<nav [class.open]="open" *ngIf="!hidden">
+  <div class="links" [class.hidden]="!open">
+    <ng-container *ngIf="loggedIn">
+      <a routerLink="/home">
+        <img src="/assets/ui/town-square.svg" alt="castle" />
+        <span class="label">Town</span>
+      </a>
+      <a routerLink="/leadership">
+        <img src="/assets/ui/white-crown.svg" alt="crown" />
+        <span class="label">Leadership</span>
+      </a>
+      <a routerLink="/home/missions">
+        <img src="/assets/ui/missions-square.svg" alt="treasure map"/>
+        <span class="label">Missions</span>
+      </a>
+      <a routerLink="/stories">
+        <img src="/assets/ui/stories.svg" alt="quill & scroll"/>
+        <span class="label">Stories</span>
+      </a>
+      <a routerLink="/home/vassals">
+        <img src="/assets/ui/vassals-square.svg" alt="portrait" />
+        <span class="label">Vassals</span>
+      </a>
+      <a routerLink="/home/treasures">
+        <img src="/assets/ui/treasures-square.svg" alt="treasure chest" />
+        <span class="label">Treasure</span>
+      </a>
+      <a routerLink="/home/logs">
+        <img src="/assets/ui/white-books.svg" alt="thick book" />
+        <span class="label">History</span>
+      </a>
+      <a routerLink="/alliance">
+        <img src="/assets/ui/alliance.svg" alt="flag"/>
+        <span class="label">Alliance</span>
+      </a>
+    </ng-container>
+    <ng-container *ngIf="!loggedIn">
+      <a routerLink="/">
+        <img src="/assets/ui/log-in.svg" alt="open door"/>
+        <span class="label">Log In</span>
+      </a>
+      <a routerLink="/createAccount">
+        <img src="/assets/ui/white-crown.svg" alt="crown"/>
+        <span class="label">Sign Up</span>
+      </a>
+      <a routerLink="/alliance/search">
+        <img src="/assets/ui/alliance.svg" alt="flag"/>
+        <span class="label">Alliances</span>
+      </a>
+    </ng-container>
+    <a routerLink="/news">
+      <div *ngIf="unreadNews" class="attention pulse">!</div>
+      <img src="/assets/ui/news.svg" alt="horn"/>
+      <span class="label">News</span>
+    </a>
+    <ng-container *ngIf="loggedIn">
+      <a routerLink="/settings">
+        <img src="/assets/ui/settings.svg" alt="gear"/>
+        <span class="label">Account</span>
+      </a>
+      <button (click)="doLogOut()">
+        <img src="/assets/ui/log-out.svg" alt="open door"/>
+        <span class="label">Log Out</span>
+      </button>
+    </ng-container>
+  </div>
+  <button class="toggle-nav" type="button" (click)="doToggleNav()">
+    <img *ngIf="!open" src="/favicon.svg" alt="show menu" />
+    <img *ngIf="open" src="/assets/ui/white-x.svg" alt="close menu" />
+  </button>
+</nav>

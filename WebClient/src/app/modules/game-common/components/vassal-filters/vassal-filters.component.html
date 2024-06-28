@@ -1,0 +1,57 @@
+<div class="search" [class.includes-tags]="tags.length > 0">
+  <p class="element">
+    <label for="filter-element">Element</label>
+    <select id="filter-element" name="element" [(ngModel)]="filters.element" (change)="doChange()">
+      <option value="">Any</option>
+      <option>Earth</option>
+      <option>Fire</option>
+      <option>Ice</option>
+      <option>Lightning</option>
+      <option>Metal</option>
+      <option>Plant</option>
+      <option>Water</option>
+    </select>
+  </p>
+  <p class="nature">
+    <label for="filter-nature">Nature</label>
+    <select id="filter-nature" name="nature" [(ngModel)]="filters.nature" (change)="doChange()">
+      <option value="">Any</option>
+      <option>Cavalier</option>
+      <option>Competitor</option>
+      <option>Defender</option>
+      <option>Explorer</option>
+      <option>Evangelist</option>
+      <option>Loner</option>
+      <option>Monger</option>
+      <option>Perfectionist</option>
+      <option value="ThrillSeeker">Thrill-seeker</option>
+      <option>Visionary</option>
+    </select>
+  </p>
+  <p class="sign">
+    <label for="filter-sign">Sign</label>
+    <select id="filter-sign" name="sign" [(ngModel)]="filters.sign" (change)="doChange()">
+      <option value="">Any</option>
+      <option>Cat</option>
+      <option>Crown</option>
+      <option value="DoubleTrident">Double Trident</option>
+      <option value="EightPlants">Eight Plants</option>
+      <option>Kundrav</option>
+      <option value="LargeCupAndLittleCup">Large Cup & Little Cup</option>
+      <option>Mountain</option>
+      <option value="PanFlute">Pan Flute</option>
+      <option value="PapyrusBoat">Papyrus Boat</option>
+      <option>Raven</option>
+      <option>River</option>
+      <option value="TheGoddess">The Goddess</option>
+      <option>Tablet</option>
+    </select>
+  </p>
+  <p class="tags" *ngIf="tags.length > 0">
+    <label for="filter-tags">Tag</label>
+    <select id="filter-tags" name="tag" [(ngModel)]="filters.tag" (change)="doChange()">
+      <option value="">Any</option>
+      <option *ngFor="let tag of tags">{{ tag.title }}</option>
+    </select>
+  </p>
+</div>

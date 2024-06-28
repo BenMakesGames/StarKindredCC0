@@ -1,0 +1,10 @@
+abbr {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  > img {
+    display: block;
+    width: 1em;
+    height: 1em;
+  }
+}

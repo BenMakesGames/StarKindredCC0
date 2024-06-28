@@ -1,0 +1,38 @@
+<main>
+  <div class="two-columns">
+    <div>
+      <ng-container *ngIf="!loggedInAs">
+        <h1>Log In</h1>
+        <app-log-in></app-log-in>
+      </ng-container>
+      <ng-container *ngIf="loggedInAs">
+        <h1>Welcome</h1>
+        <p>Hello, {{ loggedInAs }}.</p>
+        <p>Your kingdom awaits.</p>
+        <p class="buttons">
+          <a href="/home" class="button full-width">Resume Game</a>
+          <button type="button" class="wire full-width" (click)="doLogOut()">Log Out</button>
+        </p>
+      </ng-container>
+    </div>
+    <div>
+      <h1>What Will Remain?</h1>
+      <p>The universe is in a state of decline. Even the gods will not survive the end that's coming.</p>
+      <p>But a prophecy speaks of the universe's rebirth, and a figure from this cycle that <em>will</em> survive, to usher in the next.</p>
+      <p>Who - or what - is that figure? The prophecy does not say. A god, presumably, but maybe a mortal, or even a rock or a seed.</p>
+      <p>But what if it could be <em>you?</em></p>
+
+      <h1>See More</h1>
+      <div class="see-more">
+        <a routerLink="/news">
+          <img src="/assets/ui/news.svg" alt="horn" />
+          <span>News</span>
+        </a>
+        <a routerLink="/alliance/search">
+          <img src="/assets/ui/alliance.svg" alt="flag" />
+          <span>Alliances</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>

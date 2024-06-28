@@ -1,0 +1,10 @@
+<p class="vassals">
+  <a *ngFor="let v of vassals" [routerLink]="'/home/vassals/' + v.id" style="font-size:66.67%">
+    <app-vassal-medallion
+      [level]="v.level"
+      [species]="v.species"
+      [portrait]="v.portrait"
+      [element]="v.element"
+    ></app-vassal-medallion>
+  </a>
+</p>

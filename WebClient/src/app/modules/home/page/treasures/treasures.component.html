@@ -1,0 +1,23 @@
+<main>
+  <app-resources *ngIf="resources" [resources]="resources"></app-resources>
+  <h1>Treasure</h1>
+  <app-loading *ngIf="!items"></app-loading>
+  <ng-container *ngIf="items">
+    <p *ngIf="items.treasures.length + items.weapons.length == 0">You do not have any treasures!</p>
+    <div class="treasure-container" *ngIf="items.treasures.length + items.weapons.length > 0">
+      <button *ngFor="let t of items.treasures" type="button" class="treasure" (click)="doInteractWithTreasure(t)" [class.disabled]="t.quantity == 0">
+        <img [src]="'/assets/treasures/' + t.type.toLowerCase() + '.svg'" alt="" aria-hidden="true" />
+        <app-card-ribbon color="#960">{{ t.type|treasureTitle }}</app-card-ribbon>
+        <div class="quantity">&times; {{ t.quantity }}</div>
+      </button>
+      <button *ngFor="let w of items.weapons" type="button" class="invisible" (click)="doShowWeapon(w)">
+        <app-weapon-card
+          [name]="w.name"
+          [image]="w.image"
+          [level]="w.level"
+          [vassal]="w.vassal"
+        ></app-weapon-card>
+      </button>
+    </div>
+  </ng-container>
+</main>

@@ -1,0 +1,27 @@
+.vassals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+@media (max-width: 400px)
+{
+  .vassals {
+    font-size: 85%;
+  }
+}
+
+.tag-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.none {
+  text-align: center;
+  font-style: italic;
+  padding: 2em 0;
+}

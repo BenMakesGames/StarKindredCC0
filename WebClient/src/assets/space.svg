@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="320" version="1.1" viewBox="0 0 84.667 84.667" xmlns="http://www.w3.org/2000/svg">
+ <rect x="4.4409e-15" width="84.667" height="84.667" fill="#333" stroke="none"/>
+ <circle cx="14.893" cy="12.142" r=".28767" fill="#5c5c5c" stroke="none"/>
+ <g fill="#6d6d6d" stroke="none">
+  <circle cx="3.4322" cy="23.884" r=".28767"/>
+  <circle cx="5.8416" cy="19.896" r=".28767"/>
+  <circle cx="7.7525" cy="23.053" r=".28767"/>
+  <circle cx="40.801" cy="1.1159" r=".28767"/>
+  <circle cx="5.2937" cy="1.8602" r=".28767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle cx="10.827" cy="26.376" r=".28767"/>
+  <circle cx="14.482" cy="28.038" r=".28767"/>
+  <circle cx="15.479" cy="24.798" r=".28767"/>
+  <circle cx="12.987" cy="17.154" r=".28767"/>
+ </g>
+ <g fill="#676767" stroke="none">
+  <circle cx="15.794" cy="12.721" r=".28767"/>
+  <circle cx=".60407" cy="18.46" r=".28767"/>
+  <circle cx="1.274" cy="20.098" r=".28767"/>
+ </g>
+ <circle cx="20.713" cy="10.258" r=".28767" fill="#5c5c5c" stroke="none"/>
+ <circle cx="22.873" cy="10.009" r=".28767" fill="#676767" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle cx="23.954" cy="15.326" r=".28767"/>
+  <circle cx="25.781" cy="18.816" r=".28767"/>
+  <circle cx="29.271" cy="19.48" r=".28767"/>
+ </g>
+ <circle cx="33.84" cy="19.148" r=".28767" fill="#424e5c" stroke="none"/>
+ <circle cx="36.25" cy="20.727" r=".28767" fill="#424e5c" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle cx="36.167" cy="27.041" r=".28767"/>
+  <circle cx="28.746" cy="28.912" r=".28767"/>
+  <circle cx="23.704" cy="32.94" r=".28767"/>
+  <circle cx="33.591" cy="35.017" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle cx="34.505" cy="38.008" r=".28767" fill="#676767"/>
+  <circle cx="21.876" cy="39.171" r=".28767" fill="#5c5c5c"/>
+  <circle cx="19.218" cy="36.097" r=".28767" fill="#676767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle cx="13.651" cy="39.919" r=".28767"/>
+  <circle cx="9.7601" cy="40.866" r=".28767"/>
+  <circle cx="15.194" cy="42.206" r=".28767"/>
+  <circle cx=".60407" cy="36.474" r=".28767"/>
+  <circle cx="3.5153" cy="38.839" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle cx="3.8476" cy="34.851" r=".28767" fill="#5c4646"/>
+  <circle cx="8.9987" cy="35.1" r=".28767" fill="#5c5c5c"/>
+  <circle cx="13.651" cy="31.112" r=".28767" fill="#5c5c5c"/>
+  <circle cx="8.9987" cy="24.465" r=".28767" fill="#626262"/>
+  <circle cx="6.4232" cy="18.151" r=".28767" fill="#6d6d6d"/>
+  <circle cx="4.263" cy="14.246" r=".28767" fill="#5c5c5c"/>
+  <circle cx="2.186" cy="7.1011" r=".28767" fill="#5c5c5c"/>
+  <circle cx="2.9337" cy="3.0301" r=".28767" fill="#676767"/>
+  <circle cx="6.0078" cy="3.1963" r=".28767" fill="#424e5c"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle cx="6.1739" cy="7.4334" r=".28767"/>
+  <circle cx="9.0818" cy="10.092" r=".28767"/>
+  <circle cx="12.571" cy="4.941" r=".28767"/>
+  <circle cx="17.141" cy="3.944" r=".28767"/>
+ </g>
+ <circle cx="23.403" cy="7.8461" r=".28767" fill="#5c4646" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle cx="25.532" cy="6.4365" r=".28767"/>
+  <circle cx="30.6" cy="2.8639" r=".28767"/>
+  <circle cx="35.917" cy="2.1162" r=".28767"/>
+  <circle cx="37.164" cy="5.1902" r=".28767"/>
+  <circle cx="36.997" cy="13.249" r=".28767"/>
+  <circle cx="37.579" cy="17.154" r=".28767"/>
+  <circle cx="42.065" cy="21.89" r=".28767"/>
+  <circle cx="39.241" cy="30.032" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle cx="30.185" cy="27.789" r=".28767" fill="#424e5c"/>
+  <circle cx="26.446" cy="24.715" r=".28767" fill="#5c4646"/>
+  <circle cx="24.12" cy="28.453" r=".28767" fill="#676767"/>
+  <circle cx="27.429" cy="33.789" r=".28767" fill="#5c5c5c"/>
+  <circle cx="36.748" cy="35.017" r=".28767" fill="#5c5c5c"/>
+  <circle cx="37.33" cy="40.334" r=".28767" fill="#676767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle cx="31.431" cy="38.506" r=".28767"/>
+  <circle cx="23.732" cy="36.462" r=".28767"/>
+  <circle cx="33.425" cy="42.503" r=".28767"/>
+  <circle cx="41.152" cy="38.423" r=".28767"/>
+  <circle cx="41.65" cy="37.925" r=".28767"/>
+  <circle transform="rotate(90)" cx="14.636" cy="-73.048" r=".28767"/>
+ </g>
+ <g fill="#6d6d6d" stroke="none">
+  <circle transform="rotate(90)" cx="3.1747" cy="-61.306" r=".28767"/>
+  <circle transform="rotate(90)" cx="5.5841" cy="-65.294" r=".28767"/>
+  <circle transform="rotate(90)" cx="7.495" cy="-62.137" r=".28767"/>
+  <circle transform="rotate(90)" cx="40.544" cy="-84.074" r=".28767"/>
+  <circle transform="rotate(90)" cx="5.0363" cy="-83.33" r=".28767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="rotate(90)" cx="10.569" cy="-58.814" r=".28767"/>
+  <circle transform="rotate(90)" cx="14.225" cy="-57.152" r=".28767"/>
+  <circle transform="rotate(90)" cx="15.222" cy="-60.393" r=".28767"/>
+  <circle transform="rotate(90)" cx="12.729" cy="-68.036" r=".28767"/>
+ </g>
+ <g fill="#676767" stroke="none">
+  <circle transform="rotate(90)" cx="15.537" cy="-72.469" r=".28767"/>
+  <circle transform="rotate(90)" cx=".34659" cy="-66.73" r=".28767"/>
+  <circle transform="rotate(90)" cx="1.0165" cy="-65.092" r=".28767"/>
+ </g>
+ <circle transform="rotate(90)" cx="20.456" cy="-74.932" r=".28767" fill="#5c5c5c" stroke="none"/>
+ <circle transform="rotate(90)" cx="22.616" cy="-75.181" r=".28767" fill="#676767" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="rotate(90)" cx="23.696" cy="-69.864" r=".28767"/>
+  <circle transform="rotate(90)" cx="25.524" cy="-66.374" r=".28767"/>
+  <circle transform="rotate(90)" cx="29.013" cy="-65.71" r=".28767"/>
+ </g>
+ <circle transform="rotate(90)" cx="33.583" cy="-66.042" r=".28767" fill="#424e5c" stroke="none"/>
+ <circle transform="rotate(90)" cx="35.992" cy="-64.464" r=".28767" fill="#424e5c" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="rotate(90)" cx="35.909" cy="-58.149" r=".28767"/>
+  <circle transform="rotate(90)" cx="28.489" cy="-56.278" r=".28767"/>
+  <circle transform="rotate(90)" cx="23.447" cy="-52.251" r=".28767"/>
+  <circle transform="rotate(90)" cx="33.334" cy="-50.173" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle transform="rotate(90)" cx="34.247" cy="-47.183" r=".28767" fill="#676767"/>
+  <circle transform="rotate(90)" cx="21.619" cy="-46.019" r=".28767" fill="#5c5c5c"/>
+  <circle transform="rotate(90)" cx="18.96" cy="-49.093" r=".28767" fill="#676767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="rotate(90)" cx="13.394" cy="-45.272" r=".28767"/>
+  <circle transform="rotate(90)" cx="9.5026" cy="-44.324" r=".28767"/>
+  <circle transform="rotate(90)" cx="14.937" cy="-42.984" r=".28767"/>
+  <circle transform="rotate(90)" cx=".34659" cy="-48.716" r=".28767"/>
+  <circle transform="rotate(90)" cx="3.2578" cy="-46.352" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle transform="rotate(90)" cx="3.5901" cy="-50.34" r=".28767" fill="#5c4646"/>
+  <circle transform="rotate(90)" cx="8.7412" cy="-50.09" r=".28767" fill="#5c5c5c"/>
+  <circle transform="rotate(90)" cx="13.394" cy="-54.078" r=".28767" fill="#5c5c5c"/>
+  <circle transform="rotate(90)" cx="8.7412" cy="-60.725" r=".28767" fill="#626262"/>
+  <circle transform="rotate(90)" cx="6.1657" cy="-67.039" r=".28767" fill="#6d6d6d"/>
+  <circle transform="rotate(90)" cx="4.0056" cy="-70.944" r=".28767" fill="#5c5c5c"/>
+  <circle transform="rotate(90)" cx="1.9285" cy="-78.089" r=".28767" fill="#5c5c5c"/>
+  <circle transform="rotate(90)" cx="2.6762" cy="-82.16" r=".28767" fill="#676767"/>
+  <circle transform="rotate(90)" cx="5.7503" cy="-81.994" r=".28767" fill="#424e5c"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="rotate(90)" cx="5.9164" cy="-77.757" r=".28767"/>
+  <circle transform="rotate(90)" cx="8.8243" cy="-75.098" r=".28767"/>
+  <circle transform="rotate(90)" cx="12.314" cy="-80.249" r=".28767"/>
+  <circle transform="rotate(90)" cx="16.883" cy="-81.246" r=".28767"/>
+ </g>
+ <circle transform="rotate(90)" cx="18.628" cy="-77.591" r=".28767" fill="#5c4646" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="rotate(90)" cx="25.275" cy="-78.754" r=".28767"/>
+  <circle transform="rotate(90)" cx="30.343" cy="-82.326" r=".28767"/>
+  <circle transform="rotate(90)" cx="35.66" cy="-83.074" r=".28767"/>
+  <circle transform="rotate(90)" cx="36.906" cy="-80" r=".28767"/>
+  <circle transform="rotate(90)" cx="36.74" cy="-71.941" r=".28767"/>
+  <circle transform="rotate(90)" cx="37.322" cy="-68.036" r=".28767"/>
+  <circle transform="rotate(90)" cx="41.808" cy="-63.3" r=".28767"/>
+  <circle transform="rotate(90)" cx="38.983" cy="-55.158" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle transform="rotate(90)" cx="29.927" cy="-57.402" r=".28767" fill="#424e5c"/>
+  <circle transform="rotate(90)" cx="26.188" cy="-60.476" r=".28767" fill="#5c4646"/>
+  <circle transform="rotate(90)" cx="23.862" cy="-56.737" r=".28767" fill="#676767"/>
+  <circle transform="rotate(90)" cx="27.172" cy="-51.401" r=".28767" fill="#5c5c5c"/>
+  <circle transform="rotate(90)" cx="36.491" cy="-50.173" r=".28767" fill="#5c5c5c"/>
+  <circle transform="rotate(90)" cx="37.072" cy="-44.856" r=".28767" fill="#676767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="rotate(90)" cx="31.173" cy="-46.684" r=".28767"/>
+  <circle transform="rotate(90)" cx="27.435" cy="-47.099" r=".28767"/>
+  <circle transform="rotate(90)" cx="33.167" cy="-42.687" r=".28767"/>
+  <circle transform="rotate(90)" cx="40.894" cy="-46.767" r=".28767"/>
+  <circle transform="rotate(90)" cx="52.851" cy="-60.215" r=".28767"/>
+  <circle transform="rotate(90)" cx="52.627" cy="-50.373" r=".28767"/>
+  <circle transform="rotate(90)" cx="53.906" cy="-53.175" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-69.798" cy="53.906" r=".28767"/>
+ </g>
+ <g fill="#6d6d6d" stroke="none">
+  <circle transform="scale(-1,1)" cx="-81.259" cy="65.648" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-78.849" cy="61.66" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-76.939" cy="64.817" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-50.666" cy="47.847" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-79.397" cy="43.624" r=".28767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="scale(-1,1)" cx="-73.865" cy="68.14" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-70.209" cy="69.802" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-69.212" cy="66.562" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-71.704" cy="58.918" r=".28767"/>
+ </g>
+ <g fill="#676767" stroke="none">
+  <circle transform="scale(-1,1)" cx="-68.897" cy="54.485" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-84.087" cy="60.224" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-83.417" cy="61.862" r=".28767"/>
+ </g>
+ <circle transform="scale(-1,1)" cx="-63.978" cy="52.022" r=".28767" fill="#5c5c5c" stroke="none"/>
+ <circle transform="scale(-1,1)" cx="-61.818" cy="51.773" r=".28767" fill="#676767" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="scale(-1,1)" cx="-60.738" cy="57.09" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-58.91" cy="60.58" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-55.42" cy="61.244" r=".28767"/>
+ </g>
+ <g fill="#424e5c" stroke="none">
+  <circle transform="scale(-1,1)" cx="-50.851" cy="60.912" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-55.794" cy="48.789" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-48.441" cy="62.491" r=".28767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="scale(-1,1)" cx="-48.524" cy="68.805" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-55.945" cy="70.676" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-60.987" cy="74.704" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-51.1" cy="76.781" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle transform="scale(-1,1)" cx="-50.186" cy="79.772" r=".28767" fill="#676767"/>
+  <circle transform="scale(-1,1)" cx="-62.815" cy="80.935" r=".28767" fill="#5c5c5c"/>
+  <circle transform="scale(-1,1)" cx="-65.473" cy="77.861" r=".28767" fill="#676767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="scale(-1,1)" cx="-71.04" cy="81.683" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-74.931" cy="82.63" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-69.497" cy="83.97" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-84.087" cy="78.238" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-81.176" cy="80.602" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle transform="scale(-1,1)" cx="-80.843" cy="76.615" r=".28767" fill="#5c4646"/>
+  <circle transform="scale(-1,1)" cx="-75.692" cy="76.864" r=".28767" fill="#5c5c5c"/>
+  <circle transform="scale(-1,1)" cx="-71.04" cy="72.876" r=".28767" fill="#5c5c5c"/>
+  <circle transform="scale(-1,1)" cx="-75.692" cy="66.229" r=".28767" fill="#626262"/>
+  <circle transform="scale(-1,1)" cx="-78.268" cy="59.915" r=".28767" fill="#6d6d6d"/>
+  <circle transform="scale(-1,1)" cx="-80.428" cy="56.01" r=".28767" fill="#5c5c5c"/>
+  <circle transform="scale(-1,1)" cx="-82.505" cy="48.865" r=".28767" fill="#5c5c5c"/>
+  <circle transform="scale(-1,1)" cx="-81.757" cy="44.794" r=".28767" fill="#676767"/>
+  <circle transform="scale(-1,1)" cx="-78.683" cy="44.96" r=".28767" fill="#424e5c"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="scale(-1,1)" cx="-78.517" cy="49.197" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-75.609" cy="51.856" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-72.12" cy="46.705" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-67.55" cy="45.708" r=".28767"/>
+ </g>
+ <circle transform="scale(-1,1)" cx="-65.806" cy="49.364" r=".28767" fill="#5c4646" stroke="none"/>
+ <circle transform="scale(-1,1)" cx="-54.028" cy="50.312" r=".28767" fill="#5c4646" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="scale(-1,1)" cx="-59.159" cy="48.2" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-54.091" cy="44.628" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-48.774" cy="43.88" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-47.527" cy="46.954" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-47.694" cy="55.013" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-47.112" cy="58.918" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-42.626" cy="63.654" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-45.45" cy="71.796" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle transform="scale(-1,1)" cx="-54.506" cy="69.553" r=".28767" fill="#424e5c"/>
+  <circle transform="scale(-1,1)" cx="-58.245" cy="66.479" r=".28767" fill="#5c4646"/>
+  <circle transform="scale(-1,1)" cx="-60.571" cy="70.217" r=".28767" fill="#676767"/>
+  <circle transform="scale(-1,1)" cx="-57.262" cy="75.553" r=".28767" fill="#5c5c5c"/>
+  <circle transform="scale(-1,1)" cx="-47.943" cy="76.781" r=".28767" fill="#5c5c5c"/>
+  <circle transform="scale(-1,1)" cx="-55.986" cy="81.179" r=".28767" fill="#676767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="scale(-1,1)" cx="-53.26" cy="80.27" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-56.999" cy="79.855" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-51.266" cy="84.267" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-43.54" cy="80.187" r=".28767"/>
+  <circle transform="scale(-1,1)" cx="-41.439" cy="78.509" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="56.4" cy="11.643" r=".28767"/>
+ </g>
+ <g fill="#6d6d6d" stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="44.939" cy="23.385" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="47.348" cy="19.397" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="49.259" cy="22.554" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="82.308" cy=".6167" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="46.8" cy="1.3611" r=".28767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="52.333" cy="25.877" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="55.989" cy="27.539" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="56.986" cy="24.298" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="54.493" cy="16.655" r=".28767"/>
+ </g>
+ <g fill="#676767" stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="57.3" cy="12.222" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="42.111" cy="17.961" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="63.973" cy="13.925" r=".28767"/>
+ </g>
+ <circle transform="matrix(0,1,1,0,0,0)" cx="62.22" cy="9.7591" r=".28767" fill="#5c5c5c" stroke="none"/>
+ <circle transform="matrix(0,1,1,0,0,0)" cx="64.38" cy="9.5098" r=".28767" fill="#676767" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="65.46" cy="14.827" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="67.288" cy="18.317" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="70.777" cy="18.981" r=".28767"/>
+ </g>
+ <circle transform="matrix(0,1,1,0,0,0)" cx="75.347" cy="18.649" r=".28767" fill="#424e5c" stroke="none"/>
+ <circle transform="matrix(0,1,1,0,0,0)" cx="77.756" cy="20.227" r=".28767" fill="#424e5c" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="77.673" cy="26.542" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="70.253" cy="28.413" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="65.211" cy="32.441" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="75.098" cy="34.518" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="72.469" cy="36.268" r=".28767" fill="#676767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="64.441" cy="27.03" r=".28767" fill="#5c5c5c"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="60.724" cy="35.598" r=".28767" fill="#676767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="55.158" cy="39.419" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="51.342" cy="30.2" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="56.701" cy="41.707" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="42.111" cy="35.975" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="46.572" cy="28.692" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="45.354" cy="34.351" r=".28767" fill="#5c4646"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="50.505" cy="34.601" r=".28767" fill="#5c5c5c"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="55.158" cy="30.613" r=".28767" fill="#5c5c5c"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="50.505" cy="23.966" r=".28767" fill="#626262"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="69.123" cy="11.978" r=".28767" fill="#6d6d6d"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="45.77" cy="13.747" r=".28767" fill="#5c5c5c"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="43.692" cy="6.602" r=".28767" fill="#5c5c5c"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="44.44" cy="2.5309" r=".28767" fill="#676767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="47.514" cy="2.6971" r=".28767" fill="#424e5c"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="47.68" cy="6.9343" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="50.588" cy="9.5929" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="54.078" cy="4.4418" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="58.647" cy="3.4448" r=".28767"/>
+ </g>
+ <circle transform="matrix(0,1,1,0,0,0)" cx="60.392" cy="7.1005" r=".28767" fill="#5c4646" stroke="none"/>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="67.039" cy="5.9373" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="72.107" cy="2.3648" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="77.424" cy="1.617" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="78.67" cy="4.6911" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="78.504" cy="12.75" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="79.085" cy="16.655" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="83.572" cy="21.391" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="80.747" cy="29.533" r=".28767"/>
+ </g>
+ <g stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="71.691" cy="27.289" r=".28767" fill="#424e5c"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="67.952" cy="24.215" r=".28767" fill="#5c4646"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="65.626" cy="27.954" r=".28767" fill="#676767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="71.049" cy="37.055" r=".28767" fill="#5c5c5c"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="78.255" cy="34.518" r=".28767" fill="#5c5c5c"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="78.836" cy="39.835" r=".28767" fill="#676767"/>
+ </g>
+ <g fill="#5c5c5c" stroke="none">
+  <circle transform="matrix(0,1,1,0,0,0)" cx="72.937" cy="38.007" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="69.199" cy="37.592" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="74.931" cy="42.004" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="82.658" cy="37.924" r=".28767"/>
+  <circle transform="matrix(0,1,1,0,0,0)" cx="83.157" cy="37.425" r=".28767"/>
+ </g>
+ <g fill="#525252" stroke="none">
+  <path transform="matrix(.73191 0 0 .73191 .92935 6.2459)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 6.7165 -6.2929)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 30.709 -5.5695)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 40.595 -10.633)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 46.021 3.1112)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 61.212 6.487)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 66.637 -2.7965)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 27.936 29.997)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 16.241 25.777)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 -6.4251 40.848)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 26.971 47.6)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 45.538 52.181)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 68.205 53.628)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.73191 0 0 .73191 35.29 65.564)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+ </g>
+ <g fill="#666" stroke="none">
+  <path transform="matrix(.92551 0 0 .92551 28.912 29.305)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.92551 0 0 .92551 -5.0601 -17.709)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(.92551 0 0 .92551 65.798 12.738)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+ </g>
+ <g fill="#707070" stroke="none">
+  <path transform="matrix(1.3711 0 0 1.3711 -6.2104 19.922)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(1.3711 0 0 1.3711 10.322 40.076)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+  <path transform="matrix(1.3711 0 0 1.3711 46.642 -11.692)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z"/>
+ </g>
+ <path transform="matrix(.92551 0 0 .92551 52.01 40.437)" d="m15.862 19.389 0.5895 1.8279 1.9206-0.0042-1.5563 1.1255 0.59749 1.8253-1.5513-1.1323-1.5513 1.1323 0.59749-1.8253-1.5563-1.1255 1.9206 0.0042z" fill="#666" stroke="none"/>
+</svg>

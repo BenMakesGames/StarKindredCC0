@@ -1,0 +1,32 @@
+<app-dialog>
+  <h4>Research</h4>
+  <app-loading *ngIf="!availableTechnologies"></app-loading>
+  <ng-container *ngIf="availableTechnologies && availableTechnologies.length == 0">
+    <p>There are no more technologies for you to research!</p>
+    <div class="buttons centered">
+      <button type="button" (click)="doCancel()">OK</button>
+    </div>
+  </ng-container>
+  <form *ngIf="availableTechnologies && availableTechnologies.length > 0" (submit)="doSelect()">
+    <div class="technologies">
+      <label *ngFor="let t of availableTechnologies" [class.selected]="selection == t.value">
+        <input type="radio" name="building" [value]="t.value" [(ngModel)]="selection" />
+        <app-generic-card
+          [image]="'/assets/technologies/' + t.value.toLowerCase() + '.svg'"
+          ribbonColor="#258"
+          [ribbonText]="t.title"
+          [helpTopic]="'technology-' + t.value.toLowerCase()"
+        >
+          <div class="cost">
+            <app-resource *ngFor="let r of t.cost" [resource]="r"></app-resource>
+            <app-research-time [time]="t.timeInMinutes"></app-research-time>
+          </div>
+        </app-generic-card>
+      </label>
+    </div>
+    <div class="buttons centered" style="padding-top: 1em;">
+      <button type="submit" [class.disabled]="!selection">Research</button>
+      <button type="button" class="wire" (click)="doCancel()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

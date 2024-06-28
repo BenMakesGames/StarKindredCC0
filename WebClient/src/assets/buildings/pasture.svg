@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(-1 0 0 1 7.5873 .7865)">
+  <g fill="none" stroke="#000">
+   <path d="m2.3913 5.1155v0.66615" stroke-width=".26458"/>
+   <path d="m3.1438 5.2229v0.55513" stroke-width=".26458"/>
+   <path d="m2.5799 5.1159h0.57086" stroke-linecap="round" stroke-width=".79375"/>
+  </g>
+  <ellipse cx="3.5982" cy="5.3281" rx=".27475" ry=".28323" style="paint-order:markers fill stroke"/>
+  <path d="m2.3913 5.1155s-0.30677 0.037591-0.38811 0.2908" fill="none" stroke="#000" stroke-width=".13229"/>
+ </g>
+ <path d="m0.30155 3.9919 1.8322 2.5371 5.1026-0.0337-1.9475-2.545z" fill="none" stroke="#a1781a" stroke-linejoin="bevel" stroke-width=".26458"/>
+ <path d="m0.28963 4.4927 1.8322 2.5371 5.1026-0.0337-1.9475-2.545z" fill="none" stroke="#a1781a" stroke-linejoin="bevel" stroke-width=".26458"/>
+ <path d="m0.32872 2.3981 0.74568 1.0325 2.0766-0.013715-0.79259-1.0357z" fill="#e9cc4e"/>
+ <path d="m1.5057 0.062324 1.8322 2.5371 5.1026-0.0337-1.9475-2.545z" fill="#e9cc4e"/>
+ <g fill="none" stroke="#667c3f" stroke-width=".26458px">
+  <path d="m1.9868 0.49943h4.6487"/>
+  <path d="m2.3953 1.013h4.6487"/>
+  <path d="m2.7913 1.5467h4.6487"/>
+  <path d="m3.2141 2.1003h4.6487"/>
+ </g>
+ <g transform="translate(-4.8785 -.80994)" fill="#d08300">
+  <circle cx="5.6733" cy="3.2773" r=".15566"/>
+  <circle cx="6.1256" cy="3.2684" r=".15566"/>
+  <circle cx="6.5918" cy="3.2684" r=".15566"/>
+  <circle cx="7.1075" cy="3.2669" r=".15566"/>
+  <circle cx="5.8742" cy="3.6541" r=".15566"/>
+  <circle cx="6.3624" cy="3.6236" r=".15566"/>
+  <circle cx="6.8583" cy="3.6357" r=".15566"/>
+  <circle cx="7.394" cy="3.6252" r=".15566"/>
+  <circle cx="6.1629" cy="3.9755" r=".15566"/>
+  <circle cx="6.6334" cy="3.9647" r=".15566"/>
+  <circle cx="7.1536" cy="3.9526" r=".15566"/>
+  <circle cx="7.6582" cy="3.9276" r=".15566"/>
+ </g>
+ <g fill="none">
+  <g stroke="#a1781a" stroke-width=".26458px">
+   <path d="m7.2244 7.3071v-1.1099"/>
+   <path d="m2.1218 7.3532v-1.1099"/>
+   <path d="m2.9568 7.3378v-1.1099"/>
+   <path d="m3.8359 7.3365v-1.1099"/>
+   <path d="m4.6616 7.3196v-1.1099"/>
+   <path d="m5.5274 7.3196v-1.1099"/>
+   <path d="m6.3665 7.3099v-1.1099"/>
+   <path d="m5.2769 4.7405v-1.1099"/>
+   <path d="m5.7405 5.3231v-1.1099"/>
+   <path d="m6.2599 5.8959v-1.1099"/>
+   <path d="m6.7527 6.5884v-1.1099"/>
+   <path d="m0.17433 4.7866v-1.1099"/>
+   <path d="m1.0093 4.7713v-1.1099"/>
+   <path d="m1.8884 4.7699v-1.1099"/>
+   <path d="m2.7141 4.7531v-1.1099"/>
+   <path d="m3.5799 4.7531v-1.1099"/>
+   <path d="m4.419 4.7433v-1.1099"/>
+   <path d="m0.67927 5.463v-1.1099"/>
+   <path d="m1.1987 6.0357v-1.1099"/>
+   <path d="m1.6915 6.7283v-1.1099"/>
+  </g>
+  <g stroke-linecap="round" stroke-width=".79375">
+   <path d="m6.2538 3.6165h0.90354" stroke="#b79917"/>
+   <path d="m6.7058 4.0685h0.90354" stroke="#c7a719"/>
+   <path d="m7.1391 4.5394h0.90354" stroke="#dab61b"/>
+   <path d="m6.5324 3.3015h0.90354" stroke="#dab61b"/>
+   <path d="m6.9656 3.7724h0.90354" stroke="#e9cc4e"/>
+  </g>
+ </g>
+ <g transform="translate(-.14127 -.51798)">
+  <g fill="none" stroke="#000">
+   <path d="m2.3913 5.1155v0.66615" stroke-width=".26458"/>
+   <path d="m3.1438 5.2229v0.55513" stroke-width=".26458"/>
+   <path d="m2.5799 5.1159h0.57086" stroke-linecap="round" stroke-width=".79375"/>
+  </g>
+  <ellipse cx="3.5982" cy="5.3281" rx=".27475" ry=".28323" style="paint-order:markers fill stroke"/>
+  <path d="m2.3913 5.1155s-0.30677 0.037591-0.38811 0.2908" fill="none" stroke="#000" stroke-width=".13229"/>
+ </g>
+</svg>

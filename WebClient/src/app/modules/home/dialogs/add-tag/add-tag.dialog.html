@@ -1,0 +1,32 @@
+<app-dialog>
+  <app-loading *ngIf="!tags"></app-loading>
+  <ng-container *ngIf="tags">
+    <ng-container *ngIf="tags.length > 0">
+      <h4>Existing Tag</h4>
+      <p class="tag-list" [class.disabled]="adding">
+        <button type="button" class="invisible" *ngFor="let tag of tags" (click)="doSelect(tag)">
+          <app-tag [title]="tag.title" [color]="tag.color"></app-tag>
+        </button>
+      </p>
+      <h4>New Tag</h4>
+    </ng-container>
+    <form (submit)="doAdd()" [class.disabled]="adding">
+      <p>
+        <label>Name</label>
+        <input type="text" minlength="1" maxlength="20" [(ngModel)]="title" name="title" autocomplete="off" />
+      </p>
+      <p>
+        <label>Color</label>
+        <span class="colors">
+        <label *ngFor="let c of availableColors" [style.background-color]="'#' + c" [class.selected]="color == c">
+          <input type="radio" [value]="c" name="color" [(ngModel)]="color" />
+        </label>
+      </span>
+      </p>
+      <div class="buttons centered">
+        <button type="submit" class="full-width" [class.disabled]="title.trim().length == 0">Add</button>
+        <button type="button" class="full-width wire" (click)="doClose()">Cancel</button>
+      </div>
+    </form>
+  </ng-container>
+</app-dialog>

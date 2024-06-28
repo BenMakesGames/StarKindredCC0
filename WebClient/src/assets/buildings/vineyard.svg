@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" version="1.1" viewBox="0 0 8.4667 8.4667" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#e9cc4e">
+  <path d="m0.075125 4.165 2.2333 3.1333 5.1026-0.0337-2.3486-3.1412z"/>
+  <path d="m4.502 2.7481 0.74568 1.0325 2.6364-0.013715-0.79259-1.0357z"/>
+  <path d="m1.5057 0.062324 1.8322 2.5371 5.1026-0.0337-1.9475-2.545z"/>
+ </g>
+ <g transform="translate(-.70524 -.45994)" fill="#ff1313">
+  <circle cx="5.6733" cy="3.2773" r=".15566"/>
+  <circle cx="6.1256" cy="3.2684" r=".15566"/>
+  <circle cx="6.5918" cy="3.2684" r=".15566"/>
+  <circle cx="7.1075" cy="3.2669" r=".15566"/>
+  <circle cx="5.8742" cy="3.6541" r=".15566"/>
+  <circle cx="6.3624" cy="3.6236" r=".15566"/>
+  <circle cx="6.8583" cy="3.6357" r=".15566"/>
+  <circle cx="7.394" cy="3.6252" r=".15566"/>
+  <circle cx="6.1629" cy="3.9755" r=".15566"/>
+  <circle cx="6.6334" cy="3.9647" r=".15566"/>
+  <circle cx="7.1536" cy="3.9526" r=".15566"/>
+  <circle cx="7.6582" cy="3.9276" r=".15566"/>
+  <circle cx="7.6356" cy="3.2418" r=".15566"/>
+  <circle cx="7.9221" cy="3.6001" r=".15566"/>
+  <circle cx="8.1863" cy="3.9025" r=".15566"/>
+ </g>
+ <path d="m5.6259 4.3155 0.74568 1.0325 2.0766-0.013715-0.79259-1.0357z" fill="#e9cc4e"/>
+ <g transform="translate(.41871 1.1075)" fill="#b99800">
+  <circle cx="5.6733" cy="3.2773" r=".15566"/>
+  <circle cx="6.1256" cy="3.2684" r=".15566"/>
+  <circle cx="6.5918" cy="3.2684" r=".15566"/>
+  <circle cx="7.1075" cy="3.2669" r=".15566"/>
+  <circle cx="5.8742" cy="3.6541" r=".15566"/>
+  <circle cx="6.3624" cy="3.6236" r=".15566"/>
+  <circle cx="6.8583" cy="3.6357" r=".15566"/>
+  <circle cx="7.394" cy="3.6252" r=".15566"/>
+  <circle cx="6.1629" cy="3.9755" r=".15566"/>
+  <circle cx="6.6334" cy="3.9647" r=".15566"/>
+  <circle cx="7.1536" cy="3.9526" r=".15566"/>
+  <circle cx="7.6582" cy="3.9276" r=".15566"/>
+ </g>
+ <g fill="none" stroke="#667c3f" stroke-width=".26458px">
+  <path d="m1.9868 0.49943h4.6487"/>
+  <path d="m2.3953 1.013h4.6487"/>
+  <path d="m2.7913 1.5467h4.6487"/>
+  <path d="m3.2141 2.1003h4.6487"/>
+ </g>
+ <path transform="scale(.26458)" d="m6.6445 5.9434-5.7285 0.00586 4.8105 6.4922 5.9082 0.0078z" fill="#e9cc4e" stroke-width="3.7795"/>
+ <g transform="translate(-4.965 -1.6339)" fill="#4c71bd">
+  <circle cx="5.6733" cy="3.2773" r=".15566"/>
+  <circle cx="6.1256" cy="3.2684" r=".15566"/>
+  <circle cx="6.5918" cy="3.2684" r=".15566"/>
+  <circle cx="5.8742" cy="3.6541" r=".15566"/>
+  <circle cx="6.3624" cy="3.6236" r=".15566"/>
+  <circle cx="6.8583" cy="3.6357" r=".15566"/>
+  <circle cx="6.1629" cy="3.9755" r=".15566"/>
+  <circle cx="6.6334" cy="3.9647" r=".15566"/>
+  <circle cx="7.1536" cy="3.9526" r=".15566"/>
+ </g>
+ <g transform="translate(-4.4375 -.94846)" fill="#4c71bd">
+  <circle cx="5.8742" cy="3.6541" r=".15566"/>
+  <circle cx="6.3624" cy="3.6236" r=".15566"/>
+  <circle cx="6.8583" cy="3.6357" r=".15566"/>
+  <circle cx="6.1629" cy="3.9755" r=".15566"/>
+  <circle cx="6.6334" cy="3.9647" r=".15566"/>
+  <circle cx="7.1536" cy="3.9526" r=".15566"/>
+ </g>
+ <g fill="none" stroke="#b77910" stroke-width=".26458px">
+  <path d="m0.85643 3.9352v0.63961"/>
+  <path d="m1.4744 3.9515v0.63961"/>
+  <path d="m2.1573 3.9298v0.63961"/>
+  <path d="m2.8295 3.919v0.63961"/>
+  <path d="m3.5233 3.9298v0.63961"/>
+  <path d="m4.1412 3.919v0.63961"/>
+  <path d="m4.7917 3.9298v0.63961"/>
+ </g>
+ <path d="m0.5568 4.3381h4.6487" fill="none" stroke="#427c3f" stroke-width=".52917"/>
+ <g transform="translate(.56914 .75344)" fill="none" stroke="#b77910" stroke-width=".26458px">
+  <path d="m0.85643 3.9352v0.63961"/>
+  <path d="m1.4744 3.9515v0.63961"/>
+  <path d="m2.1573 3.9298v0.63961"/>
+  <path d="m2.8295 3.919v0.63961"/>
+  <path d="m3.5233 3.9298v0.63961"/>
+  <path d="m4.1412 3.919v0.63961"/>
+  <path d="m4.7917 3.9298v0.63961"/>
+ </g>
+ <path d="m1.0363 5.106h4.6487" fill="none" stroke="#427c3f" stroke-width=".52917"/>
+ <g transform="translate(1.0787 1.5448)" fill="none" stroke="#b77910" stroke-width=".26458px">
+  <path d="m0.85643 3.9352v0.63961"/>
+  <path d="m1.4744 3.9515v0.63961"/>
+  <path d="m2.1573 3.9298v0.63961"/>
+  <path d="m2.8295 3.919v0.63961"/>
+  <path d="m3.5233 3.9298v0.63961"/>
+  <path d="m4.1412 3.919v0.63961"/>
+  <path d="m4.7917 3.9298v0.63961"/>
+ </g>
+ <path d="m1.6542 5.8974h4.6487" fill="none" stroke="#427c3f" stroke-width=".52917"/>
+ <g transform="translate(1.6749 2.3145)" fill="none" stroke="#b77910" stroke-width=".26458px">
+  <path d="m0.85643 3.9352v0.63961"/>
+  <path d="m1.4744 3.9515v0.63961"/>
+  <path d="m2.1573 3.9298v0.63961"/>
+  <path d="m2.8295 3.919v0.63961"/>
+  <path d="m3.5233 3.9298v0.63961"/>
+  <path d="m4.1412 3.919v0.63961"/>
+  <path d="m4.7917 3.9298v0.63961"/>
+ </g>
+ <path d="m2.2293 6.6391h4.6487" fill="none" stroke="#427c3f" stroke-width=".52917"/>
+ <g>
+  <rect x="3.0978" y="2.4222" width=".41394" height=".70524" rx=".1921" ry=".1921" fill="#896032" style="paint-order:markers fill stroke"/>
+  <rect x="3.6216" y="2.4175" width=".41394" height=".70524" rx=".1921" ry=".1921" fill="#896032" style="paint-order:markers fill stroke"/>
+  <rect x="3.3174" y="2.743" width=".41394" height=".70524" rx=".1921" ry=".1921" fill="#a1713b" style="paint-order:markers fill stroke"/>
+  <rect x="3.8412" y="2.7383" width=".41394" height=".70524" rx=".1921" ry=".1921" fill="#a1713b" style="paint-order:markers fill stroke"/>
+  <rect x="3.5314" y="3.0618" width=".41394" height=".70524" rx=".1921" ry=".1921" fill="#b88143" style="paint-order:markers fill stroke"/>
+  <rect x="4.0552" y="3.0571" width=".41394" height=".70524" rx=".1921" ry=".1921" fill="#b88143" style="paint-order:markers fill stroke"/>
+ </g>
+ <g fill="#a1713b">
+  <rect x="1.0506" y="6.4554" width=".41394" height=".70524" rx=".1921" ry=".1921" style="paint-order:markers fill stroke"/>
+  <rect x=".31339" y="6.1085" width=".41394" height=".70524" rx=".1921" ry=".1921" style="paint-order:markers fill stroke"/>
+  <rect x="7.6201" y="2.2709" width=".41394" height=".70524" rx=".1921" ry=".1921" style="paint-order:markers fill stroke"/>
+ </g>
+</svg>

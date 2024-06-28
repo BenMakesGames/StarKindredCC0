@@ -1,0 +1,66 @@
+:host {
+  text-align: center;
+  display: block;
+  position: absolute;
+  max-width: 240px;
+  min-width: 180px;
+  box-sizing: border-box;
+  background-color: rgba(238, 238, 238, 0.8);
+  border-radius: 0.5em;
+  padding: 0.5em;
+
+  &.has-treasure {
+    width: 240px;
+  }
+
+  &.pin-top {
+    margin-top: 2em;
+    transform: translate(-50%);
+  }
+
+  &.pin-left {
+    margin-left: 2em;
+    transform: translate(0, -50%);
+  }
+
+  &.pin-right {
+    transform: translate(calc(-100% - 2em), -50%);
+  }
+
+  &.pin-bottom {
+    transform: translate(-50%, calc(-100% - 2em));
+  }
+
+  &::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    background-size: cover;
+    opacity: 0.8;
+    background-image: url(/assets/map-pin.svg);
+  }
+
+  &.pin-top::before {
+    left: calc(50% - 0.5em);
+    top: -1em;
+    transform: rotate(180deg);
+  }
+
+  &.pin-bottom::before {
+    left: calc(50% - 0.5em);
+    bottom: -1em;
+  }
+
+  &.pin-left::before {
+    top: calc(50% - 0.5em);
+    transform: rotate(90deg);
+    left: -1em;
+  }
+
+  &.pin-right::before {
+    top: calc(50% - 0.5em);
+    transform: rotate(270deg);
+    right: -1em;
+  }
+}

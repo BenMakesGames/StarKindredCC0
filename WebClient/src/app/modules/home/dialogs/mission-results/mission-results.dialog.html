@@ -1,0 +1,13 @@
+<app-dialog>
+  <h4>{{ title }}</h4>
+  <ul *ngIf="report.rewards.length > 0" class="rewards">
+    <li *ngFor="let r of report.rewards">
+      <img [src]="'/assets/' + r.image + '.svg'" [class]="r.image.substring(0, r.image.indexOf('/'))" />
+      <span *ngIf="r.quantity > 1">&times; {{ r.quantity }}</span>
+    </li>
+  </ul>
+  <markdown [data]="report.message"></markdown>
+  <div class="buttons centered">
+    <button type="button" (click)="doOk()">OK</button>
+  </div>
+</app-dialog>

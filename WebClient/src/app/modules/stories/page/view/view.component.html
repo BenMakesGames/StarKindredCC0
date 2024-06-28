@@ -1,0 +1,69 @@
+<main class="no-padding">
+  <app-resources *ngIf="resources" [resources]="resources"></app-resources>
+  <app-loading *ngIf="!story"></app-loading>
+  <ng-container *ngIf="story">
+    <img [src]="'/assets/stories/' + story.year + '/' + story.month + '/map.svg'" class="map" alt="adventure map" />
+    <div *ngIf="story.isDark" id="spotlight" #Spotlight></div>
+    <ng-container *ngFor="let complete of story.completed">
+      <button
+        *ngIf="complete.type === 'Story'"
+        class="completed-mission invisible"
+        (click)="doShowStory(complete)"
+        [style.left.px]="complete.x * 1024 / 100"
+        [style.top.px]="complete.y * 1024 / 100"
+      >
+        <img src="/assets/stories/complete-story.svg" alt="completed story mission">
+      </button>
+      <img
+        *ngIf="complete.type !== 'Story'"
+        class="completed-mission"
+        src="/assets/stories/complete.svg"
+        [style.left.px]="complete.x * 1024 / 100"
+        [style.top.px]="complete.y * 1024 / 100"
+        alt="completed mission"
+      >
+    </ng-container>
+
+    <app-mission-pin
+      *ngFor="let a of availableSteps"
+      [class.pin-left]="a.pinOverride === 'Left'"
+      [class.pin-right]="a.pinOverride === 'Right'"
+      [class.pin-bottom]="a.pinOverride === 'Bottom'"
+      [class.pin-top]="a.pinOverride === 'Top'"
+      [style.left.px]="a.x * 1024 / 100"
+      [style.top.px]="a.y * 1024 / 100"
+    >
+      <h4>{{ a.title }}</h4>
+      <p class="mission-type">{{ a.type|missionTitle }} <app-help-button [topic]="'mission-' + a.type.toLowerCase()"></app-help-button></p>
+      <p><app-describe-vassal-range [min]="a.minVassals" [max]="a.maxVassals" [requiredElement]="a.requiredElement"></app-describe-vassal-range></p>
+      <div [class.disabled]="completingAMission" *ngIf="inProgressSteps.length == 0">
+        <button type="button" class="full-width" (click)="doAssignToMission(a)">Assign</button>
+      </div>
+      <div *ngIf="inProgressSteps.length > 0" class="cannot-start">
+        Another story mission is in progress.
+      </div>
+    </app-mission-pin>
+
+    <app-mission-pin
+      *ngFor="let a of inProgressSteps"
+      [class.pin-left]="a.availableStep.pinOverride === 'Left'"
+      [class.pin-right]="a.availableStep.pinOverride === 'Right'"
+      [class.pin-bottom]="a.availableStep.pinOverride === 'Bottom'"
+      [class.pin-top]="a.availableStep.pinOverride === 'Top'"
+      [style.left.px]="a.availableStep.x * 1024 / 100"
+      [style.top.px]="a.availableStep.y * 1024 / 100"
+    >
+      <h4>{{ a.availableStep.title }}</h4>
+      <p class="mission-type">{{ a.availableStep.type|missionTitle }} <app-help-button [topic]="'mission-' + a.availableStep.type.toLowerCase()"></app-help-button></p>
+      <app-vassal-medallion-list [vassals]="a.inProgress.vassals"></app-vassal-medallion-list>
+      <p>
+        <app-time-remainings [current]="now" [end]="a.inProgress.completesOn"></app-time-remainings>
+        <app-progress-bar [progress]="now - a.inProgress.startedOn" [maxProgress]="a.inProgress.completesOn - a.inProgress.startedOn"></app-progress-bar>
+      </p>
+      <div class="buttons" [class.disabled]="completingAMission">
+        <button type="button" class="notice-me full-width" *ngIf="a.inProgress.completesOn <= now" (click)="doComplete(a)">Complete!</button>
+        <button type="button" class="wire full-width" *ngIf="a.inProgress.completesOn > now" (click)="doAbort(a)">Abort</button>
+      </div>
+    </app-mission-pin>
+  </ng-container>
+</main>

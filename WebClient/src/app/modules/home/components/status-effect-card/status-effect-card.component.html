@@ -1,0 +1,5 @@
+<div class="card">
+  <img [src]="type|statusEffectImage" alt="" aria-hidden="true" />
+  <app-card-ribbon [color]="ribbonColor"><div class="name">{{ type|statusEffectTitle }}</div></app-card-ribbon>
+  <span class="duration" *ngIf="showDuration"><img src="/assets/ui/clock.svg" alt="duration:" /><span>{{ duration }}</span></span>
+</div>

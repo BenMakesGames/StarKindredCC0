@@ -1,0 +1,15 @@
+<main>
+  <h1><a routerLink="/settings">Account</a> &gt; Email Address</h1>
+  <app-loading *ngIf="!accountInfo"></app-loading>
+  <ng-container *ngIf="accountInfo">
+    <form (submit)="doChangeEmailAddress()" [class.disabled]="working">
+      <p>
+        <label for="newEmail">Email Address</label>
+        <input id="newEmail" type="email" name="email" [placeholder]="accountInfo.emailAddress" [(ngModel)]="newEmailAddress">
+      </p>
+      <p class="buttons centered">
+        <button type="submit" [class.disabled]="!newEmailAddress">Update</button>
+      </p>
+    </form>
+  </ng-container>
+</main>

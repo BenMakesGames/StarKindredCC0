@@ -1,0 +1,34 @@
+<main>
+  <h1>History</h1>
+  <app-loading *ngIf="!logs"></app-loading>
+  <ng-container *ngIf="logs">
+    <!-- TODO: filters -->
+    <p *ngIf="logs.results.length == 0" class="centered-text">None! Try <a routerLink="/home/missions">sending a Vassal on a mission</a>.</p>
+    <ng-container *ngIf="logs.results.length > 0">
+      <p *ngIf="logs.totalPages > 1">
+        <app-pagination
+          href="/home/logs"
+          [queryParams]="query"
+          [page]="logs.page"
+          [totalPages]="logs.totalPages"
+        ></app-pagination>
+      </p>
+      <div>
+        <app-log-entry *ngFor="let log of logs.results"
+          [createdOn]="log.date"
+          [message]="log.message"
+          [tags]="log.tags"
+        >
+        </app-log-entry>
+      </div>
+      <p *ngIf="logs.totalPages > 1">
+        <app-pagination
+          href="/home/logs"
+          [queryParams]="query"
+          [page]="logs.page"
+          [totalPages]="logs.totalPages"
+        ></app-pagination>
+      </p>
+    </ng-container>
+  </ng-container>
+</main>

@@ -1,0 +1,18 @@
+<app-dialog>
+  <h4>Repair</h4>
+  <app-loading *ngIf="!weapons"></app-loading>
+  <p *ngIf="weapons && weapons.results.length == 0">No available weapons were found.</p>
+  <form *ngIf="weapons && weapons.results.length > 0" (submit)="doRepair()" [class.disabled]="repairing">
+    <p>Select a weapon to use. It will be consumed.</p>
+    <p class="weapons">
+      <label *ngFor="let weapon of weapons.results" [class.selected]="selectedWeaponId == weapon.id">
+        <input type="radio" name="weapon" [value]="weapon.id" [(ngModel)]="selectedWeaponId">
+        <app-weapon-card [name]="weapon.name" [level]="weapon.level" [vassal]="weapon.vassal" [image]="weapon.image" [repairValue]="weapon.repairValue"></app-weapon-card>
+      </label>
+    </p>
+    <div class="buttons">
+      <button type="submit" class="full-width" [class.disabled]="!selectedWeaponId">Repair</button>
+      <button type="button" class="full-width wire" (click)="doCancel()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

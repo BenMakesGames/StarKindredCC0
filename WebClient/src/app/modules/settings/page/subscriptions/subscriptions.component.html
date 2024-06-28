@@ -1,0 +1,43 @@
+<main>
+  <h1><a routerLink="/settings">Account</a> &gt; Subscriptions</h1>
+  <app-loading *ngIf="!subscriptions"></app-loading>
+  <ng-container *ngIf="subscriptions && subscriptions.totalCount == 0">
+    <ul class="stuff-you-get">
+      <li>Full access to monthly story adventures</li>
+      <li>And just for fun: access to a dozen colored avatar icons</li>
+    </ul>
+    <app-loading *ngIf="userId == null"></app-loading>
+    <ng-container *ngIf="userId != null">
+      <stripe-pricing-table
+        [attr.client-reference-id]="userId"
+        pricing-table-id="prctbl_1Lpkt1HBt93i6GbMfqhs0Qqr"
+        publishable-key="pk_test_51Llf2eHBt93i6GbMpgW75Mpok0kIjmdl5pSbPsW0IF5MCLFFVHJIKDGW0tqJOtQk0wJzQ3zqpVJAOhA1aOIv8ktA00SaRfYOWz"
+      ></stripe-pricing-table>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="subscriptions && subscriptions.totalCount > 0">
+    <app-pagination *ngIf="subscriptions.totalPages > 1"></app-pagination>
+    <div class="subscriptions">
+      <div *ngFor="let s of subscriptions.results">
+        <div>
+          <img src="/assets/ui/black-crown.svg" alt="crown" />
+        </div>
+        <div class="info">
+          <p>
+            <label>Duration</label>
+            <span>{{ s.startDate|date }} - {{ s.endDate|date }}</span>
+          </p>
+          <p *ngIf="s.subscriptionService === 'Ko-fi'">
+            <label>Details</label>
+            <a href="https://ko-fi.com/account/" target="_blank">View at ko-fi.com &raquo;</a>
+          </p>
+          <p *ngIf="s.subscriptionService === 'Stripe'">
+            <label>Details</label>
+            <a href="https://ko-fi.com/account/" target="_blank">View at stripe.com &raquo;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <app-pagination *ngIf="subscriptions.totalPages > 1"></app-pagination>
+  </ng-container>
+</main>

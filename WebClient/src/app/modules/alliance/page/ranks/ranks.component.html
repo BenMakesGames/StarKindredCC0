@@ -1,0 +1,35 @@
+<main>
+  <h1><a routerLink="/alliance/search">Alliances</a> &gt; <a routerLink="/alliance">My</a> &gt; Titles</h1>
+  <app-loading *ngIf="!titles"></app-loading>
+  <ng-container *ngIf="titles">
+    <p *ngIf="titles.length == 0" style="text-align:center;">This Alliance has no Titles.</p>
+    <p class="buttons centered" *ngIf="canEditRanks">
+      <button type="button" (click)="doAddRank()">Add Title</button>
+    </p>
+    <table *ngIf="titles.length > 0" class="properties">
+      <thead>
+        <tr class="centered-text">
+          <th>Title</th>
+          <th class="rank">Rank <app-help-button topic="alliance-rank"></app-help-button></th>
+          <th class="centered-text">Recruit</th>
+          <th class="centered-text">Kick</th>
+          <th class="centered-text">Track Giants</th>
+          <th *ngIf="canEditRanks"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rank of titles">
+          <td>{{ rank.title }}</td>
+          <td class="rank">{{ rank.rank }}</td>
+          <td class="permission" [class.can]="rank.canRecruit">{{ rank.canRecruit ? '✓' : '-' }}</td>
+          <td class="permission" [class.can]="rank.canKick">{{ rank.canKick ? '✓' : '-' }}</td>
+          <td class="permission" [class.can]="rank.canTrackGiants">{{ rank.canTrackGiants ? '✓' : '-' }}</td>
+          <td *ngIf="canEditRanks" class="buttons">
+            <button type="button" class="link-text" (click)="doRenameTitle(rank)"><img src="/assets/ui/red-quill.svg" alt="Rename"></button>
+            <button type="button" class="link-text" (click)="doDeleteTitle(rank)"><img src="/assets/ui/red-fire.svg" alt="Delete"></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</main>

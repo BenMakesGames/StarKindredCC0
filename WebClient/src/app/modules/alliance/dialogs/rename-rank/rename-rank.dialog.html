@@ -1,0 +1,13 @@
+<app-dialog>
+  <form (submit)="doRename()" [class.disabled]="submitting">
+    <h4>Create Title</h4>
+    <p>
+      <label>Title</label>
+      <input type="text" name="title" [(ngModel)]="title" maxlength="20" />
+    </p>
+    <div class="buttons centered">
+      <button type="submit" [class.disabled]="title.length < 1">Rename</button>
+      <button type="button" (click)="doClose()" class="wire">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

@@ -1,0 +1,42 @@
+<app-dialog>
+  <h4>Recruit</h4>
+  <p *ngIf="!inviteStatus"><app-loading></app-loading></p>
+  <ng-container *ngIf="inviteStatus">
+    <form (submit)="doUpdateOpenInvitation()" [class.disabled]="waiting">
+      <h5>Open Invitation</h5>
+      <p class="radio-checkbox-list">
+        <label><input type="checkbox" [checked]="openInvitation" (change)="openInvitation = !openInvitation" /> Enabled</label>
+      </p>
+      <fieldset [class.disabled]="!openInvitation">
+        <p>
+          <label>Minimum Level</label>
+          <input type="number" name="min-level" [(ngModel)]="minLevel" />
+        </p>
+        <p>
+          <label>Maximum Level</label>
+          <input type="number" name="max-level" [(ngModel)]="maxLevel" />
+        </p>
+      </fieldset>
+      <p class="buttons centered" [class.disabled]="waiting">
+        <button type="submit">Update Open Invitation</button>
+      </p>
+    </form>
+    <form (submit)="doUpdateInviteCode()" [class.disabled]="waiting">
+      <h5>Invite Code <app-help-button topic="alliance-invitecode"></app-help-button></h5>
+
+      <p class="radio-checkbox-list">
+        <label><input type="checkbox" [checked]="useInviteCode" (change)="useInviteCode = !useInviteCode" /> Enabled</label>
+      </p>
+      <p [class.disabled]="!useInviteCode" class="invite-code">
+        <code>{{ inviteStatus.inviteCode }}</code>
+      </p>
+      <p class="buttons centered" [class.disabled]="waiting">
+        <button type="submit">Update Invite Code</button>
+      </p>
+
+    </form>
+  </ng-container>
+  <div class="buttons centered" [class.disabled]="waiting">
+    <button type="button" (click)="doCancel()">OK</button>
+  </div>
+</app-dialog>

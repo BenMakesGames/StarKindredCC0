@@ -1,0 +1,21 @@
+.dialog {
+  > .body {
+    padding: 1em;
+  }
+
+  > .right-decoration {
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    right: -8px;
+    background-image: url(/assets/ui/dialog-right-edge.png);
+  }
+
+  > .left-decoration {
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    left: -8px;
+    background-image: url(/assets/ui/dialog-left-edge.png);
+  }
+}

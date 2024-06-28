@@ -1,0 +1,22 @@
+.permission {
+  text-align: center;
+  color: #999;
+
+  &.can {
+    font-weight: bold;
+    color: green;
+  }
+}
+
+table {
+  margin: 0 auto;
+
+  .rank {
+    text-align: right;
+  }
+}
+
+.buttons img {
+  width: 1em;
+  display: block;
+}

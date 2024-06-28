@@ -1,0 +1,26 @@
+<app-dialog>
+  <h4>{{ useLabel }}</h4>
+  <form (submit)="doOpen()" [class.disabled]="opening">
+    <div class="options">
+      <label *ngFor="let c of choices" [class.selected]="choice === c.value">
+        <input type="radio" [(ngModel)]="choice" [value]="c.value" name="choice" />
+        <app-generic-card
+          ribbonColor="#393"
+          [ribbonText]="c.label"
+          [image]="'/assets/' + c.image + '.svg'"
+        ></app-generic-card>
+      </label>
+    </div>
+    <p *ngIf="maxAllowedQuantity > 1">
+      <label for="quantity">Quantity</label>
+      <span style="display: grid; grid-template-columns: auto 2.5em; column-gap: 0.5em; align-items: center;">
+        <input id="quantity" name="quantity" type="range" [(ngModel)]="quantity" min="1" max="{{ maxAllowedQuantity }}" step="1" />
+        <span>&times; {{ quantity }}</span>
+      </span>
+    </p>
+    <div class="buttons centered">
+      <button type="submit" class="full-width" [class.disabled]="choice === undefined">{{ useLabel }}</button>
+      <button type="button" class="full-width wire" (click)="doClose()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

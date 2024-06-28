@@ -1,0 +1,13 @@
+<app-dialog>
+  <form (submit)="doRename()" [class.disabled]="submitting">
+    <h4>Enter Invite Code</h4>
+    <p>
+      <label>Invite Code</label>
+      <input type="text" name="title" [(ngModel)]="inviteCode" maxlength="7" />
+    </p>
+    <div class="buttons centered">
+      <button type="submit" [class.disabled]="inviteCode.length != 7">Join</button>
+      <button type="button" (click)="doClose()" class="wire">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

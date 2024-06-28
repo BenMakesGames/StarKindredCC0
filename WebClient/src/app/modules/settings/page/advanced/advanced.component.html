@@ -1,0 +1,16 @@
+<main>
+  <h1><a routerLink="/settings">Account</a> &gt; Advanced Info</h1>
+  <app-loading *ngIf="!accountInfo"></app-loading>
+  <ng-container *ngIf="accountInfo">
+    <div class="info">
+      <p>
+        <label>Id</label>
+        <span>{{ accountInfo.id }}</span>
+      </p>
+      <p>
+        <label>Sign Up Date</label>
+        <span>{{ accountInfo.signUpDate|date:'medium' }}<small>{{ accountInfo.signUpDate|date:'yyyy-MM-dd HH:mm:ss':'UTC' }} UTC</small></span>
+      </p>
+    </div>
+  </ng-container>
+</main>

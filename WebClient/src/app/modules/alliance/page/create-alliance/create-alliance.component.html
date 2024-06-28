@@ -1,0 +1,15 @@
+<main>
+  <app-resources *ngIf="resources" [resources]="resources"></app-resources>
+  <h1>Create an Alliance</h1>
+  <p>To create an Alliance, you need...</p>
+  <ul>
+    <li>A Level 10 or higher Palace</li>
+    <li><app-describe-yield [yield]="[{ type: 'Gold', quantity: 1000 }]" [orientation]="YieldOrientation.Horizontal"></app-describe-yield></li>
+  </ul>
+  <form (submit)="doCreateAlliance()" [class.disabled]="creating">
+    <div class="buttons">
+      <a routerLink="/alliance" class="button wire">Cancel</a>
+      <button type="submit" class="button">Create</button>
+    </div>
+  </form>
+</main>

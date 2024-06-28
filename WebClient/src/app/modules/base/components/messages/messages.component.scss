@@ -1,0 +1,13 @@
+:host {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: calc(100vw - 1rem);
+  max-width: calc(420px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  z-index: var(--z-index-toast);
+}

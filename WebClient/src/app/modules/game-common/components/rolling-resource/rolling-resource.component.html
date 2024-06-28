@@ -1,0 +1,4 @@
+<div [class]="'resource ' + resource.type.toLowerCase()" [class.rolling-up]="delta > 0" [class.rolling-down]="delta < 0" [title]="resource.type">
+  <img [src]="'/assets/resources/' + resource.type.toLowerCase() + '.svg'" [alt]="resource.type">
+  <span class="monospace-numbers">&times;<span [countUp]="resource.newQuantity" [options]="{ startVal: resource.oldQuantity, useGrouping: false, duration: 0.5 }" (complete)="delta = 0">{{ resource.oldQuantity }}</span></span>
+</div>

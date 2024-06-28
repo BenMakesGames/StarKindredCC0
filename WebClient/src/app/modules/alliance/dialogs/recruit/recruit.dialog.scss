@@ -1,0 +1,25 @@
+.method {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+
+  > button {
+    max-width: 6em;
+    display: flex;
+    flex-direction: column;
+    > img {
+      width: 100%;
+    }
+    > span {
+      color: #333;
+    }
+  }
+
+}
+
+.invite-code > code {
+  margin: 0 auto;
+  display: block;
+  width: min-content;
+  padding: 1em;
+}

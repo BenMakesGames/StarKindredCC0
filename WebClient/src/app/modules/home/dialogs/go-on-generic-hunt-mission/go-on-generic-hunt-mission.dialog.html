@@ -1,0 +1,17 @@
+<app-dialog>
+  <app-assemble-a-team
+    [maxVassals]="maxVassals"
+    [embarking]="embarking"
+    [tags]="tags"
+    [(selectedVassals)]="selectedVassals"
+    (select)="doGoOnMission()"
+    (cancel)="doCancel()"
+  >
+    <app-chance-of-success
+      [vassals]="selectedVassals"
+      [level]="level"
+      [maxVassals]="maxVassals"
+      [applyHuntingBonus]="true"
+    ></app-chance-of-success>
+  </app-assemble-a-team>
+</app-dialog>

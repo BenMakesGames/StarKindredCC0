@@ -1,0 +1,12 @@
+<app-dialog>
+  <p>
+    <b>Duration:</b>{{ ' ' }}
+    <ng-container *ngIf="!specialDuration">{{ duration }} Missions</ng-container>
+    <ng-container *ngIf="specialDuration">Special</ng-container>
+  </p>
+  <markdown [src]="'/assets/help/' + helpKey + '.md'"></markdown>
+  <div class="buttons centered">
+    <button type="button" class="full-width" [class.disabled]="ichorQuantity == 0" (click)="doUseIchor()">Remove (Uses 1 <img src="/assets/treasures/ichor.svg" alt="" aria-hidden="true" />Ichor)</button>
+    <button type="button" class="full-width" (click)="doClose()">OK</button>
+  </div>
+</app-dialog>

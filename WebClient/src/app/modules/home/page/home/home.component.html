@@ -1,0 +1,79 @@
+<a *ngIf="town && town.canDecorate" routerLink="/home/decorate" class="decoration-mode"><img src="/assets/ui/vase.svg" alt="edit decorations"></a>
+<app-resources *ngIf="resources" [resources]="resources"></app-resources>
+<main class="no-padding">
+  <app-loading *ngIf="!town"></app-loading>
+  <ng-container *ngIf="town">
+    <img src="/assets/town.svg" class="map" alt="town map" />
+    <div
+      *ngFor="let b of town.buildings; let i = index"
+      class="building"
+      [style.left]="'calc(max(min(960px, 100vw), 100vh) * ' + b.left / 100 + ')'"
+      [style.top]="'calc(max(min(960px, 100vw), 100vh) * ' + b.top / 100 + ')'"
+      [style.z-index]="b.top - b.top % 1"
+    >
+      <button
+        type="button"
+        class="invisible main"
+        (click)="doHarvestBuilding(b)"
+      >
+        <img [src]="'/assets/buildings/' + b.type.toLowerCase() + '.svg'" alt="" aria-hidden="true" />
+        <div class="label"><div class="type">{{ b.type|buildingTitle }}</div><div class="level">level {{ b.level }}</div></div>
+        <div class="yield-progress"><app-progress-bar [progress]="buildingYieldProgress[i].progress" [maxProgress]="buildingYieldProgress[i].target"></app-progress-bar></div>
+        <div class="yield"><app-describe-yield [yield]="b.yield"></app-describe-yield></div>
+      </button>
+      <button
+        *ngIf="buildingPowerAvailable[i]"
+        class="invisible power"
+        (click)="doUsePower(b)"
+      >
+        <img src="/assets/lightning.svg" alt="use daily power">
+      </button>
+    </div>
+
+    <div
+      *ngFor="let d of town.decorations"
+      class="decoration"
+      [style.left]="'calc(max(min(960px, 100vw), 100vh) * ' + d.x / 100 + ')'"
+      [style.top]="'calc(max(min(960px, 100vw), 100vh) * ' + d.y / 100 + ')'"
+      [style.z-index]="d.y - d.y % 1"
+      [class.flip-x]="d.flipX"
+    >
+      <img [src]="'/assets/decorations/' + d.type.toLowerCase() + '.svg'" [style.width.%]="d.scale" [alt]="d.type" />
+    </div>
+
+    <button
+      *ngIf="town.rumorWaiting"
+      class="rumor"
+      type="button"
+      [style.left]="'calc(max(min(960px, 100vw), 100vh) * ' + (TownPositions[0].left + 13) / 100 + ')'"
+      [style.top]="'calc(max(min(960px, 100vw), 100vh) * ' + (TownPositions[0].top - 2) / 100 + ')'"
+      (click)="doHearRumor()"
+    ><img src="/assets/new-quest.svg" alt="your people have news!"></button>
+
+    <button
+      *ngFor="let s of emptySpaces"
+      type="button"
+      class="empty-space"
+      [style.left]="'calc(max(min(960px, 100vw), 100vh) * ' + s.left / 100 + ')'"
+      [style.top]="'calc(max(min(960px, 100vw), 100vh) * ' + s.top / 100 + ')'"
+      (click)="doBuildSomething(s)"
+    >
+      <img src="/assets/ui/hammer.svg" alt="hammer icon"><span>Build</span>
+    </button>
+
+    <button
+      *ngFor="let g of town.goodies"
+      type="button"
+      class="goodie"
+      [style.left]="'calc(max(min(960px, 100vw), 100vh) * ' + (goodiePositions[g.position].left) / 100 + ' - 14px)'"
+      [style.top]="'calc(max(min(960px, 100vw), 100vh) * ' + (goodiePositions[g.position].top) / 100 + ' - 36px)'"
+      (click)="doCollectGoodie(g)"
+    >
+      <img [src]="'/assets/resources/' + g.type.toLowerCase() + '.svg'" [alt]="g.type" />
+    </button>
+
+    <button class="town-name invisible" type="button" (click)="doRenameTown()">
+      <app-card-ribbon>&nbsp;{{ town.name }}&nbsp;</app-card-ribbon>
+    </button>
+  </ng-container>
+</main>

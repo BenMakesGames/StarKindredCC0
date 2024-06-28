@@ -1,0 +1,5 @@
+<ul class="resources" *ngIf="resources">
+  <li *ngFor="let r of rollingResources">
+    <app-rolling-resource [resource]="r"></app-rolling-resource>
+  </li>
+</ul>

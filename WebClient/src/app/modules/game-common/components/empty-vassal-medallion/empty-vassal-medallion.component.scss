@@ -1,0 +1,20 @@
+.medallion {
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
+  position: relative;
+  background-color: #bbb;
+
+  > div {
+    position: relative;
+    top: -1em;
+    box-sizing: border-box;
+    width: 4em;
+    height: 5em;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-size: 6em 8em;
+    background-position: -1em 0em;
+    background-image: url(/assets/vassal/portraits/placeholder.svg);
+  }
+}

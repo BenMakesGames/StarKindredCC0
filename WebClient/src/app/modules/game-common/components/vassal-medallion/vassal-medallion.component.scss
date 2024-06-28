@@ -1,0 +1,61 @@
+.vassal {
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
+  position: relative;
+  background-size: cover;
+
+  &.Earth {
+    background-color: #cb9;
+    background-image: url(/assets/vassal/backgrounds/earth.svg);
+  }
+
+  &.Fire {
+    background-color: #daa;
+    background-image: url(/assets/vassal/backgrounds/fire.svg);
+  }
+
+  &.Water {
+    background-color: #9ad;
+    background-image: url(/assets/vassal/backgrounds/water.svg);
+  }
+
+  &.Plant {
+    background-color: #8c8;
+    background-image: url(/assets/vassal/backgrounds/plant.svg);
+  }
+
+  &.Ice {
+    background-color: #cde;
+    background-image: url(/assets/vassal/backgrounds/ice.svg);
+  }
+
+  &.Metal {
+    background-color: #ccc;
+    background-image: url(/assets/vassal/backgrounds/metal.svg);
+  }
+
+  &.Lightning {
+    background-color: #fd8;
+    background-image: url(/assets/vassal/backgrounds/lightning.svg);
+  }
+
+  > .portrait {
+    position: relative;
+    top: -1em;
+    box-sizing: border-box;
+    width: 4em;
+    height: 5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    background-size: 6em 8em;
+    background-position: -1em 0em;
+  }
+
+  > app-level-badge {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

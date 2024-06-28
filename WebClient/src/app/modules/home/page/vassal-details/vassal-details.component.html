@@ -1,0 +1,133 @@
+<main>
+  <app-resources *ngIf="resources" [resources]="resources"></app-resources>
+  <app-loading *ngIf="!vassal"></app-loading>
+  <ng-container *ngIf="vassal">
+    <div class="two-columns">
+      <div>
+        <div class="portrait">
+          <app-vassal-portrait [vassal]="vassalPortraitInfo!"></app-vassal-portrait>
+          <div class="buttons" [class.disabled]="!loadingSubscription.closed || vassal.mission">
+            <button type="button" *ngIf="vassal.level < maxLevel" [class.disabled]="canLevel" class="full-width" (click)="doLevelUp()">Level Up</button>
+            <button type="button" [class.disabled]="vassal.willpower < 1" class="full-width" (click)="doSpendWillpower()">Spend Willpower</button>
+            <button type="button" *ngIf="!vassal.weapon" class="full-width" (click)="doEquipSomething()">Equip</button>
+            <button type="button" *ngIf="vassal.weapon" class="full-width" (click)="doShowWeapon()">View Equipment</button>
+            <button type="button" *ngIf="hasRenamingScrolls" class="full-width" (click)="doRename()">Rename</button>
+            <div class="retire-container">
+              <button type="button" *ngIf="vassal.retirementProgress < 10" class="full-width" (click)="doDismiss()" [class.disabled]="vassal.favorite || vassal.leader">Dismiss</button>
+              <button type="button" *ngIf="vassal.retirementProgress >= 10" class="full-width" (click)="doRetire()" [class.disabled]="vassal.favorite || vassal.leader">Retire</button>
+              <img src="/assets/ui/favorite-locked.svg" class="favorite-locked" *ngIf="vassal.favorite" alt="locked (a favorite vassal)">
+            </div>
+          </div>
+          <p *ngIf="vassal.mission" class="mission-description">
+            <img src="/assets/ui/on-a-mission.svg" class="status-effect" alt="on a mission" style="height:0.8em" />
+            {{ vassal.name }} is currently on a mission: {{ vassal.mission|missionTitle }}.
+            <app-help-button [topic]="'mission-' + vassal.mission.toLowerCase()"></app-help-button>
+          </p>
+          <p *ngIf="vassal.leader" class="mission-description">
+            <img src="/assets/ui/black-crown.svg" class="status-effect" alt="leader" style="height:0.8em" />
+            {{ vassal.name }} holds a leadership position. <a routerLink="/leadership">View all leaders.</a>
+          </p>
+        </div>
+      </div>
+      <div>
+        <h1><app-favorite [vassalId]="vassalId" [(favorite)]="vassal.favorite"></app-favorite> {{ vassal.name }}</h1>
+        <table class="properties">
+          <tbody>
+            <tr>
+              <th>Species</th>
+              <td>{{ vassal.species }}</td>
+              <td><app-help-button [topic]="'species-' + vassal.species"></app-help-button></td>
+            </tr>
+            <tr>
+              <th>Element</th>
+              <td>{{ vassal.element }}</td>
+              <td><app-help-button [topic]="'element-' + vassal.element"></app-help-button></td>
+            </tr>
+            <tr>
+              <th>Nature</th>
+              <td>{{ vassal.nature|natureTitle }}</td>
+              <td><app-help-button [topic]="'nature-' + vassal.nature"></app-help-button></td>
+            </tr>
+            <tr>
+              <th>Sign</th>
+              <td>{{ vassal.sign|signTitle }}</td>
+              <td><app-help-button [topic]="'sign-' + vassal.sign"></app-help-button></td>
+            </tr>
+            <tr>
+              <th>Recruited</th>
+              <td>{{ vassal.recruitDate|date }}</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Tags</th>
+              <td colspan="2" class="tags">
+                <button type="button" class="wire" (click)="doRemoveTags()" *ngIf="vassal.tags.length > 0">- Tag</button>
+                <ng-container *ngIf="removingTags">
+                  <button
+                    *ngFor="let tag of vassal.tags;let i = index"
+                    class="invisible shivering"
+                    (click)="doRemoveTag(tag)"
+                    [style.animation-delay.s]="-i * 3.1459"
+                  >
+                    <app-tag [title]="tag.title" [color]="tag.color"></app-tag>
+                  </button>
+                </ng-container>
+                <ng-container *ngIf="!removingTags">
+                  <a
+                    *ngFor="let tag of vassal.tags"
+                    routerLink="/home/vassals"
+                    [queryParams]="{ tag: tag.title }"
+                  >
+                    <app-tag [title]="tag.title" [color]="tag.color"></app-tag>
+                  </a>
+                </ng-container>
+                <button type="button" class="wire" (click)="doAddTag()" *ngIf="vassal.tags.length < 5">+ Tag</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ng-container *ngIf="vassal.statusEffects.length > 0">
+          <h2>Status Effects</h2>
+          <div class="status-effects">
+            <button
+              *ngFor="let se of vassal.statusEffects"
+              class="invisible"
+              [class.disabled]="!loadingSubscription.closed"
+              (click)="doShowStatusEffect(se)"
+            >
+              <app-status-effect-card [type]="se.type" [duration]="se.strength"></app-status-effect-card>
+            </button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="vassal.relationships.length > 0">
+          <h2>Relationships <app-help-button topic="relationships"></app-help-button></h2>
+          <div class="relationships">
+            <div *ngFor="let r of vassal.relationships">
+              <a class="portrait" [routerLink]="'/home/vassals/' + r.id">
+                <app-vassal-medallion
+                  [portrait]="r.portrait"
+                  [element]="r.element"
+                  [species]="r.species"
+                  [level]="r.level"
+                ></app-vassal-medallion>
+              </a>
+              <div class="name">
+                <img src="/assets/ui/favorite.svg" class="favorite" *ngIf="r.favorite" alt="a favorite">
+                {{ r.name }}
+              </div>
+              <div class="stars"><app-stars [stars]="r.relationshipLevel" [maxStars]="5" icon="gold-star" emptyIcon="gray-star" [title]="'Level-' + r.relationshipLevel + ' Relationship'"></app-stars></div>
+              <div class="progress">
+                <app-progress-bar
+                  *ngIf="r.relationshipLevel < 5"
+                  [progress]="r.relationshipProgress"
+                  [maxProgress]="1"
+                  [pulsing]="false"
+                ></app-progress-bar>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</main>

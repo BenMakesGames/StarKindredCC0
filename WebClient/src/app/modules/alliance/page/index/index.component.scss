@@ -1,0 +1,38 @@
+.alliances {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 1em;
+
+  > div {
+    display: grid;
+    grid-template-columns: 7.5em auto;
+    grid-column-gap: 1em;
+    background-color: #fff;
+    border-radius: 0.5em;
+    padding: 1em;
+    position: relative;
+    cursor: pointer;
+
+    .view-details {
+      position: absolute;
+      bottom: 1em;
+      right: 1em;
+    }
+  }
+}
+
+@media (max-width: 480px)
+{
+  table,tr,th,td { display: block; }
+}
+
+th {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+td {
+  padding-right: 0;
+  padding-top: 0;
+}

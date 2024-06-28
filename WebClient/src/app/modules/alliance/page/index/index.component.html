@@ -1,0 +1,52 @@
+<main>
+  <h1>Alliances</h1>
+  <p class="centered-text">
+    <a href="/alliance">My Alliance</a>
+  </p>
+  <app-loading *ngIf="!results"></app-loading>
+  <ng-container *ngIf="results">
+    <div class="alliances">
+      <div class="invisible" *ngFor="let alliance of results.results" (click)="doViewAlliance(alliance)">
+        <div>
+          <app-member-card
+            [name]="alliance.leader.name"
+            [isLeader]="true"
+            [avatar]="alliance.leader.avatar"
+            [color]="alliance.leader.color"
+          ></app-member-card>
+        </div>
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <th>Last Active</th>
+                <td *ngIf="!alliance.lastActiveOn" style="opacity:0.5">&mdash;</td>
+                <td *ngIf="alliance.lastActiveOn">{{ alliance.lastActiveOn|date:'mediumDate' }}</td>
+              </tr>
+              <tr>
+                <th>Level</th>
+                <td>{{ alliance.level }}</td>
+              </tr>
+              <tr>
+                <th>Members</th>
+                <td>{{ alliance.memberCount }}</td>
+              </tr>
+              <tr>
+                <th>Founded</th>
+                <td>{{ alliance.createdOn|date:'mediumDate' }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p *ngIf="alliance.openInvitation">Accepting new members, levels {{ alliance.openInvitation.minLevel }}-{{ alliance.openInvitation.maxLevel }}.</p>
+          <a class="view-details" [routerLink]="'/alliance/view/' + alliance.id">View Details &raquo;</a>
+        </div>
+      </div>
+    </div>
+    <app-pagination
+      href="/alliance/search"
+      [queryParams]="query"
+      [page]="results.page"
+      [totalPages]="results.totalPages"
+    ></app-pagination>
+  </ng-container>
+</main>

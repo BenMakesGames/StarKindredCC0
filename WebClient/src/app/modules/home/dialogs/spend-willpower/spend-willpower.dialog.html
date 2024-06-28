@@ -1,0 +1,18 @@
+<app-dialog>
+  <form (submit)="doSubmit()">
+    <h4>Spend Willpower</h4>
+    <app-loading *ngIf="!options"></app-loading>
+    <div *ngIf="options" class="radio-checkbox-list">
+      <div *ngFor="let o of options" [class.disabled]="willpower < o.cost || !o.canUse">
+        <label><input type="radio" name="selection" [value]="o.type" [(ngModel)]="selected"> {{ o.type|willpowerOptionTitle }} ({{ o.cost }} Willpower)</label>
+        <markdown [data]="o.type|willpowerOptionDescription"></markdown>
+      </div>
+      <div *ngIf="vassalLevel < 10" class="disabled">A new option will be unlocked at level 10.</div>
+      <div *ngIf="vassalLevel >= 10 && vassalLevel < 30" class="disabled">A new option will be unlocked at level 30.</div>
+    </div>
+    <div class="buttons centered">
+      <button type="submit" class="full-width" [class.disabled]="!selected">Spend</button>
+      <button type="button" class="full-width wire" (click)="doCancel()">Cancel</button>
+    </div>
+  </form>
+</app-dialog>

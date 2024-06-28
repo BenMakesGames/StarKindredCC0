@@ -1,0 +1,26 @@
+:host {
+  position: relative;
+  display: block;
+  width: 7.5em;
+  height: 10em;
+  border-radius: 5px;
+  background-color: #ccc;
+
+  > app-card-ribbon {
+    position: absolute;
+    bottom: 2em;
+  }
+
+  > img {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0.5em;
+  }
+
+  > .extra {
+    position: absolute;
+    bottom: 0.5em;
+    width: 7.5em;
+    text-align: center;
+  }
+}

@@ -1,0 +1,16 @@
+.buttons
+{
+  flex-direction: column;
+  align-items: center;
+
+  > button {
+
+    > img {
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+
+}

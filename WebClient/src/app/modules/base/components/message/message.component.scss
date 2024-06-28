@@ -1,0 +1,28 @@
+button {
+  display: block;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+  color: #333;
+
+  &.Error {
+    background-color: #f99;
+    animation-name: shake;
+    animation-iteration-count: 4;
+    animation-duration: 100ms;
+  }
+
+  &.Success {
+    background-color: #8c8;
+  }
+
+  &.Info {
+    background-color: #aaf;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}

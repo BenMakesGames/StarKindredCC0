@@ -1,0 +1,53 @@
+.positions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+
+  > .position {
+    width: 380px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 1em;
+    border-radius: 5px;
+  }
+}
+
+.vacant {
+  text-align: center;
+}
+
+.leader > a {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.details
+{
+  > span {
+    display: block;
+  }
+
+  > .name {
+    font-weight: bold;
+  }
+
+  > .nature-and-sign {
+    text-decoration: none;
+  }
+}
+
+.completed-projects {
+  margin: 0 auto;
+  tbody > tr {
+    cursor: pointer;
+  }
+  td {
+    vertical-align: middle;
+  }
+}

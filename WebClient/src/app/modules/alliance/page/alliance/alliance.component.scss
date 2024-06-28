@@ -1,0 +1,48 @@
+.no-alliance {
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+
+  > a, > button {
+    max-width: 400px;
+    width: 100%;
+
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+
+    > img {
+      width: 2em;
+    }
+  }
+}
+
+.member-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 1em;
+  gap: 1em;
+  justify-content: center;
+}
+
+.logs-section {
+  margin-top: 1em;
+
+  > table {
+    margin: 0 auto 1em;
+  }
+
+  > p {
+    text-align: center;
+  }
+}

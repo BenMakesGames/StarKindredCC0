@@ -1,0 +1,81 @@
+:host {
+  position: relative;
+}
+
+.resource {
+
+  &.rolling-up {
+    animation-name: rolling-up;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  &.rolling-down {
+    animation-name: rolling-down;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  border-radius: 0.6em;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0 0.25em;
+  color: #333;
+
+  &.wheat {
+    background-color: #ec6;
+  }
+
+  &.meat {
+    background-color: #fbb;
+  }
+
+  &.gold {
+    background-color: #ff5;
+  }
+
+  &.stone {
+    background-color: #dcb;
+  }
+
+  &.marble {
+    background-color: #eef;
+  }
+
+  &.wood {
+    background-color: #c93;
+  }
+
+  &.quintessence {
+    background-color: #bfe;
+  }
+
+  &.wine {
+    background-color: #ecf;
+  }
+
+  img {
+    height: 1em;
+    width: 1em;
+    overflow: hidden;
+  }
+}
+
+@keyframes rolling-up
+{
+  0% { transform: none; }
+  50% { transform: translate(-1.25%, -1.25%) scale(1.1); }
+  100% { transform: none; }
+}
+
+@keyframes rolling-down
+{
+  0% { transform: none; }
+  50% { transform: translate(1.25%, 1.25%) scale(0.9); }
+  100% { transform: none; }
+}
